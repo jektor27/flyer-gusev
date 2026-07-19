@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Флаер Гусев — каталог магазинов и товаров Гусева, Калининградская область. Найдите мебель, продукты, стройматериалы и другие товары в Гусеве.">
+    <meta name="keywords" content="Гусев, магазины Гусев, товары Гусев, мебель Гусев, продукты Гусев, стройматериалы Гусев, каталог Гусев">
+    <meta name="author" content="Флаер Гусев">
+    <meta name="robots" content="index, follow">
+    
+    <meta property="og:title" content="Флаер Гусев — Каталог магазинов и товаров">
+    <meta property="og:description" content="Найдите лучшие магазины и товары в Гусеве, Калининградская область">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ru_RU">
+    
+    <title>Флаер Гусев — Каталог магазинов и товаров | Гусев, Калининградская область</title>
+    
+    <link rel="canonical" href="https://flyer-gusev.ru/">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-icon">📋</span>
+                <span class="logo-text">Флаер<strong>Гусев</strong></span>
+            </div>
+            <nav class="nav">
+                <a href="index.html" class="nav-link active">Главная</a>
+                <a href="#categories" class="nav-link">Категории</a>
+                <a href="#shops" class="nav-link">Магазины</a>
+                <a href="#about" class="nav-link">О нас</a>
+                <a href="#contact" class="nav-link">Контакты</a>
+            </nav>
+            <button class="menu-btn" onclick="toggleMenu()">☰</button>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Найдите <span class="highlight">товары</span> в <span class="highlight">Гусеве</span></h1>
+            <p class="subtitle">Каталог магазинов и товаров города Гусев, Калининградская область</p>
+            
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Что ищете? Например: мебель, продукты, стройматериалы..." class="search-input">
+                <button class="search-btn" onclick="search()">Найти</button>
+            </div>
+            
+            <div class="popular-tags">
+                <span class="tag-label">Популярные запросы:</span>
+                <a href="category.html?cat=mебель" class="tag">мебель в Гусеве</a>
+                <a href="category.html?cat=продукты" class="tag">продукты Гусев</a>
+                <a href="category.html?cat=стройматериалы" class="tag">стройматериалы Гусев</a>
+                <a href="category.html?cat=одежда" class="tag">одежда Гусев</a>
+                <a href="category.html?cat=техника" class="tag">техника Гусев</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats" id="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-icon">🏪</span>
+                    <span class="stat-number" id="shopsCount">12</span>
+                    <span class="stat-label">Магазинов</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-icon">📦</span>
+                    <span class="stat-number" id="productsCount">150+</span>
+                    <span class="stat-label">Товаров</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-icon">👥</span>
+                    <span class="stat-number">28 000</span>
+                    <span class="stat-label">Жителей</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-icon">⭐</span>
+                    <span class="stat-number">4.8</span>
+                    <span class="stat-label">Рейтинг</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="categories" id="categories">
+        <div class="container">
+            <h2 class="section-title">Категории товаров</h2>
+            <div class="categories-grid">
+                <a href="category.html?cat=мебель" class="category-card">
+                    <span class="category-icon">🪑</span>
+                    <span class="category-name">Мебель</span>
+                    <span class="category-count">8 магазинов</span>
+                </a>
+                <a href="category.html?cat=продукты" class="category-card">
+                    <span class="category-icon">🛒</span>
+                    <span class="category-name">Продукты</span>
+                    <span class="category-count">15 магазинов</span>
+                </a>
+                <a href="category.html?cat=стройматериалы" class="category-card">
+                    <span class="category-icon">🧱</span>
+                    <span class="category-name">Стройматериалы</span>
+                    <span class="category-count">6 магазинов</span>
+                </a>
+                <a href="category.html?cat=одежда" class="category-card">
+                    <span class="category-icon">👗</span>
+                    <span class="category-name">Одежда</span>
+                    <span class="category-count">10 магазинов</span>
+                </a>
+                <a href="category.html?cat=техника" class="category-card">
+                    <span class="category-icon">💻</span>
+                    <span class="category-name">Техника</span>
+                    <span class="category-count">5 магазинов</span>
+                </a>
+                <a href="category.html?cat=быт" class="category-card">
+                    <span class="category-icon">🏠</span>
+                    <span class="category-name">Бытовая химия</span>
+                    <span class="category-count">7 магазинов</span>
+                </a>
+                <a href="category.html?cat=аптека" class="category-card">
+                    <span class="category-icon">💊</span>
+                    <span class="category-name">Аптеки</span>
+                    <span class="category-count">4 магазина</span>
+                </a>
+                <a href="category.html?cat=авто" class="category-card">
+                    <span class="category-icon">🚗</span>
+                    <span class="category-name">Авто</span>
+                    <span class="category-count">3 магазина</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="shops" id="shops">
+        <div class="container">
+            <h2 class="section-title">Популярные магазины</h2>
+            <div class="shops-grid" id="shopsGrid">
+                <!-- Контент загружается из data.json -->
+            </div>
+        </div>
+    </section>
+
+    <section class="cta" id="cta">
+        <div class="container">
+            <h2>Добавьте свой магазин</h2>
+            <p>Рекламируйте свой бизнес в каталоге Флаер Гусев. Первые 3 месяца бесплатно!</p>
+            <a href="#contact" class="cta-btn">Добавить бесплатно</a>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">О проекте</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Флаер Гусев — ваш каталог магазинов</h3>
+                    <p>Мы создали удобный каталог магазинов и товаров города Гусев. Здесь вы найдёте информацию о магазинах, их ассортименте и контактах.</p>
+                    <ul class="about-list">
+                        <li>✅ Более 12 магазинов</li>
+                        <li>✅ 8 категорий товаров</li>
+                        <li>✅ Актуальная информация</li>
+                        <li>✅ Удобный поиск</li>
+                        <li>✅ Бесплатное размещение для бизнеса</li>
+                    </ul>
+                </div>
+                <div class="about-contact">
+                    <h3>Контакты</h3>
+                    <p>📧 pryazhnikov24@yandex.ru</p>
+                    <p>📱 +7 (952) 796-57-85</p>
+                    <p>📍 г. Гусев, Калининградская область</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="seo-text" id="seo-text">
+        <div class="container">
+            <h2 class="section-title">Полезная информация о Гусеве</h2>
+            <div class="seo-content">
+                <p><strong>Гусев</strong> — город в Калининградской области, административный центр Гусевского района. Население около 28 000 человек. Город расположен на слиянии рек Писса и Красная, недалеко от границы с Польшей и Литвой.</p>
+                
+                <p>В Гусеве представлены различные магазины и торговые точки: продуктовые магазины, мебельные салоны, строительные гипермаркеты, магазины одежды и техники. Город является частью Янтарной особой экономической зоны, что способствует развитию бизнеса.</p>
+                
+                <p>Наш каталог <strong>Флаер Гусев</strong> поможет вам найти нужные товары и магазины в Гусеве. Используйте поиск по сайту или просматривайте категории, чтобы найти нужную информацию о магазинах и товарах города Гусев, Калининградская область.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Свяжитесь с нами</h2>
+            <div class="contact-content">
+                <div class="contact-form">
+                    <h3>Добавить магазин</h3>
+                    <form id="addShopForm">
+                        <input type="text" name="name" placeholder="Название магазина" required>
+                        <input type="text" name="category" placeholder="Категория" required>
+                        <input type="text" name="address" placeholder="Адрес" required>
+                        <input type="tel" name="phone" placeholder="Телефон" required>
+                        <textarea name="description" placeholder="Описание товаров"></textarea>
+                        <button type="submit" class="submit-btn">Отправить</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <h3>Для рекламы</h3>
+                    <p>Хотите разместить информацию о вашем магазине в каталоге Флаер Гусев? Свяжитесь с нами!</p>
+                    <p>📧 pryazhnikov24@yandex.ru</p>
+                    <p>📱 +7 (952) 796-57-85</p>
+                    <p class="promo">🎁 Первые 3 месяца бесплатно!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-icon">📋</span>
+                    <span class="logo-text">Флаер<strong>Гусев</strong></span>
+                    <p>Каталог магазинов и товаров города Гусев</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Навигация</h4>
+                    <a href="index.html">Главная</a>
+                    <a href="#categories">Категории</a>
+                    <a href="#shops">Магазины</a>
+                    <a href="#about">О нас</a>
+                </div>
+                <div class="footer-categories">
+                    <h4>Категории</h4>
+                    <a href="category.html?cat=мебель">Мебель в Гусеве</a>
+                    <a href="category.html?cat=продукты">Продукты Гусев</a>
+                    <a href="category.html?cat=стройматериалы">Стройматериалы</a>
+                    <a href="category.html?cat=одежда">Одежда</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 ФлаерГусев. Все права защищены.</p>
+                <p>📧 pryazhnikov24@yandex.ru | 📱 +7 (952) 796-57-85</p>
+                <p>г. Гусев, Калининградская область</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

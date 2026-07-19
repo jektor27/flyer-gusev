@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Каталог магазинов категории в Гусеве, Калининградская область. Найдите нужные товары и магазины.">
+    <title>Категория — Флаер Гусев</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">📋</span>
+                <span class="logo-text">Флаер<strong>Гусев</strong></span>
+            </a>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Главная</a>
+                <a href="index.html#categories" class="nav-link active">Категории</a>
+                <a href="index.html#shops" class="nav-link">Магазины</a>
+                <a href="index.html#about" class="nav-link">О нас</a>
+                <a href="index.html#contact" class="nav-link">Контакты</a>
+            </nav>
+            <button class="menu-btn" onclick="toggleMenu()">☰</button>
+        </div>
+    </header>
+
+    <section class="hero" style="padding: 60px 0;">
+        <div class="container">
+            <h1 id="categoryTitle">Загрузка...</h1>
+            <p class="subtitle" id="categoryDesc"></p>
+            
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Искать в этой категории..." class="search-input">
+                <button class="search-btn" onclick="searchInCategory()">Найти</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="shops" style="padding: 60px 0;">
+        <div class="container">
+            <h2 class="section-title">Магазины в категории</h2>
+            <div class="shops-grid" id="categoryShops">
+                <!-- Контент загружается из main.js -->
+            </div>
+        </div>
+    </section>
+
+    <section class="seo-text" style="padding: 60px 0;">
+        <div class="container">
+            <h2 class="section-title">Полезная информация</h2>
+            <div class="seo-content">
+                <p>Гусев — город в Калининградской области с населением около 28 000 человек. В городе представлены различные магазины и торговые точки, предлагающие широкий ассортимент товаров.</p>
+                <p>Используйте наш каталог, чтобы найти нужные товары и магазины в Гусеве. Мы постоянно обновляем информацию о магазинах и товарах, чтобы вы могли найти самую актуальную информацию.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 ФлаерГусев. Все права защищены.</p>
+                <p>г. Гусев, Калининградская область</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
