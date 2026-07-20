@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gusev-flyer.ru/sitemap.xml
+
+# Кrawl-delay не нужен для Яндекса (ограничивает краулинг)
+# Crawl-delay: 1
+
+# Запрет на служебные страницы
+Disallow: /admin/
+Disallow: /api/
