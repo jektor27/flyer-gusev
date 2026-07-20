@@ -5,7 +5,7 @@ const shopsData = [
         name: "Продукты 'У дома'",
         category: "Продукты",
         address: "ул. Московская, 45",
-        phone: "+7 (40143) 3-10-10",
+        phone: "+7 (952) 796-57-85",
         description: "Продукты питания, молочные изделия, хлебобулочные изделия",
         products: ["Молоко", "Хлеб", "Мясо", "Овощи", "Фрукты"],
         badge: "Популярный",
@@ -16,7 +16,7 @@ const shopsData = [
         name: "Мебель 'Комфорт'",
         category: "Мебель",
         address: "ул. Победы, 12",
-        phone: "+7 (40143) 5-20-20",
+        phone: "+7 (952) 796-57-85",
         description: "Мебель для дома и офиса: кровати, шкафы, столы, стулья",
         products: ["Кровати", "Шкафы", "Столы", "Стулья", "Диваны"],
         badge: "Новинка",
@@ -27,7 +27,7 @@ const shopsData = [
         name: "Стройматериалы 'СтройДом'",
         category: "Стройматериалы",
         address: "ул. Западная, 8",
-        phone: "+7 (40143) 4-30-30",
+        phone: "+7 (952) 796-57-85",
         description: "Строительные материалы для ремонта и строительства",
         products: ["Кирпич", "Цемент", "Доски", "Краска", "Инструменты"],
         badge: "Выгодная цена",
@@ -38,7 +38,7 @@ const shopsData = [
         name: "Одежда 'Стиль'",
         category: "Одежда",
         address: "ул. Центральная, 22",
-        phone: "+7 (40143) 2-40-40",
+        phone: "+7 (952) 796-57-85",
         description: "Одежда для всей семьи: мужская, женская, детская",
         products: ["Платья", "Костюмы", "Джинсы", "Обувь", "Аксессуары"],
         badge: "Скидки",
@@ -49,7 +49,7 @@ const shopsData = [
         name: "Техника 'Электро'",
         category: "Техника",
         address: "ул. Ленина, 33",
-        phone: "+7 (40143) 6-50-50",
+        phone: "+7 (952) 796-57-85",
         description: "Бытовая техника, электроника, компьютеры",
         products: ["Телевизоры", "Стиральные машины", "Холодильники", "Ноутбуки"],
         badge: "Гарантия",
@@ -60,7 +60,7 @@ const shopsData = [
         name: "Аптека 'Здоровье'",
         category: "Аптеки",
         address: "ул. Медицинская, 5",
-        phone: "+7 (40143) 7-60-60",
+        phone: "+7 (952) 796-57-85",
         description: "Лекарства, витамины, медицинские товары",
         products: ["Лекарства", "Витамины", "БАДы", "Медтехника"],
         badge: "Рецепты",
@@ -71,7 +71,7 @@ const shopsData = [
         name: "Продукты 'Свежесть'",
         category: "Продукты",
         address: "ул. Садовая, 18",
-        phone: "+7 (40143) 3-70-70",
+        phone: "+7 (952) 796-57-85",
         description: "Свежие продукты, овощи, фрукты, мясо",
         products: ["Овощи", "Фрукты", "Мясо", "Рыба", "Молочные изделия"],
         badge: "Свежее",
@@ -82,7 +82,7 @@ const shopsData = [
         name: "Мебель 'Домашний'",
         category: "Мебель",
         address: "ул. Лесная, 7",
-        phone: "+7 (40143) 5-80-80",
+        phone: "+7 (952) 796-57-85",
         description: "Мебель из натурального дерева",
         products: ["Кровати", "Шкафы", "Комоды", "Столы"],
         badge: "Дерево",
@@ -93,7 +93,7 @@ const shopsData = [
         name: "Стройматериалы 'Мастер'",
         category: "Стройматериалы",
         address: "ул. Промышленная, 15",
-        phone: "+7 (40143) 4-90-90",
+        phone: "+7 (952) 796-57-85",
         description: "Инструменты и стройматериалы для профессионалов",
         products: ["Инструменты", "Крепеж", "Электрика", "Сантехника"],
         badge: "Профессионалам",
@@ -104,7 +104,7 @@ const shopsData = [
         name: "Бытовая химия 'Чисто'",
         category: "Быт",
         address: "ул. Чистая, 3",
-        phone: "+7 (40143) 8-10-10",
+        phone: "+7 (952) 796-57-85",
         description: "Бытовая химия, уборка, гигиена",
         products: ["Порошки", "Гели", "Средства для уборки", "Гигиена"],
         badge: "Акции",
@@ -115,7 +115,7 @@ const shopsData = [
         name: "Автозапчасти 'АвтоМир'",
         category: "Авто",
         address: "ул. Автомобильная, 20",
-        phone: "+7 (40143) 9-20-20",
+        phone: "+7 (952) 796-57-85",
         description: "Автозапчасти, шины, масла, аксессуары",
         products: ["Запчасти", "Шины", "Масла", "Аксессуары"],
         badge: "Оригинал",
@@ -126,7 +126,7 @@ const shopsData = [
         name: "Продукты 'Вкусный мир'",
         category: "Продукты",
         address: "ул. Вкусная, 10",
-        phone: "+7 (40143) 3-30-30",
+        phone: "+7 (952) 796-57-85",
         description: "Деликатесы, сладости, напитки",
         products: ["Шоколад", "Кофе", "Чай", "Сладости", "Напитки"],
         badge: "Деликатесы",
@@ -151,6 +151,7 @@ document.addEventListener('DOMContentLoaded', function() {
     loadShops();
     initSearch();
     loadCategoryPage();
+    initScrollEffects();
 });
 
 // Загрузка магазинов
@@ -158,13 +159,15 @@ function loadShops() {
     const grid = document.getElementById('shopsGrid');
     if (!grid) return;
     
-    grid.innerHTML = shopsData.slice(0, 6).map(shop => createShopCard(shop)).join('');
+    grid.innerHTML = shopsData.slice(0, 6).map((shop, index) => 
+        createShopCard(shop, index)
+    ).join('');
 }
 
 // Создание карточки магазина
-function createShopCard(shop) {
+function createShopCard(shop, index) {
     return `
-        <div class="shop-card">
+        <div class="shop-card" style="animation: fadeInUp 0.6s ease ${index * 0.1}s both">
             <div class="shop-header">
                 <span class="shop-name">${shop.name}</span>
                 <span class="shop-badge">${shop.badge}</span>
@@ -195,7 +198,6 @@ function search() {
     const query = document.getElementById('searchInput').value.toLowerCase().trim();
     if (!query) return;
     
-    // Определяем категорию по запросу
     const categoryMap = {
         "мебель": "мебель",
         "кровать": "мебель",
@@ -231,7 +233,6 @@ function search() {
     if (category) {
         window.location.href = `category.html?cat=${category}`;
     } else {
-        // Общий поиск
         const results = shopsData.filter(shop => 
             shop.name.toLowerCase().includes(query) ||
             shop.description.toLowerCase().includes(query) ||
@@ -270,9 +271,11 @@ function loadCategoryPage() {
     const grid = document.getElementById('categoryShops');
     if (grid) {
         if (filteredShops.length > 0) {
-            grid.innerHTML = filteredShops.map(shop => createShopCard(shop)).join('');
+            grid.innerHTML = filteredShops.map((shop, index) => 
+                createShopCard(shop, index)
+            ).join('');
         } else {
-            grid.innerHTML = '<p style="text-align:center; color:#64748b; grid-column:1/-1;">Магазины в этой категории пока не добавлены</p>';
+            grid.innerHTML = '<p style="text-align:center; color:#8892b0; grid-column:1/-1; padding:60px;">Магазины в этой категории пока не добавлены</p>';
         }
     }
 }
@@ -280,6 +283,19 @@ function loadCategoryPage() {
 // Меню
 function toggleMenu() {
     document.querySelector('.nav').classList.toggle('active');
+}
+
+// Эффекты скролла
+function initScrollEffects() {
+    const header = document.getElementById('header');
+    
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
 }
 
 // Форма
