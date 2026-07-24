@@ -3,35 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Блог о Гусеве — Новости и события города | Флаер Гусев</title>
-    <meta name="description" content="Блог Флаер Гусев — новости, события и полезная информация о городе Гусев, Калининградская область. Актуальные статьи о бизнесе, магазинах и жизни города.">
-    <meta name="keywords" content="Гусев, новости Гусев, события Гусев, магазины Гусев, услуги Гусев, Калининградская область">
+    <meta name="description" content="Блог Флаер Гусев — статьи о магазинах Гусева, советы по покупкам, руководства. Полезная информация о городе Гусев, Калининградская область.">
+    <meta name="keywords" content="Гусев, статьи, советы, стройматериалы, магазины Гусев, каталог Гусев, бизнес Гусев">
     <meta name="robots" content="index, follow">
     
-    <meta property="og:title" content="Блог о Гусеве — Новости и события | Флаер Гусев">
-    <meta property="og:description" content="Новости и полезная информация о городе Гусев, Калининградская область. Статьи о бизнесе, магазинах и жизни города.">
+    <meta property="og:title" content="Блог Флаер Гусев — статьи и советы">
+    <meta property="og:description" content="Полезные статьи о магазинах Гусева. Советы по выбору товаров, руководства для бизнеса, новости города.">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="ru_RU">
     <meta property="og:image" content="https://gusev-flyer.ru/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     
-    <title>Блог о Гусеве — Новости и события | Флаер Гусев</title>
+    <title>Блог — Флаер Гусев | Статьи и советы</title>
     
     <link rel="canonical" href="https://gusev-flyer.ru/blog.html">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="stylesheet" href="css/style.css">
     
+    <!-- Яндекс.Вебмастер -->
     <meta name="yandex-verification" content="f76b111d88cf6ce9">
     
+    <!-- Schema.org Blog -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Blog",
-      "name": "Блог о Гусеве",
-      "description": "Новости и события города Гусев",
+      "name": "Флаер Гусев — Блог",
+      "description": "Статьи и советы о магазинах города Гусев",
       "url": "https://gusev-flyer.ru/blog.html",
       "publisher": {
         "@type": "Organization",
         "name": "ФлаерГусев",
+        "url": "https://gusev-flyer.ru",
         "logo": {
           "@type": "ImageObject",
           "url": "https://gusev-flyer.ru/og-image.png"
@@ -39,151 +43,142 @@
       }
     }
     </script>
+    
+    <!-- Schema.org BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Главная",
+          "item": "https://gusev-flyer.ru/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Блог",
+          "item": "https://gusev-flyer.ru/blog.html"
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
-    <header class="header">
+    <header class="header" id="header">
         <div class="container">
-            <div class="logo">
-                <span class="logo-icon">🫎</span>
-                <span class="logo-text">ФлаерГусев</span>
-            </div>
+            <a href="index.html" class="logo">
+                <div class="logo-icon">📋</div>
+                <span class="logo-text">Флаер<strong>Гусев</strong></span>
+            </a>
             <nav class="nav">
                 <a href="index.html" class="nav-link">Главная</a>
-                <a href="category.html?cat=мебель" class="nav-link">Мебель</a>
-                <a href="category.html?cat=продукты" class="nav-link">Продукты</a>
-                <a href="blog.html" class="nav-link active">Блог</a>
+                <a href="index.html#categories" class="nav-link">Категории</a>
+                <a href="index.html#shops" class="nav-link">Магазины</a>
+                <a href="index.html#about" class="nav-link">О нас</a>
+                <a href="index.html#contact" class="nav-link">Контакты</a>
             </nav>
-            <button class="menu-toggle">☰</button>
+            <button class="menu-btn" onclick="toggleMenu()">☰</button>
         </div>
     </header>
 
-    <main class="main">
-        <section class="hero">
-            <div class="container">
-                <h1>Блог о Гусеве</h1>
-                <p class="subtitle">Новости, события и полезная информация о городе Гусев, Калининградская область</p>
+    <section class="hero" style="padding: 60px 0;">
+        <div class="container">
+            <div class="hero-badge">
+                <span>📝</span>
+                <span>Полезный блог</span>
             </div>
-        </section>
+            <h1>Блог Флаер Гусев</h1>
+            <p class="subtitle">Полезные статьи, советы и руководства для жителей Гусева</p>
+        </div>
+    </section>
 
-        <section class="content">
-            <div class="container">
-                <div class="blog-grid">
-                    <article class="blog-card">
-                        <div class="blog-image">🏙️</div>
-                        <div class="blog-content">
-                            <h2><a href="blog/gusev-history.html">История города Гусев</a></h2>
-                            <p class="blog-date">📅 22 июля 2026</p>
-                            <p>Гусев — город в Калининградской области с богатой историей. Основан в 1560 году как немецкий город Гумбиннен. Сегодня это современный город с населением более 28 тысяч человек.</p>
-                            <a href="blog/gusev-history.html" class="read-more">Читать далее →</a>
-                        </div>
-                    </article>
-
-                    <article class="blog-card">
-                        <div class="blog-image">🛒</div>
-                        <div class="blog-content">
-                            <h2><a href="blog/shopping-guide.html">Гид по магазинам Гусева</a></h2>
-                            <p class="blog-date">📅 20 июля 2026</p>
-                            <p>Обзор лучших магазинов города: от продуктовых до мебельных. Где купить качественные товары по доступным ценам.</p>
-                            <a href="blog/shopping-guide.html" class="read-more">Читать далее →</a>
-                        </div>
-                    </article>
-
-                    <article class="blog-card">
-                        <div class="blog-image">🎉</div>
-                        <div class="blog-content">
-                            <h2><a href="blog/events-july.html">События июля 2026 в Гусеве</a></h2>
-                            <p class="blog-date">📅 18 июля 2026</p>
-                            <p>Анонс главных событий месяца: фестивали, ярмарки, спортивные мероприятия и культурные события.</p>
-                            <a href="blog/events-july.html" class="read-more">Читать далее →</a>
-                        </div>
-                    </article>
-
-                    <article class="blog-card">
-                        <div class="blog-image">🏠</div>
-                        <div class="blog-content">
-                            <h2><a href="blog/real-estate.html">Недвижимость в Гусеве</a></h2>
-                            <p class="blog-date">📅 15 июля 2026</p>
-                            <p>Обзор рынка недвижимости: цены на квартиры, дома, земельные участки. Советы по покупке и продаже.</p>
-                            <a href="blog/real-estate.html" class="read-more">Читать далее →</a>
-                        </div>
-                    </article>
-
-                    <article class="blog-card">
-                        <div class="blog-image">🍕</div>
-                        <div class="blog-content">
-                            <h2><a href="blog/restaurants.html">Лучшие кафе и рестораны Гусева</a></h2>
-                            <p class="blog-date">📅 12 июля 2026</p>
-                            <p>Топ-10 мест для вкусного питания: от кафе-столовых до ресторанов с европейской кухней.</p>
-                            <a href="blog/restaurants.html" class="read-more">Читать далее →</a>
-                        </div>
-                    </article>
-
-                    <article class="blog-card">
-                        <div class="blog-image">🚗</div>
-                        <div class="blog-content">
-                            <h2><a href="blog/auto-services.html">Автосервисы Гусева</a></h2>
-                            <p class="blog-date">📅 10 июля 2026</p>
-                            <p>Каталог автосервисов: ремонт, обслуживание, шиномонтаж. Где отремонтировать авто по выгодной цене.</p>
-                            <a href="blog/auto-services.html" class="read-more">Читать далее →</a>
-                        </div>
-                    </article>
-                </div>
-
-                <div class="info-block">
-                    <h2>Полезные ссылки</h2>
-                    <div class="links-grid">
-                        <a href="category.html?cat=мебель" class="link-card">
-                            <span class="link-icon">🪑</span>
-                            <span class="link-text">Мебель в Гусеве</span>
-                        </a>
-                        <a href="category.html?cat=продукты" class="link-card">
-                            <span class="link-icon">🛒</span>
-                            <span class="link-text">Продукты в Гусеве</span>
-                        </a>
-                        <a href="category.html?cat=стройматериалы" class="link-card">
-                            <span class="link-icon">🧱</span>
-                            <span class="link-text">Стройматериалы</span>
-                        </a>
-                        <a href="category.html?cat=одежда" class="link-card">
-                            <span class="link-icon">👗</span>
-                            <span class="link-text">Одежда в Гусеве</span>
-                        </a>
+    <section class="blog-list" style="padding: 60px 0;">
+        <div class="container">
+            <h2 class="section-title">Последние статьи</h2>
+            
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <div class="blog-card-header">
+                        <span class="blog-tag">🔧 Стройматериалы</span>
+                        <span class="blog-date">24 июля 2026</span>
                     </div>
-                </div>
+                    <h3 class="blog-card-title">
+                        <a href="article-stroymaterialy.html">Топ-5 мест, где купить стройматериалы в Гусеве в 2026 году</a>
+                    </h3>
+                    <p class="blog-card-excerpt">
+                        Обзор лучших магазинов стройматериалов в Гусеве: кирпич, цемент, доски, краска, инструменты. 
+                        Адреса, телефоны, цены и отзывы реальных покупателей.
+                    </p>
+                    <a href="article-stroymaterialy.html" class="blog-read-more">Читать статью →</a>
+                </article>
+                
+                <article class="blog-card">
+                    <div class="blog-card-header">
+                        <span class="blog-tag">📋 Бизнес</span>
+                        <span class="blog-date">24 июля 2026</span>
+                    </div>
+                    <h3 class="blog-card-title">
+                        <a href="article-add-shop.html">Как добавить свой магазин в наш каталог: пошаговая инструкция</a>
+                    </h3>
+                    <p class="blog-card-excerpt">
+                        Полное руководство для предпринимателей Гусева. Как зарегистрировать магазин, 
+                        какие данные указать и как начать бесплатное размещение в каталоге Флаер Гусев.
+                    </p>
+                    <a href="article-add-shop.html" class="blog-read-more">Читать статью →</a>
+                </article>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Добавьте свой магазин</h2>
+                <p>Хотите быть в нашем блоге? Разместите свой магазин в каталоге!</p>
+                <a href="index.html#contact" class="cta-btn">
+                    <span>Добавить бесплатно</span>
+                    <span>→</span>
+                </a>
+            </div>
+        </div>
+    </section>
 
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>📋 ФлаерГусев</h3>
+            <div class="footer-grid">
+                <div class="footer-logo">
+                    <a href="index.html" class="logo">
+                        <div class="logo-icon">📋</div>
+                        <span class="logo-text">Флаер<strong>Гусев</strong></span>
+                    </a>
                     <p>Каталог магазинов и товаров города Гусев, Калининградская область</p>
                 </div>
-                
-                <div class="footer-section">
-                    <h3>Навигация</h3>
-                    <ul>
-                        <li><a href="index.html">Главная</a></li>
-                        <li><a href="category.html?cat=мебель">Мебель</a></li>
-                        <li><a href="category.html?cat=продукты">Продукты</a></li>
-                        <li><a href="blog.html">Блог</a></li>
-                    </ul>
+                <div class="footer-links">
+                    <h4>Навигация</h4>
+                    <a href="index.html">Главная</a>
+                    <a href="blog.html">Блог</a>
+                    <a href="index.html#categories">Категории</a>
+                    <a href="index.html#shops">Магазины</a>
                 </div>
-                
-                <div class="footer-section">
-                    <h3>Контакты</h3>
-                    <p>📧 pryazhnikov24@yandex.ru</p>
-                    <p>📱 +7 (952) 796-57-85</p>
-                    <p>📍 г. Гусев, Калининградская область</p>
+                <div class="footer-categories">
+                    <h4>Категории</h4>
+                    <a href="mebel.html">Мебель в Гусеве</a>
+                    <a href="produkty.html">Продукты Гусев</a>
+                    <a href="stroymaterialy.html">Стройматериалы</a>
+                    <a href="odezhda.html">Одежда</a>
                 </div>
             </div>
-            
             <div class="footer-bottom">
-                <p>© 2026 ФлаерГусев. Все права защищены.</p>
+                <p>&copy; 2026 ФлаерГусев. Все права защищены.</p>
+                <p>📧 pryazhnikov24@yandex.ru | 📱 +7 (952) 796-57-85</p>
+                <p>г. Гусев, Калининградская область</p>
             </div>
         </div>
     </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
