@@ -985,3 +985,247 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+/* ========================================
+   ТАРИФЫ
+   ======================================== */
+
+.tariffs {
+    padding: 60px 0;
+}
+
+.tariff-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.tariff-card {
+    background: var(--dark);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.tariff-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.tariff-badge {
+    position: absolute;
+    top: 15px;
+    right: -35px;
+    background: var(--accent);
+    color: #000;
+    padding: 4px 40px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transform: rotate(45deg);
+    z-index: 1;
+}
+
+.tariff-header {
+    padding: 30px 25px 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+}
+
+.tariff-icon {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.tariff-name {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--text);
+}
+
+.tariff-price {
+    font-size: 42px;
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: 5px;
+}
+
+.tariff-price span {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--gray);
+}
+
+.tariff-subtitle {
+    font-size: 14px;
+    color: var(--gray);
+}
+
+.tariff-body {
+    padding: 25px;
+}
+
+.tariff-body > p {
+    color: var(--gray);
+    font-size: 14px;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.tariff-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px;
+}
+
+.tariff-features li {
+    padding: 6px 0;
+    font-size: 14px;
+    color: var(--text);
+    border-bottom: 1px solid var(--border);
+}
+
+.tariff-features li:last-child {
+    border-bottom: none;
+}
+
+.tariff-bonus {
+    background: rgba(255, 107, 74, 0.1);
+    border: 1px solid var(--accent);
+    border-radius: 8px;
+    padding: 10px 15px;
+    font-size: 13px;
+    color: var(--accent);
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.tariff-desc {
+    font-size: 13px;
+    color: var(--gray);
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.tariff-btn {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.tariff-btn:hover {
+    opacity: 0.9;
+}
+
+.tariff-btn-green {
+    background: var(--success);
+    color: #fff;
+}
+
+.tariff-btn-yellow {
+    background: #f59e0b;
+    color: #000;
+}
+
+.tariff-btn-red {
+    background: var(--accent);
+    color: #fff;
+}
+
+/* Services */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.service-card {
+    background: var(--dark);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-3px);
+}
+
+.service-icon {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: var(--text);
+}
+
+.service-price {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+.service-price span {
+    font-size: 16px;
+    color: var(--gray);
+}
+
+.service-price-old {
+    font-size: 16px;
+    color: var(--gray);
+    text-decoration: line-through;
+    margin-bottom: 5px;
+}
+
+.service-price-new {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--success);
+    margin-bottom: 5px;
+}
+
+.service-price-new span {
+    font-size: 16px;
+    color: var(--gray);
+}
+
+.service-save {
+    font-size: 13px;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.service-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: var(--primary);
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: opacity 0.3s ease;
+}
+
+.service-btn:hover {
+    opacity: 0.9;
+}
