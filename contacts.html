@@ -95,24 +95,49 @@
     </script>
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <a href="index.html" class="logo">
-                <div class="logo-icon">🫎</div>
-                <span class="logo-text">Флаер<strong>Гусев</strong></span>
+    <header class="site-header" style="
+    background: #0f172a;
+    border-bottom: 2px solid #1e293b;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+">
+    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <a href="index.html" style="text-decoration: none;">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <span style="font-size: 2rem;"></span>
+                    <span style="
+                        font-size: 1.5rem;
+                        font-weight: bold;
+                        background: linear-gradient(135deg, #60a5fa, #a78bfa);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                    ">ФлаерГусев</span>
+                </div>
             </a>
-            <nav class="nav">
-                <a href="index.html" class="nav-link">Главная</a>
-                <a href="category.html?cat=мебель" class="nav-link">Мебель</a>
-                <a href="category.html?cat=продукты" class="nav-link">Продукты</a>
-                <a href="blog.html" class="nav-link">Блог</a>
-                <a href="contacts.html" class="nav-link active">Контакты</a>
-            </nav>
-            <button class="menu-toggle">☰</button>
-        </div>
-    </header>
 
-    <main class="main">
+            <nav class="main-nav">
+                <ul style="
+                    display: flex;
+                    gap: 25px;
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+                ">
+                    <li><a href="index.html" style="color: #e2e8f0; text-decoration: none; font-weight: 500;">Главная</a></li>
+                    <li><a href="category.html?cat=mebel" style="color: #e2e8f0; text-decoration: none; font-weight: 500;">Категории</a></li>
+                    <li><a href="tariffs.html" style="color: #e2e8f0; text-decoration: none; font-weight: 500;">Тарифы</a></li>
+                    <li><a href="blog.html" style="color: #e2e8f0; text-decoration: none; font-weight: 500;">Блог</a></li>
+                    <li><a href="contacts.html" style="color: #e2e8f0; text-decoration: none; font-weight: 500;">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<main class="main">
         <section class="hero">
             <div class="container">
                 <h1>Контакты Флаер Гусев</h1>
@@ -230,37 +255,58 @@
         </section>
     </main>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>📋 ФлаерГусев</h3>
-                    <p>Каталог магазинов и товаров города Гусев, Калининградская область</p>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Навигация</h3>
-                    <ul>
-                        <li><a href="index.html">Главная</a></li>
-                        <li><a href="category.html?cat=мебель">Мебель</a></li>
-                        <li><a href="category.html?cat=продукты">Продукты</a></li>
-                        <li><a href="blog.html">Блог</a></li>
-                        <li><a href="contacts.html">Контакты</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Контакты</h3>
-                    <p>📧 pryazhnikov24@yandex.ru</p>
-                    <p>📱 +7 (952) 796-57-85</p>
-                    <p>📍 г. Гусев, Калининградская область</p>
-                </div>
+    <footer class="site-footer" style="
+    background: #0f172a;
+    border-top: 2px solid #1e293b;
+    padding: 40px 0 20px;
+    margin-top: 80px;
+">
+    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px;">
+            <div>
+                <h4 style="color: #60a5fa; margin-bottom: 15px;">О проекте</h4>
+                <p style="color: #94a3b8; line-height: 1.6;">
+                    Флаер Гусев — цифровой каталог магазинов города Гусев, Калининградская область.
+                </p>
             </div>
-            
-            <div class="footer-bottom">
-                <p>© 2026 ФлаерГусев. Все права защищены.</p>
+
+            <div>
+                <h4 style="color: #60a5fa; margin-bottom: 15px;">Категории</h4>
+                <ul style="list-style: none; padding: 0; color: #94a3b8;">
+                    <li style="margin-bottom: 8px;"><a href="category.html?cat=mebel" style="color: #94a3b8; text-decoration: none;">🪑 Мебель</a></li>
+                    <li style="margin-bottom: 8px;"><a href="category.html?cat=produkty" style="color: #94a3b8; text-decoration: none;">🛒 Продукты</a></li>
+                    <li style="margin-bottom: 8px;"><a href="category.html?cat=stroymaterialy" style="color: #94a3b8; text-decoration: none;">🧱 Стройматериалы</a></li>
+                    <li style="margin-bottom: 8px;"><a href="category.html?cat=odezhda" style="color: #94a3b8; text-decoration: none;">👗 Одежда</a></li>
+                    <li style="margin-bottom: 8px;"><a href="category.html?cat=tehnika" style="color: #94a3b8; text-decoration: none;">💻 Техника</a></li>
+                    <li style="margin-bottom: 8px;"><a href="category.html?cat=byt" style="color: #94a3b8; text-decoration: none;">🧴 Бытовая химия</a></li>
+                    <li style="margin-bottom: 8px;"><a href="category.html?cat=apteka" style="color: #94a3b8; text-decoration: none;">💊 Аптеки</a></li>
+                    <li style="margin-bottom: 8px;"><a href="category.html?cat=avto" style="color: #94a3b8; text-decoration: none;">🚗 Авто</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 style="color: #60a5fa; margin-bottom: 15px;">Полезное</h4>
+                <ul style="list-style: none; padding: 0; color: #94a3b8;">
+                    <li style="margin-bottom: 8px;"><a href="tariffs.html" style="color: #94a3b8; text-decoration: none;">💎 Тарифы</a></li>
+                    <li style="margin-bottom: 8px;"><a href="blog.html" style="color: #94a3b8; text-decoration: none;">📝 Блог</a></li>
+                    <li style="margin-bottom: 8px;"><a href="moose.html" style="color: #94a3b8; text-decoration: none;">🦌 О лосе</a></li>
+                    <li style="margin-bottom: 8px;"><a href="contacts.html" style="color: #94a3b8; text-decoration: none;">📞 Контакты</a></li>
+                </ul>
             </div>
         </div>
-    </footer>
+
+        <div style="
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #1e293b;
+            color: #64748b;
+            font-size: 0.9rem;
+        ">
+            &copy; 2026 Флаер Гусев. Все права защищены. | pryazhnikov24@yandex.ru | +7 (952) 796-57-85 | г. Гусев, Калининградская обл.
+        </div>
+    </div>
+</footer>
+
+
 </body>
 </html>
