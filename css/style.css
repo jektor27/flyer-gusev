@@ -1651,3 +1651,53 @@ body {
         padding: 0 10px;
     }
 }
+/* ========================================
+   Popular Queries
+   ======================================== */
+
+.popular-queries {
+    margin-top: 15px;
+}
+
+.popular-label {
+    color: #94a3b8;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.popular-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.popular-buttons button {
+    padding: 8px 16px;
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    color: #e2e8f0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.popular-buttons button:hover {
+    background: #3b82f6;
+    border-color: #60a5fa;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 640px) {
+    .popular-buttons {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+    }
+
+    .popular-buttons button {
+        padding: 10px 12px;
+        font-size: 13px;
+    }
+}
