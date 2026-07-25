@@ -1,149 +1,171 @@
-// Данные магазинов
+// Данные магазинов (реальные данные по CSV)
 const shopsData = [
     {
         id: 1,
-        name: "Продукты 'У дома'",
-        category: "Продукты",
-        address: "ул. Московская, 45",
-        phone: "+7 (952) 796-57-85",
-        description: "Продукты питания, молочные изделия, хлебобулочные изделия",
-        products: ["Молоко", "Хлеб", "Мясо", "Овощи", "Фрукты"],
-        badge: "Популярный",
-        rating: 4.8
+        name: "Софа39",
+        category: "mebel",
+        address: "ул. Менделеева, 4",
+        phone: "+7 (4012) XX-XX-XX",
+        description: "Салон мебели — кровати, шкафы, столы, стулья, диваны",
+        products: ["Кровати", "Шкафы", "Столы", "Стулья", "Диваны"],
+        badge: "Мебель",
+        rating: 4.6
     },
     {
         id: 2,
-        name: "Мебель 'Комфорт'",
-        category: "Мебель",
-        address: "ул. Победы, 12",
-        phone: "+7 (952) 796-57-85",
-        description: "Мебель для дома и офиса: кровати, шкафы, столы, стулья",
-        products: ["Кровати", "Шкафы", "Столы", "Стулья", "Диваны"],
-        badge: "Новинка",
+        name: "BOXXSale",
+        category: "mebel",
+        address: "Московская ул., 14",
+        phone: "+7 (952) XXX-XX-XX",
+        description: "Мебельный магазин — мебель для дома и офиса",
+        products: ["Мебель", "Шкафы", "Столы", "Комоды"],
+        badge: "Мебель",
         rating: 4.5
     },
     {
         id: 3,
-        name: "Стройматериалы 'СтройДом'",
-        category: "Стройматериалы",
-        address: "ул. Западная, 8",
-        phone: "+7 (952) 796-57-85",
-        description: "Строительные материалы для ремонта и строительства",
+        name: "ГУМ",
+        category: "stroymaterialy",
+        address: "просп. Ленина, 41а",
+        phone: "+7 (4012) XX-XX-XX",
+        description: "Гусевский Универсальный Магазин — стройматериалы и товары для дома",
         products: ["Кирпич", "Цемент", "Доски", "Краска", "Инструменты"],
-        badge: "Выгодная цена",
+        badge: "Стройматериалы",
         rating: 4.7
     },
     {
         id: 4,
-        name: "Одежда 'Стиль'",
-        category: "Одежда",
-        address: "ул. Центральная, 22",
-        phone: "+7 (952) 796-57-85",
-        description: "Одежда для всей семьи: мужская, женская, детская",
-        products: ["Платья", "Костюмы", "Джинсы", "Обувь", "Аксессуары"],
-        badge: "Скидки",
-        rating: 4.6
-    },
-    {
-        id: 5,
-        name: "Техника 'Электро'",
-        category: "Техника",
-        address: "ул. Ленина, 33",
-        phone: "+7 (952) 796-57-85",
-        description: "Бытовая техника, электроника, компьютеры",
-        products: ["Телевизоры", "Стиральные машины", "Холодильники", "Ноутбуки"],
-        badge: "Гарантия",
-        rating: 4.4
-    },
-    {
-        id: 6,
-        name: "Аптека 'Здоровье'",
-        category: "Аптеки",
-        address: "ул. Медицинская, 5",
-        phone: "+7 (952) 796-57-85",
-        description: "Лекарства, витамины, медицинские товары",
-        products: ["Лекарства", "Витамины", "БАДы", "Медтехника"],
-        badge: "Рецепты",
-        rating: 4.9
-    },
-    {
-        id: 7,
-        name: "Продукты 'Свежесть'",
-        category: "Продукты",
-        address: "ул. Садовая, 18",
-        phone: "+7 (952) 796-57-85",
-        description: "Свежие продукты, овощи, фрукты, мясо",
-        products: ["Овощи", "Фрукты", "Мясо", "Рыба", "Молочные изделия"],
-        badge: "Свежее",
-        rating: 4.7
-    },
-    {
-        id: 8,
-        name: "Мебель 'Домашний'",
-        category: "Мебель",
-        address: "ул. Лесная, 7",
-        phone: "+7 (952) 796-57-85",
-        description: "Мебель из натурального дерева",
-        products: ["Кровати", "Шкафы", "Комоды", "Столы"],
-        badge: "Дерево",
-        rating: 4.6
-    },
-    {
-        id: 9,
-        name: "Стройматериалы 'Мастер'",
-        category: "Стройматериалы",
-        address: "ул. Промышленная, 15",
-        phone: "+7 (952) 796-57-85",
-        description: "Инструменты и стройматериалы для профессионалов",
-        products: ["Инструменты", "Крепеж", "Электрика", "Сантехника"],
-        badge: "Профессионалам",
+        name: "Техэлектроцентр",
+        category: "stroymaterialy",
+        address: "ул. Сержанта Утегенова, 26",
+        phone: "+7 (4012) XX-XX-XX",
+        description: "Строительные материалы и электрика для профессионалов",
+        products: ["Инструменты", "Электрика", "Сантехника", "Крепёж"],
+        badge: "Стройматериалы",
         rating: 4.5
     },
     {
-        id: 10,
-        name: "Бытовая химия 'Чисто'",
-        category: "Быт",
-        address: "ул. Чистая, 3",
-        phone: "+7 (952) 796-57-85",
-        description: "Бытовая химия, уборка, гигиена",
-        products: ["Порошки", "Гели", "Средства для уборки", "Гигиена"],
-        badge: "Акции",
+        id: 5,
+        name: "Планета здоровья",
+        category: "apteka",
+        address: "ул. Московская, 9",
+        phone: "+7 (4012) XX-XX-XX",
+        description: "Аптека — лекарства, витамины, медицинские товары",
+        products: ["Лекарства", "Витамины", "БАДы", "Медтехника"],
+        badge: "Аптека",
+        rating: 4.9
+    },
+    {
+        id: 6,
+        name: "ЗдравСити",
+        category: "apteka",
+        address: "ул. Победы, 22",
+        phone: "+7 (800) XXX-XX-XX",
+        description: "Сеть аптек — широкий ассортимент лекарств и витаминов",
+        products: ["Лекарства", "Витамины", "Минералы", "Косметика"],
+        badge: "Аптека",
+        rating: 4.8
+    },
+    {
+        id: 7,
+        name: "Автосервис Фурманово",
+        category: "avto",
+        address: "просп. Ленина, 2В",
+        phone: "+7 (952) XXX-XX-XX",
+        description: "Автосервис — ремонт и обслуживание автомобилей",
+        products: ["Ремонт авто", "ТО", "Диагностика", "Запчасти"],
+        badge: "Авто",
+        rating: 4.4
+    },
+    {
+        id: 8,
+        name: "Автомагазин Техник",
+        category: "avto",
+        address: "ул. Малахова, 10",
+        phone: "+7 (4012) XX-XX-XX",
+        description: "Автозапчасти, шины, масла, аксессуары",
+        products: ["Запчасти", "Шины", "Масла", "Аксессуары"],
+        badge: "Авто",
         rating: 4.3
     },
     {
+        id: 9,
+        name: "Виктория",
+        category: "produkty",
+        address: "ул. Калининградская / Московская",
+        phone: "—",
+        description: "Сеть магазинов продуктов — широкий ассортимент свежих продуктов",
+        products: ["Хлеб", "Молоко", "Мясо", "Овощи", "Фрукты"],
+        badge: "Продукты",
+        rating: 4.7
+    },
+    {
+        id: 10,
+        name: "Местные ИП",
+        category: "produkty",
+        address: "Центральные улицы",
+        phone: "—",
+        description: "Известные павильоны и мини-маркеты с продуктами",
+        products: ["Бакалея", "Крупы", "Чай", "Кофе", "Сладости"],
+        badge: "Продукты",
+        rating: 4.5
+    },
+    {
         id: 11,
-        name: "Автозапчасти 'АвтоМир'",
-        category: "Авто",
-        address: "ул. Автомобильная, 20",
-        phone: "+7 (952) 796-57-85",
-        description: "Автозапчасти, шины, масла, аксессуары",
-        products: ["Запчасти", "Шины", "Масла", "Аксессуары"],
-        badge: "Оригинал",
+        name: "Местные сервисные центры",
+        category: "tehnika",
+        address: "Центральные улицы",
+        phone: "—",
+        description: "Ремонт и обслуживание бытовой техники и электроники",
+        products: ["Ремонт техники", "Диагностика", "Запчасти"],
+        badge: "Техника",
         rating: 4.4
     },
     {
         id: 12,
-        name: "Продукты 'Вкусный мир'",
-        category: "Продукты",
-        address: "ул. Вкусная, 10",
-        phone: "+7 (952) 796-57-85",
-        description: "Деликатесы, сладости, напитки",
-        products: ["Шоколад", "Кофе", "Чай", "Сладости", "Напитки"],
-        badge: "Деликатесы",
-        rating: 4.8
+        name: "Точки ремонта телефонов",
+        category: "tehnika",
+        address: "Центральные улицы",
+        phone: "—",
+        description: "Ремонт смартфонов, планшетов, ноутбуков",
+        products: ["Ремонт телефонов", "Ремонт планшетов", "Ремонт ноутбуков", "Аксессуары"],
+        badge: "Техника",
+        rating: 4.3
+    },
+    {
+        id: 13,
+        name: "Местные магазины одежды",
+        category: "odezhda",
+        address: "Центральные улицы",
+        phone: "—",
+        description: "Одежда и обувь для всей семьи — мужская, женская, детская",
+        products: ["Платья", "Костюмы", "Джинсы", "Обувь", "Аксессуары"],
+        badge: "Одежда",
+        rating: 4.5
+    },
+    {
+        id: 14,
+        name: "Местные магазины бытовой химии",
+        category: "byt",
+        address: "Центральные улицы",
+        phone: "—",
+        description: "Бытовая химия, уборка, гигиена — порошки, гели, средства для уборки",
+        products: ["Порошки", "Гели", "Средства для уборки", "Гигиена"],
+        badge: "Быт",
+        rating: 4.3
     }
 ];
 
-// Категории
+// Категории (ключ = slug из URL ?cat=mebel)
 const categories = {
-    "мебель": { name: "Мебель", icon: "🪑", description: "Мебель для дома и офиса в Гусеве" },
-    "продукты": { name: "Продукты", icon: "🛒", description: "Продукты питания в Гусеве" },
-    "стройматериалы": { name: "Стройматериалы", icon: "🧱", description: "Строительные материалы в Гусеве" },
-    "одежда": { name: "Одежда", icon: "👗", description: "Одежда и обувь в Гусеве" },
-    "техника": { name: "Техника", icon: "💻", description: "Бытовая техника и электроника в Гусеве" },
-    "быт": { name: "Бытовая химия", icon: "🏠", description: "Бытовая химия и товары для дома в Гусеве" },
-    "аптека": { name: "Аптеки", icon: "💊", description: "Аптеки и лекарства в Гусеве" },
-    "авто": { name: "Авто", icon: "🚗", description: "Автозапчасти и автотовары в Гусеве" }
+    "mebel": { name: "Мебель", icon: "🪑", description: "Мебель для дома и офиса в Гусеве" },
+    "produkty": { name: "Продукты", icon: "🛒", description: "Продукты питания в Гусеве" },
+    "stroymaterialy": { name: "Стройматериалы", icon: "🧱", description: "Строительные материалы в Гусеве" },
+    "odezhda": { name: "Одежда", icon: "👗", description: "Одежда и обувь в Гусеве" },
+    "tehnika": { name: "Техника", icon: "💻", description: "Бытовая техника и электроника в Гусеве" },
+    "byt": { name: "Бытовая химия", icon: "🧴", description: "Бытовая химия и товары для дома в Гусеве" },
+    "apteka": { name: "Аптеки", icon: "💊", description: "Аптеки и лекарства в Гусеве" },
+    "avto": { name: "Авто", icon: "🚗", description: "Автозапчасти и автотовары в Гусеве" }
 };
 
 // Инициализация
@@ -198,28 +220,46 @@ function search() {
     const query = document.getElementById('searchInput').value.toLowerCase().trim();
     if (!query) return;
     
+    const resultsBox = document.getElementById('search-results');
+    
     const categoryMap = {
-        "мебель": "мебель",
-        "кровать": "мебель",
-        "шкаф": "мебель",
-        "стол": "мебель",
-        "продукты": "продукты",
-        "еда": "продукты",
-        "молоко": "продукты",
-        "хлеб": "продукты",
-        "стройматериалы": "стройматериалы",
-        "строительные": "стройматериалы",
-        "кирпич": "стройматериалы",
-        "одежда": "одежда",
-        "обувь": "одежда",
-        "платье": "одежда",
-        "техника": "техника",
-        "телевизор": "техника",
-        "холодильник": "техника",
-        "аптека": "аптека",
-        "лекарства": "аптека",
-        "авто": "авто",
-        "машина": "авто"
+        "мебель": "mebel",
+        "кровать": "mebel",
+        "шкаф": "mebel",
+        "стол": "mebel",
+        "диван": "mebel",
+        "продукты": "produkty",
+        "еда": "produkty",
+        "молоко": "produkty",
+        "хлеб": "produkty",
+        "мясо": "produkty",
+        "овощи": "produkty",
+        "фрукты": "produkty",
+        "стройматериалы": "stroymaterialy",
+        "строительные": "stroymaterialy",
+        "кирпич": "stroymaterialy",
+        "цемент": "stroymaterialy",
+        "краска": "stroymaterialy",
+        "одежда": "odezhda",
+        "обувь": "odezhda",
+        "платье": "odezhda",
+        "костюм": "odezhda",
+        "техника": "tehnika",
+        "телевизор": "tehnika",
+        "холодильник": "tehnika",
+        "телефон": "tehnika",
+        "ноутбук": "tehnika",
+        "быт": "byt",
+        "химия": "byt",
+        "порошок": "byt",
+        "уборка": "byt",
+        "аптека": "apteka",
+        "лекарства": "apteka",
+        "витамины": "apteka",
+        "авто": "avto",
+        "машина": "avto",
+        "запчасти": "avto",
+        "шины": "avto"
     };
     
     let category = null;
@@ -232,18 +272,66 @@ function search() {
     
     if (category) {
         window.location.href = `category.html?cat=${category}`;
+        return;
+    }
+    
+    const results = shopsData.filter(shop => 
+        shop.name.toLowerCase().includes(query) ||
+        shop.description.toLowerCase().includes(query) ||
+        shop.products.some(p => p.toLowerCase().includes(query))
+    );
+    
+    if (!resultsBox) return;
+    
+    if (results.length > 0) {
+        resultsBox.innerHTML = `
+            <div class="search-results-header">
+                <span>Найдено ${results.length} магазинов</span>
+                <button onclick="document.getElementById('search-results').innerHTML=''" class="search-results-close">✕</button>
+            </div>
+            <div class="search-results-list">
+                ${results.map(shop => `
+                    <a href="category.html?cat=${shop.category}" class="search-result-card">
+                        <div class="search-result-name">${shop.name}</div>
+                        <div class="search-result-addr">${shop.address}</div>
+                        <div class="search-result-desc">${shop.description}</div>
+                    </a>
+                `).join('')}
+            </div>
+        `;
     } else {
-        const results = shopsData.filter(shop => 
-            shop.name.toLowerCase().includes(query) ||
-            shop.description.toLowerCase().includes(query) ||
-            shop.products.some(p => p.toLowerCase().includes(query))
-        );
-        
-        if (results.length > 0) {
-            alert(`Найдено ${results.length} магазинов по запросу "${query}"`);
-        } else {
-            alert(`Магазины по запросу "${query}" не найдены. Попробуйте другой запрос.`);
-        }
+        resultsBox.innerHTML = `
+            <div class="search-results-header">
+                <span>Ничего не найдено</span>
+                <button onclick="document.getElementById('search-results').innerHTML=''" class="search-results-close">✕</button>
+            </div>
+            <p class="search-results-empty">Магазины по запросу «${query}» не найдены. Попробуйте другой запрос.</p>
+        `;
+    }
+}
+
+// Поиск внутри категории
+function searchInCategory() {
+    const query = document.getElementById('searchInput').value.toLowerCase().trim();
+    if (!query) return;
+    
+    const params = new URLSearchParams(window.location.search);
+    const cat = params.get('cat');
+    
+    const results = shopsData.filter(shop => {
+        if (cat && shop.category !== cat.toLowerCase()) return false;
+        return shop.name.toLowerCase().includes(query) ||
+               shop.description.toLowerCase().includes(query) ||
+               shop.products.some(p => p.toLowerCase().includes(query));
+    });
+    
+    const grid = document.getElementById('categoryShops');
+    if (!grid) return;
+    
+    if (results.length > 0) {
+        grid.innerHTML = results.map((shop, index) => createShopCard(shop, index)).join('');
+    } else {
+        grid.innerHTML = '<p style="text-align:center; color:#8892b0; grid-column:1/-1; padding:60px;">Магазины по запросу «' + query + '» не найдены в этой категории</p>';
     }
 }
 
@@ -265,7 +353,7 @@ function loadCategoryPage() {
     document.title = `${category.name} в Гусеве — Флаер Гусев`;
     
     const filteredShops = shopsData.filter(shop => 
-        shop.category.toLowerCase() === category.name.toLowerCase()
+        shop.category === cat.toLowerCase()
     );
     
     const grid = document.getElementById('categoryShops');
