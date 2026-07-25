@@ -1,0 +1,26 @@
+<!-- ХЛЕБНЫЕ КРОШКИ -->
+<nav class="breadcrumbs" style="
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+    color: #94a3b8;
+    font-size: 0.9rem;
+">
+    <a href="index.html" style="color: #60a5fa; text-decoration: none;">Главная</a>
+    <span style="margin: 0 10px;">/</span>
+    <span id="current-page" style="color: #e2e8f0;">Текущая страница</span>
+</nav>
+
+<script>
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    const pageNames = {
+        'index.html': 'Главная',
+        'tariffs.html': 'Тарифы',
+        'blog.html': 'Блог',
+        'contacts.html': 'Контакты',
+        'moose.html': 'О лосе',
+        'category.html': 'Категория'
+    };
+    
+    document.getElementById('current-page').textContent = pageNames[currentPage] || currentPage;
+</script>
