@@ -986,7 +986,109 @@ body {
     }
 }
 
+
 /* ========================================
+   Internal Links (Полезное)
+   ======================================== */
+
+.internal-links {
+    padding: 100px 0;
+    background: var(--dark);
+    position: relative;
+}
+
+.internal-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin-top: 50px;
+}
+
+.internal-card {
+    background: linear-gradient(135deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 35px 30px;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.internal-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent), var(--gold));
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+}
+
+.internal-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(233,69,96,0.3);
+    box-shadow: var(--shadow-glow);
+}
+
+.internal-card:hover::before {
+    transform: scaleX(1);
+}
+
+.internal-card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: var(--light);
+}
+
+.internal-card p {
+    color: var(--gray);
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 18px;
+}
+
+.internal-link {
+    display: inline-block;
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 6px 14px;
+    border: 1px solid rgba(233,69,96,0.2);
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    margin: 2px;
+}
+
+.internal-link:hover {
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+    transform: translateY(-2px);
+}
+
+/* Category card internal links */
+.internal-card .internal-link {
+    display: inline-block;
+}
+
+@media (max-width: 992px) {
+    .internal-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .internal-grid {
+        grid-template-columns: 1fr;
+    }
+    .internal-links {
+        padding: 60px 0;
+    }
+}/* ========================================
    РўРђР РР¤Р«
    ======================================== */
 
