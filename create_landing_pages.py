@@ -120,6 +120,7 @@ template = """<!DOCTYPE html>
     
     <link rel="canonical" href="https://gusev-flyer.ru/{slug}.html">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preload" href="css/style.css" as="style">
     <link rel="stylesheet" href="css/style.css">
     
     <!-- Яндекс.Вебмастер верификация -->
