@@ -59,7 +59,7 @@
       "name": "Одежда в Гусеве",
       "description": "Магазины Одежда в городе Гусев, Калининградская область",
       "url": "https://gusev-flyer.ru/odezhda.html",
-      "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Одежда 'Магазин одежды "Стиль"'", "url": "https://gusev-flyer.ru/odezhda.html", "description": "Платья, костюмы, джинсы, обувь, аксессуары"}]
+      "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Kari Гипер", "url": "https://gusev-flyer.ru/odezhda.html", "description": "Обувь для всей семьи"}, {"@type": "ListItem", "position": 2, "name": "Золотая комета", "url": "https://gusev-flyer.ru/odezhda.html", "description": "Одежда, аксессуары"}, {"@type": "ListItem", "position": 3, "name": "Супер Цены", "url": "https://gusev-flyer.ru/odezhda.html", "description": "Одежда по доступным ценам"}]
     }
     </script>
     
@@ -86,49 +86,24 @@
     </script>
 </head>
 <body>
-    <header class="site-header" style="
-    background: #0f172a;
-    border-bottom: 2px solid #1e293b;
-    padding: 20px 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-">
-    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-        <div style="display: flex; justify-content: space-between; align-items: center;">
-            <a href="index.html" style="text-decoration: none;">
-                <div style="display: flex; align-items: center; gap: 10px;">
-                    <span style="font-size: 2rem;"></span>
-                    <span style="
-                        font-size: 1.5rem;
-                        font-weight: bold;
-                        background: linear-gradient(135deg, #60a5fa, #a78bfa);
-                        -webkit-background-clip: text;
-                        -webkit-text-fill-color: transparent;
-                    ">ФлаерГусев</span>
-                </div>
+    <header class="header" id="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">📋</div>
+                <span class="logo-text">Флаер<strong>Гусев</strong></span>
             </a>
-
-            <nav class="main-nav">
-                <ul style="
-                    display: flex;
-                    gap: 25px;
-                    list-style: none;
-                    margin: 0;
-                    padding: 0;
-                ">
-                    <li><a href="index.html" style="color: #e2e8f0; text-decoration: none; font-weight: 500;">Главная</a></li>
-                    <li><a href="category.html?cat=mebel" style="color: #e2e8f0; text-decoration: none; font-weight: 500;">Категории</a></li>
-                    <li><a href="tariffs.html" style="color: #e2e8f0; text-decoration: none; font-weight: 500;">Тарифы</a></li>
-                    <li><a href="blog.html" style="color: #e2e8f0; text-decoration: none; font-weight: 500;">Блог</a></li>
-                    <li><a href="contacts.html" style="color: #e2e8f0; text-decoration: none; font-weight: 500;">Контакты</a></li>
-                </ul>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Главная</a>
+                <a href="index.html#categories" class="nav-link">Категории</a>
+                <a href="index.html#shops" class="nav-link">Магазины</a>
+                <a href="index.html#about" class="nav-link">О нас</a>
+                <a href="index.html#contact" class="nav-link">Контакты</a>
             </nav>
+            <button class="menu-btn" onclick="toggleMenu()">☰</button>
         </div>
-    </div>
-</header>
+    </header>
 
-<section class="hero" style="padding: 60px 0;">
+    <section class="hero" style="padding: 60px 0;">
         <div class="container">
             <div class="hero-badge">
                 <span>👗</span>
@@ -146,13 +121,35 @@
                 
         <div class="shop-card" style="animation: fadeInUp 0.6s ease 0.0s both">
             <div class="shop-header">
-                <span class="shop-name">Одежда 'Магазин одежды "Стиль"'</span>
-                <span class="shop-badge">Скидки</span>
+                <span class="shop-name">Kari Гипер</span>
+                <span class="shop-badge">Одежда</span>
             </div>
-            <div class="shop-address">📍 ул. Центральная, 22</div>
-            <div class="shop-phone">📱 +7 (952) 796-57-85</div>
+            <div class="shop-address">📍 просп. Ленина, 21А</div>
+            <div class="shop-phone">📱 +7 (499) 648-05-40</div>
             <div class="shop-products">
-                <span class="product-tag">Платья</span><span class="product-tag">костюмы</span><span class="product-tag">джинсы</span><span class="product-tag">обувь</span><span class="product-tag">аксессуары</span>
+                <span class="product-tag">Обувь для всей семьи</span>
+            </div>
+        </div>
+        <div class="shop-card" style="animation: fadeInUp 0.6s ease 0.1s both">
+            <div class="shop-header">
+                <span class="shop-name">Золотая комета</span>
+                <span class="shop-badge">Одежда</span>
+            </div>
+            <div class="shop-address">📍 ул. Ломоносова, 5</div>
+            <div class="shop-phone">📱 +7 (4012) 61-40-02</div>
+            <div class="shop-products">
+                <span class="product-tag">Одежда</span><span class="product-tag">аксессуары</span>
+            </div>
+        </div>
+        <div class="shop-card" style="animation: fadeInUp 0.6s ease 0.2s both">
+            <div class="shop-header">
+                <span class="shop-name">Супер Цены</span>
+                <span class="shop-badge">Одежда</span>
+            </div>
+            <div class="shop-address">📍 Правобережная ул., 4 (2 этаж)</div>
+            <div class="shop-phone">📱 +7 (962) 269-45-71</div>
+            <div class="shop-products">
+                <span class="product-tag">Одежда по доступным ценам</span>
             </div>
         </div>
             </div>
@@ -163,9 +160,9 @@
         <div class="container">
             <h2 class="section-title">Одежда в Гусеве — всё для вашего комфорта</h2>
             <div class="seo-content">
-                <p>Магазины одежды в Гусеве — найдите платье, костюм, джинсы или обувь для всей семьи. Наш каталог собрал для вас актуальные адреса и телефоны проверенных точек.</p>
-                <p>Каталог организаций Гусева: одежда и обувь — в одном месте. Не нужно искать по объявлениям и соцсетям — всё, что нужно, уже собрано на сайте Флаер Гусев.</p>
-                <p>Владельцы магазинов одежды в Гусеве — добавьте свою точку в каталог бесплатно на 3 месяца! Укажите ассортимент, адрес и фото — ваши товары заметят тысячи жителей города.</p>
+                <p>Гусев — город с богатой инфраструктурой и развитой торговлей. В нашем каталоге собраны лучшие магазины категории "Одежда" в Гусеве.</p>
+                <p>Мы постоянно обновляем информацию о магазинах и товарах, чтобы вы могли найти самые актуальные предложения. Все магазины проходят проверку — мы гарантируем качество данных.</p>
+                <p>Если вы владелец магазина в категории "Одежда" — добавьте свой магазин бесплатно! Первые 3 месяца размещения — без платежей.</p>
             </div>
         </div>
     </section>
@@ -183,59 +180,38 @@
         </div>
     </section>
 
-    <footer class="site-footer" style="
-    background: #0f172a;
-    border-top: 2px solid #1e293b;
-    padding: 40px 0 20px;
-    margin-top: 80px;
-">
-    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px;">
-            <div>
-                <h4 style="color: #60a5fa; margin-bottom: 15px;">О проекте</h4>
-                <p style="color: #94a3b8; line-height: 1.6;">
-                    Флаер Гусев — цифровой каталог магазинов города Гусев, Калининградская область.
-                </p>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-logo">
+                    <a href="index.html" class="logo">
+                        <div class="logo-icon">📋</div>
+                        <span class="logo-text">Флаер<strong>Гусев</strong></span>
+                    </a>
+                    <p>Каталог магазинов и товаров города Гусев, Калининградская область</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Навигация</h4>
+                    <a href="index.html">Главная</a>
+                    <a href="index.html#categories">Категории</a>
+                    <a href="index.html#shops">Магазины</a>
+                    <a href="index.html#about">О нас</a>
+                </div>
+                <div class="footer-categories">
+                    <h4>Категории</h4>
+                    <a href="mebel.html">Мебель в Гусеве</a>
+                    <a href="produkty.html">Продукты Гусев</a>
+                    <a href="stroymaterialy.html">Стройматериалы</a>
+                    <a href="odezhda.html">Одежда</a>
+                </div>
             </div>
-
-            <div>
-                <h4 style="color: #60a5fa; margin-bottom: 15px;">Категории</h4>
-                <ul style="list-style: none; padding: 0; color: #94a3b8;">
-                    <li style="margin-bottom: 8px;"><a href="category.html?cat=mebel" style="color: #94a3b8; text-decoration: none;">🪑 Мебель</a></li>
-                    <li style="margin-bottom: 8px;"><a href="category.html?cat=produkty" style="color: #94a3b8; text-decoration: none;">🛒 Продукты</a></li>
-                    <li style="margin-bottom: 8px;"><a href="category.html?cat=stroymaterialy" style="color: #94a3b8; text-decoration: none;">🧱 Стройматериалы</a></li>
-                    <li style="margin-bottom: 8px;"><a href="category.html?cat=odezhda" style="color: #94a3b8; text-decoration: none;">👗 Одежда</a></li>
-                    <li style="margin-bottom: 8px;"><a href="category.html?cat=tehnika" style="color: #94a3b8; text-decoration: none;">💻 Техника</a></li>
-                    <li style="margin-bottom: 8px;"><a href="category.html?cat=byt" style="color: #94a3b8; text-decoration: none;">🧴 Бытовая химия</a></li>
-                    <li style="margin-bottom: 8px;"><a href="category.html?cat=apteka" style="color: #94a3b8; text-decoration: none;">💊 Аптеки</a></li>
-                    <li style="margin-bottom: 8px;"><a href="category.html?cat=avto" style="color: #94a3b8; text-decoration: none;">🚗 Авто</a></li>
-                </ul>
-            </div>
-
-            <div>
-                <h4 style="color: #60a5fa; margin-bottom: 15px;">Полезное</h4>
-                <ul style="list-style: none; padding: 0; color: #94a3b8;">
-                    <li style="margin-bottom: 8px;"><a href="tariffs.html" style="color: #94a3b8; text-decoration: none;">💎 Тарифы</a></li>
-                    <li style="margin-bottom: 8px;"><a href="blog.html" style="color: #94a3b8; text-decoration: none;">📝 Блог</a></li>
-                    <li style="margin-bottom: 8px;"><a href="moose.html" style="color: #94a3b8; text-decoration: none;">🦌 О лосе</a></li>
-                    <li style="margin-bottom: 8px;"><a href="contacts.html" style="color: #94a3b8; text-decoration: none;">📞 Контакты</a></li>
-                </ul>
+            <div class="footer-bottom">
+                <p>&copy; 2026 ФлаерГусев. Все права защищены.</p>
+                <p>📧 pryazhnikov24@yandex.ru | 📱 +7 (952) 796-57-85</p>
+                <p>г. Гусев, Калининградская область</p>
             </div>
         </div>
-
-        <div style="
-            text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid #1e293b;
-            color: #64748b;
-            font-size: 0.9rem;
-        ">
-            &copy; 2026 Флаер Гусев. Все права защищены. | pryazhnikov24@yandex.ru | +7 (952) 796-57-85 | г. Гусев, Калининградская обл.
-        </div>
-    </div>
-</footer>
-
-
+    </footer>
 
     <script src="js/main.js"></script>
 </body>
