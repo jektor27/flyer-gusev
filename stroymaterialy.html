@@ -59,7 +59,7 @@
       "name": "Стройматериалы в Гусеве",
       "description": "Магазины Стройматериалы в городе Гусев, Калининградская область",
       "url": "https://gusev-flyer.ru/stroymaterialy.html",
-      "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Тёплый дом", "url": "https://gusev-flyer.ru/stroymaterialy.html", "description": "Школьная ул., 11 — кирпич, цемент, доски, краска, инструменты"}, {"@type": "ListItem", "position": 2, "name": "Фазенда", "url": "https://gusev-flyer.ru/stroymaterialy.html", "description": "Московская ул., 33А — инструменты, электрика, сантехника"}]
+      "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Тёплый дом", "url": "https://gusev-flyer.ru/stroymaterialy.html", "description": "Кирпич, цемент, доски, краска, инструменты"}, {"@type": "ListItem", "position": 2, "name": "Фазенда", "url": "https://gusev-flyer.ru/stroymaterialy.html", "description": "Инструменты, крепёж, электрика, сантехника"}]
     }
     </script>
     
@@ -86,49 +86,24 @@
     </script>
 </head>
 <body>
-    <header class="site-header" style="
-    background: #0f172a;
-    border-bottom: 2px solid #1e293b;
-    padding: 20px 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-">
-    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-        <div style="display: flex; justify-content: space-between; align-items: center;">
-            <a href="index.html" style="text-decoration: none;">
-                <div style="display: flex; align-items: center; gap: 10px;">
-                    <span style="font-size: 2rem;"></span>
-                    <span style="
-                        font-size: 1.5rem;
-                        font-weight: bold;
-                        background: linear-gradient(135deg, #60a5fa, #a78bfa);
-                        -webkit-background-clip: text;
-                        -webkit-text-fill-color: transparent;
-                    ">ФлаерГусев</span>
-                </div>
+    <header class="header" id="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">📋</div>
+                <span class="logo-text">Флаер<strong>Гусев</strong></span>
             </a>
-
-            <nav class="main-nav">
-                <ul style="
-                    display: flex;
-                    gap: 25px;
-                    list-style: none;
-                    margin: 0;
-                    padding: 0;
-                ">
-                    <li><a href="index.html" style="color: #e2e8f0; text-decoration: none; font-weight: 500;">Главная</a></li>
-                    <li><a href="category.html?cat=mebel" style="color: #e2e8f0; text-decoration: none; font-weight: 500;">Категории</a></li>
-                    <li><a href="tariffs.html" style="color: #e2e8f0; text-decoration: none; font-weight: 500;">Тарифы</a></li>
-                    <li><a href="blog.html" style="color: #e2e8f0; text-decoration: none; font-weight: 500;">Блог</a></li>
-                    <li><a href="contacts.html" style="color: #e2e8f0; text-decoration: none; font-weight: 500;">Контакты</a></li>
-                </ul>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Главная</a>
+                <a href="index.html#categories" class="nav-link">Категории</a>
+                <a href="index.html#shops" class="nav-link">Магазины</a>
+                <a href="index.html#about" class="nav-link">О нас</a>
+                <a href="index.html#contact" class="nav-link">Контакты</a>
             </nav>
+            <button class="menu-btn" onclick="toggleMenu()">☰</button>
         </div>
-    </div>
-</header>
+    </header>
 
-<section class="hero" style="padding: 60px 0;">
+    <section class="hero" style="padding: 60px 0;">
         <div class="container">
             <div class="hero-badge">
                 <span>🧱</span>
@@ -152,18 +127,18 @@
             <div class="shop-address">📍 Школьная ул., 11</div>
             <div class="shop-phone">📱 +7 (40143) XXX-XX-XX</div>
             <div class="shop-products">
-                <span class="product-tag">Кирпич</span><span class="product-tag">Цемент</span><span class="product-tag">Доски</span><span class="product-tag">Краска</span><span class="product-tag">Инструменты</span>
+                <span class="product-tag">Кирпич</span><span class="product-tag">цемент</span><span class="product-tag">доски</span><span class="product-tag">краска</span><span class="product-tag">инструменты</span>
             </div>
         </div>
         <div class="shop-card" style="animation: fadeInUp 0.6s ease 0.1s both">
             <div class="shop-header">
                 <span class="shop-name">Фазенда</span>
-                <span class="shop-badge">Стройматериалы</span>
+                <span class="shop-badge">Строительный магазин</span>
             </div>
             <div class="shop-address">📍 Московская ул., 33А</div>
             <div class="shop-phone">📱 не указан</div>
             <div class="shop-products">
-                <span class="product-tag">Инструменты</span><span class="product-tag">Электрика</span><span class="product-tag">Сантехника</span><span class="product-tag">Крепёж</span>
+                <span class="product-tag">Инструменты</span><span class="product-tag">крепёж</span><span class="product-tag">электрика</span><span class="product-tag">сантехника</span>
             </div>
         </div>
             </div>
@@ -174,9 +149,9 @@
         <div class="container">
             <h2 class="section-title">Стройматериалы в Гусеве — всё для вашего комфорта</h2>
             <div class="seo-content">
-                <p>Ищете стройматериалы в Гусеве? Наш каталог — всё, что нужно для ремонта и строительства: кирпич, цемент, доски, краска, инструменты. Актуальные адреса, телефоны и цены проверенных магазинов.</p>
-                <p>Стройматериалы в Гусеве — от базовых позиций до профессионального инструмента. Каталог организаций Гусева собрал 10+ магазинов стройматериалов в одном месте, чтобы вы тратили время на стройку, а не на поиск.</p>
-                <p>Владельцы магазинов стройматериалов — добавьте свою точку в каталог бесплатно! Первые 3 месяца размещения без платежей. Привлекайте клиентов из Гусева и района.</p>
+                <p>Гусев — город с богатой инфраструктурой и развитой торговлей. В нашем каталоге собраны лучшие магазины категории "Стройматериалы" в Гусеве.</p>
+                <p>Мы постоянно обновляем информацию о магазинах и товарах, чтобы вы могли найти самые актуальные предложения. Все магазины проходят проверку — мы гарантируем качество данных.</p>
+                <p>Если вы владелец магазина в категории "Стройматериалы" — добавьте свой магазин бесплатно! Первые 3 месяца размещения — без платежей.</p>
             </div>
         </div>
     </section>
@@ -194,59 +169,38 @@
         </div>
     </section>
 
-    <footer class="site-footer" style="
-    background: #0f172a;
-    border-top: 2px solid #1e293b;
-    padding: 40px 0 20px;
-    margin-top: 80px;
-">
-    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px;">
-            <div>
-                <h4 style="color: #60a5fa; margin-bottom: 15px;">О проекте</h4>
-                <p style="color: #94a3b8; line-height: 1.6;">
-                    Флаер Гусев — цифровой каталог магазинов города Гусев, Калининградская область.
-                </p>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-logo">
+                    <a href="index.html" class="logo">
+                        <div class="logo-icon">📋</div>
+                        <span class="logo-text">Флаер<strong>Гусев</strong></span>
+                    </a>
+                    <p>Каталог магазинов и товаров города Гусев, Калининградская область</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Навигация</h4>
+                    <a href="index.html">Главная</a>
+                    <a href="index.html#categories">Категории</a>
+                    <a href="index.html#shops">Магазины</a>
+                    <a href="index.html#about">О нас</a>
+                </div>
+                <div class="footer-categories">
+                    <h4>Категории</h4>
+                    <a href="mebel.html">Мебель в Гусеве</a>
+                    <a href="produkty.html">Продукты Гусев</a>
+                    <a href="stroymaterialy.html">Стройматериалы</a>
+                    <a href="odezhda.html">Одежда</a>
+                </div>
             </div>
-
-            <div>
-                <h4 style="color: #60a5fa; margin-bottom: 15px;">Категории</h4>
-                <ul style="list-style: none; padding: 0; color: #94a3b8;">
-                    <li style="margin-bottom: 8px;"><a href="category.html?cat=mebel" style="color: #94a3b8; text-decoration: none;">🪑 Мебель</a></li>
-                    <li style="margin-bottom: 8px;"><a href="category.html?cat=produkty" style="color: #94a3b8; text-decoration: none;">🛒 Продукты</a></li>
-                    <li style="margin-bottom: 8px;"><a href="category.html?cat=stroymaterialy" style="color: #94a3b8; text-decoration: none;">🧱 Стройматериалы</a></li>
-                    <li style="margin-bottom: 8px;"><a href="category.html?cat=odezhda" style="color: #94a3b8; text-decoration: none;">👗 Одежда</a></li>
-                    <li style="margin-bottom: 8px;"><a href="category.html?cat=tehnika" style="color: #94a3b8; text-decoration: none;">💻 Техника</a></li>
-                    <li style="margin-bottom: 8px;"><a href="category.html?cat=byt" style="color: #94a3b8; text-decoration: none;">🧴 Бытовая химия</a></li>
-                    <li style="margin-bottom: 8px;"><a href="category.html?cat=apteka" style="color: #94a3b8; text-decoration: none;">💊 Аптеки</a></li>
-                    <li style="margin-bottom: 8px;"><a href="category.html?cat=avto" style="color: #94a3b8; text-decoration: none;">🚗 Авто</a></li>
-                </ul>
-            </div>
-
-            <div>
-                <h4 style="color: #60a5fa; margin-bottom: 15px;">Полезное</h4>
-                <ul style="list-style: none; padding: 0; color: #94a3b8;">
-                    <li style="margin-bottom: 8px;"><a href="tariffs.html" style="color: #94a3b8; text-decoration: none;">💎 Тарифы</a></li>
-                    <li style="margin-bottom: 8px;"><a href="blog.html" style="color: #94a3b8; text-decoration: none;">📝 Блог</a></li>
-                    <li style="margin-bottom: 8px;"><a href="moose.html" style="color: #94a3b8; text-decoration: none;">🦌 О лосе</a></li>
-                    <li style="margin-bottom: 8px;"><a href="contacts.html" style="color: #94a3b8; text-decoration: none;">📞 Контакты</a></li>
-                </ul>
+            <div class="footer-bottom">
+                <p>&copy; 2026 ФлаерГусев. Все права защищены.</p>
+                <p>📧 pryazhnikov24@yandex.ru | 📱 +7 (952) 796-57-85</p>
+                <p>г. Гусев, Калининградская область</p>
             </div>
         </div>
-
-        <div style="
-            text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid #1e293b;
-            color: #64748b;
-            font-size: 0.9rem;
-        ">
-            &copy; 2026 Флаер Гусев. Все права защищены. | pryazhnikov24@yandex.ru | +7 (952) 796-57-85 | г. Гусев, Калининградская обл.
-        </div>
-    </div>
-</footer>
-
-
+    </footer>
 
     <script src="js/main.js"></script>
 </body>
