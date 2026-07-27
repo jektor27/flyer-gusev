@@ -22,7 +22,9 @@ const shopsData = [
     {id:20,name:"Апрель",category:"apteka",address:"Московская ул., 52",phone:"не указан",description:"Аптека — лекарства, витамины, медтехника",products:["Лекарства","Витамины","Медтехника"],badge:"Аптека",rating:4.5},
     {id:21,name:"Техник",category:"avto",address:"ул. Победы, 41А",phone:"+7 (906) 215-11-19",description:"Автозапчасти — иномарки, отечественные",products:["Запчасти","Иномарки","Отечественные"],badge:"Авто",rating:4.5},
     {id:22,name:"Автофарт",category:"avto",address:"ул. Менделеева, 2А",phone:"+7 (952) 116-84-74",description:"Автозапчасти, аксессуары",products:["Запчасти","Аксессуары"],badge:"Авто",rating:4.4},
-    {id:23,name:"Деталь",category:"avto",address:"Московская ул., 39",phone:"+7 (921) 265-41-18",description:"Автозапчасти, шины, масла",products:["Запчасти","Шины","Масла"],badge:"Авто",rating:4.3}
+    {id:23,name:"Деталь",category:"avto",address:"Московская ул., 39",phone:"+7 (921) 265-41-18",description:"Автозапчасти, шины, масла",products:["Запчасти","Шины","Масла"],badge:"Авто",rating:4.3},
+    {id:24,name:"Канцлир",category:"kanctovary",address:"Московская ул., 28",phone:"+7 (911) 485-83-30",description:"Канцтовары — тетради, ручки, бумага, портфели",products:["Тетради","Ручки","Бумага","Портфели"],badge:"Канцтовары",rating:4.5},
+    {id:25,name:"Холст с маслом",category:"kanctovary",address:"ул. Менделеева, 8А (этаж 1)",phone:"+7 (906) 237-70-13",description:"Канцтовары, художественные принадлежности",products:["Канцтовары","Художественные принадлежности","Холсты"],badge:"Канцтовары",rating:4.4},
 ]
 
 // Категории (ключ = slug из URL ?cat=mebel)
@@ -34,7 +36,8 @@ const categories = {
     "tehnika": { name: "Техника", icon: "💻", description: "Бытовая техника и электроника в Гусеве" },
     "byt": { name: "Бытовая химия", icon: "🧴", description: "Бытовая химия и товары для дома в Гусеве" },
     "apteka": { name: "Аптеки", icon: "💊", description: "Аптеки и лекарства в Гусеве" },
-    "avto": { name: "Авто", icon: "🚗", description: "Автозапчасти и автотовары в Гусеве" }
+    "avto": { name: "Авто", icon: "🚗", description: "Автозапчасти и автотовары в Гусеве" },
+    "kanctovary": { name: "Канцтовары", icon: "📎", description: "Канцтовары и офисные принадлежности в Гусеве" }
 };
 
 // Инициализация
@@ -43,6 +46,14 @@ document.addEventListener('DOMContentLoaded', function() {
     initSearch();
     loadCategoryPage();
     initScrollEffects();
+    const form = document.getElementById('addShopForm');
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Спасибо! Мы свяжемся с вами в течение 24 часов.');
+            form.reset();
+        });
+    }
 });
 
 // Загрузка магазинов
@@ -50,27 +61,60 @@ function loadShops() {
     const grid = document.getElementById('shopsGrid');
     if (!grid) return;
     
-    grid.innerHTML = shopsData.slice(0, 6).map((shop, index) => 
-        createShopCard(shop, index)
-    ).join('');
+    grid.innerHTML = '';
+    shopsData.slice(0, 6).forEach((shop, index) => {
+        grid.appendChild(createShopCard(shop, index));
+    });
 }
 
-// Создание карточки магазина
+// Создание карточки магазина (безопасное создание DOM-элементов)
 function createShopCard(shop, index) {
-    return `
-        <div class="shop-card" style="animation: fadeInUp 0.6s ease ${index * 0.1}s both">
-            <div class="shop-header">
-                <span class="shop-name">${shop.name}</span>
-                <span class="shop-badge">${shop.badge}</span>
-            </div>
-            <div class="shop-category">${shop.category}</div>
-            <div class="shop-address">📍 ${shop.address}</div>
-            <div class="shop-phone">📱 ${shop.phone}</div>
-            <div class="shop-products">
-                ${shop.products.slice(0, 4).map(p => `<span class="product-tag">${p}</span>`).join('')}
-            </div>
-        </div>
-    `;
+    const card = document.createElement('div');
+    card.className = 'shop-card';
+    card.style.animation = `fadeInUp 0.6s ease ${index * 0.1}s both`;
+    
+    const header = document.createElement('div');
+    header.className = 'shop-header';
+    
+    const name = document.createElement('span');
+    name.className = 'shop-name';
+    name.textContent = shop.name;
+    
+    const badge = document.createElement('span');
+    badge.className = 'shop-badge';
+    badge.textContent = shop.badge;
+    
+    header.appendChild(name);
+    header.appendChild(badge);
+    
+    const category = document.createElement('div');
+    category.className = 'shop-category';
+    category.textContent = shop.category;
+    
+    const address = document.createElement('div');
+    address.className = 'shop-address';
+    address.textContent = `📍 ${shop.address}`;
+    
+    const phone = document.createElement('div');
+    phone.className = 'shop-phone';
+    phone.textContent = `📱 ${shop.phone}`;
+    
+    const products = document.createElement('div');
+    products.className = 'shop-products';
+    shop.products.slice(0, 4).forEach(p => {
+        const tag = document.createElement('span');
+        tag.className = 'product-tag';
+        tag.textContent = p;
+        products.appendChild(tag);
+    });
+    
+    card.appendChild(header);
+    card.appendChild(category);
+    card.appendChild(address);
+    card.appendChild(phone);
+    card.appendChild(products);
+    
+    return card;
 }
 
 // Поиск
@@ -89,7 +133,14 @@ function search() {
     const query = document.getElementById('searchInput').value.toLowerCase().trim();
     if (!query) return;
     
+    const loader = document.getElementById('loader');
     const resultsBox = document.getElementById('search-results');
+    
+    if (loader) loader.style.display = 'flex';
+    if (resultsBox) resultsBox.innerHTML = '';
+    
+    setTimeout(() => {
+        if (loader) loader.style.display = 'none';
     
     const categoryMap = {
         "мебель": "mebel",
@@ -128,7 +179,13 @@ function search() {
         "авто": "avto",
         "машина": "avto",
         "запчасти": "avto",
-        "шины": "avto"
+        "шины": "avto",
+        "канцтовары": "kanctovary",
+        "канцелярия": "kanctovary",
+        "тетради": "kanctovary",
+        "ручки": "kanctovary",
+        "бумага": "kanctovary",
+        "офис": "kanctovary"
     };
     
     let category = null;
@@ -177,6 +234,7 @@ function search() {
             <p class="search-results-empty">Магазины по запросу «${query}» не найдены. Попробуйте другой запрос.</p>
         `;
     }
+    }, 500);
 }
 
 // Поиск внутри категории
@@ -237,14 +295,10 @@ function loadCategoryPage() {
     }
 }
 
-// Меню
-function toggleMenu() {
-    document.querySelector('.nav').classList.toggle('active');
-}
-
 // Эффекты скролла
 function initScrollEffects() {
     const header = document.getElementById('header');
+    if (!header) return;
     
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
@@ -255,14 +309,12 @@ function initScrollEffects() {
     });
 }
 
-// Форма
-document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('addShopForm');
-    if (form) {
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Спасибо! Ваш магазин будет добавлен после проверки.');
-            form.reset();
-        });
+// Переключение мобильного меню
+function toggleMenu() {
+    const nav = document.querySelector('.main-nav');
+    if (nav) {
+        nav.classList.toggle('active');
     }
-});
+}
+
+// Форма
