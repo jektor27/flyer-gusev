@@ -3,230 +3,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Блог Флаер Гусев — статьи о магазинах Гусева, советы по покупкам, руководства. Полезная информация о городе Гусев, Калининградская область.">
-    <meta name="keywords" content="Гусев, статьи, советы, стройматериалы, магазины Гусев, каталог Гусев, бизнес Гусев">
-    <meta name="robots" content="index, follow">
-    
-    <meta property="og:title" content="Блог Флаер Гусев — статьи и советы">
-    <meta property="og:description" content="Полезные статьи о магазинах Гусева. Советы по выбору товаров, руководства для бизнеса, новости города.">
+    <title>Блог — Флаер Гусев | Статьи и советы</title>
+    <meta name="description" content="Полезные статьи о магазинах Гусева, советы по выбору товаров, инструкции для предпринимателей. Читайте блог ФлаерГусев!">
+    <meta property="og:title" content="Блог — Флаер Гусев | Статьи и советы">
+    <meta property="og:description" content="Полезные статьи о магазинах Гусева, советы по выбору товаров, инструкции для предпринимателей.">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="ru_RU">
     <meta property="og:image" content="https://gusev-flyer.ru/og-image.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    
-    <title>Блог — Флаер Гусев | Статьи и советы</title>
-    
     <link rel="canonical" href="https://gusev-flyer.ru/blog.html">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="preload" href="css/style.css" as="style">
     <link rel="stylesheet" href="css/style.css">
-    
-    <!-- Яндекс.Вебмастер -->
     <meta name="yandex-verification" content="f76b111d88cf6ce9">
-    
-    <!-- Schema.org Blog -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Blog",
-      "name": "Флаер Гусев — Блог",
-      "description": "Статьи и советы о магазинах города Гусев",
-      "url": "https://gusev-flyer.ru/blog.html",
-      "publisher": {
-        "@type": "Organization",
-        "name": "ФлаерГусев",
-        "url": "https://gusev-flyer.ru",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://gusev-flyer.ru/og-image.png"
-        }
-      }
-    }
-    </script>
-    
-    <!-- Schema.org BreadcrumbList -->
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Главная",
-          "item": "https://gusev-flyer.ru/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Блог",
-          "item": "https://gusev-flyer.ru/blog.html"
-        }
+        {"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://gusev-flyer.ru/"},
+        {"@type": "ListItem", "position": 2, "name": "Блог", "item": "https://gusev-flyer.ru/blog.html"}
       ]
     }
     </script>
 </head>
 <body>
-    <header class="site-header" style="
-    background: #0f172a;
-    border-bottom: 2px solid #1e293b;
-    padding: 20px 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-">
-    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-        <div style="display: flex; justify-content: space-between; align-items: center;">
-            <a href="index.html" style="text-decoration: none;">
-                <div style="display: flex; align-items: center; gap: 10px;">
-                    <span style="font-size: 2rem;"></span>
-                    <span style="
-                        font-size: 1.5rem;
-                        font-weight: bold;
-                        background: linear-gradient(135deg, #60a5fa, #a78bfa);
-                        -webkit-background-clip: text;
-                        -webkit-text-fill-color: transparent;
-                    ">ФлаерГусев</span>
-                </div>
+    <header class="header" id="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">📋</div>
+                <span class="logo-text">Флаер<strong>Гусев</strong></span>
             </a>
-
-            <nav class="main-nav">
-                <ul style="
-                    display: flex;
-                    gap: 25px;
-                    list-style: none;
-                    margin: 0;
-                    padding: 0;
-                ">
-                    <li><a href="index.html" style="color: #e2e8f0; text-decoration: none; font-weight: 500;">Главная</a></li>
-                    <li><a href="categories.html" style="color: #e2e8f0; text-decoration: none; font-weight: 500;">Категории</a></li>
-                    <li><a href="tariffs.html" style="color: #e2e8f0; text-decoration: none; font-weight: 500;">Тарифы</a></li>
-                    <li><a href="blog.html" style="color: #e2e8f0; text-decoration: none; font-weight: 500;">Блог</a></li>
-                    <li><a href="contacts.html" style="color: #e2e8f0; text-decoration: none; font-weight: 500;">Контакты</a></li>
-                </ul>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Главная</a>
+                <a href="categories.html" class="nav-link">Категории</a>
+                <a href="school.html" class="nav-link">Всё для школы</a>
+                <a href="tariffs.html" class="nav-link">Тарифы</a>
+                <a href="blog.html" class="nav-link active">Блог</a>
+                <a href="contacts.html" class="nav-link">Контакты</a>
             </nav>
+            <button class="menu-btn" onclick="toggleMenu()">☰</button>
         </div>
-    </div>
-</header>
+    </header>
 
-<section class="hero" style="padding: 60px 0;">
+    <section class="hero" style="padding: 60px 0;">
         <div class="container">
-            <div class="hero-badge">
-                <span>📝</span>
-                <span>Полезный блог</span>
-            </div>
-            <h1>Блог Флаер Гусев</h1>
-            <p class="subtitle">Полезные статьи, советы и руководства для жителей Гусева</p>
+            <h1>Блог ФлаерГусев</h1>
+            <p class="subtitle">Статьи и советы для жителей и предпринимателей Гусева</p>
         </div>
     </section>
 
-    <section class="blog-list" style="padding: 60px 0;">
+    <section style="padding: 60px 0;">
         <div class="container">
-            <h2 class="section-title">Последние статьи</h2>
-            
+            <div class="blog-filters">
+                <button class="filter-btn active" data-category="all">Все статьи</button>
+                <button class="filter-btn" data-category="business">Бизнес</button>
+                <button class="filter-btn" data-category="shopping">Покупки</button>
+                <button class="filter-btn" data-category="guides">Гайды</button>
+            </div>
+
             <div class="blog-grid">
-                <article class="blog-card">
-                    <div class="blog-card-header">
-                        <span class="blog-tag">🔧 Стройматериалы</span>
-                        <span class="blog-date">24 июля 2026</span>
+
+                <article class="blog-card" data-category="shopping">
+                    <div class="blog-card-image">
+                        <div class="placeholder-image">🏗️</div>
+                        <span class="blog-badge">Стройматериалы</span>
                     </div>
-                    <h3 class="blog-card-title">
-                        <a href="article-stroymaterialy.html">Топ-5 мест, где купить стройматериалы в Гусеве в 2026 году</a>
-                    </h3>
-                    <p class="blog-card-excerpt">
-                        Обзор лучших магазинов стройматериалов в Гусеве: кирпич, цемент, доски, краска, инструменты. 
-                        Адреса, телефоны, цены и отзывы реальных покупателей.
-                    </p>
-                    <a href="article-stroymaterialy.html" class="blog-read-more">Читать статью →</a>
-                </article>
-                
-                <article class="blog-card">
-                    <div class="blog-card-header">
-                        <span class="blog-tag">📋 Бизнес</span>
-                        <span class="blog-date">24 июля 2026</span>
+                    <div class="blog-card-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">📅 24 июля 2026</span>
+                            <span class="blog-reading-time">⏱️ 5 мин</span>
+                        </div>
+                        <h3>Топ-5 мест, где купить стройматериалы в Гусеве в 2026 году</h3>
+                        <p>Обзор лучших магазинов стройматериалов в Гусеве: кирпич, цемент, доски, краска, инструменты. Адреса, телефоны и цены.</p>
+                        <a href="blog/gusev-history.html" class="blog-read-more">Читать статью →</a>
                     </div>
-                    <h3 class="blog-card-title">
-                        <a href="article-add-shop.html">Как добавить свой магазин в наш каталог: пошаговая инструкция</a>
-                    </h3>
-                    <p class="blog-card-excerpt">
-                        Полное руководство для предпринимателей Гусева. Как зарегистрировать магазин, 
-                        какие данные указать и как начать бесплатное размещение в каталоге Флаер Гусев.
-                    </p>
-                    <a href="article-add-shop.html" class="blog-read-more">Читать статью →</a>
                 </article>
+
+                <article class="blog-card" data-category="business">
+                    <div class="blog-card-image">
+                        <div class="placeholder-image">🏪</div>
+                        <span class="blog-badge">Бизнес</span>
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">📅 24 июля 2026</span>
+                            <span class="blog-reading-time">⏱️ 7 мин</span>
+                        </div>
+                        <h3>Как добавить свой магазин в наш каталог: пошаговая инструкция</h3>
+                        <p>Полное руководство для предпринимателей Гусева. Как зарегистрировать магазин и начать бесплатное размещение.</p>
+                        <a href="article-add-shop.html" class="blog-read-more">Читать статью →</a>
+                    </div>
+                </article>
+
+                <article class="blog-card" data-category="shopping">
+                    <div class="blog-card-image">
+                        <div class="placeholder-image">🎒</div>
+                        <span class="blog-badge">Всё для школы</span>
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">📅 27 июля 2026</span>
+                            <span class="blog-reading-time">⏱️ 6 мин</span>
+                        </div>
+                        <h3>Подготовка к 1 сентября: полный гид для родителей Гусева</h3>
+                        <p>Где купить канцтовары, школьную форму и рюкзаки в Гусеве. Чек-лист первоклассника и лучшие магазины.</p>
+                        <a href="school.html" class="blog-read-more">Читать статью →</a>
+                    </div>
+                </article>
+
+                <article class="blog-card" data-category="guides">
+                    <div class="blog-card-image">
+                        <div class="placeholder-image">🛋️</div>
+                        <span class="blog-badge">Мебель</span>
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">📅 20 июля 2026</span>
+                            <span class="blog-reading-time">⏱️ 4 мин</span>
+                        </div>
+                        <h3>Как выбрать мебель для маленькой квартиры: советы экспертов</h3>
+                        <p>Практические рекомендации по выбору компактной и функциональной мебели в Гусеве.</p>
+                        <a href="mebel.html" class="blog-read-more">Читать статью →</a>
+                    </div>
+                </article>
+
+            </div>
+
+            <div class="blog-cta">
+                <h2>Хотите быть в курсе?</h2>
+                <p>Подпишитесь на нашу группу ВКонтакте, чтобы получать свежие статьи и новости первыми!</p>
+                <a href="https://vk.com/flaergusev" target="_blank" class="btn-vk">Подписаться ВКонтакте</a>
             </div>
         </div>
     </section>
 
-    <section class="cta">
+    <footer class="footer">
         <div class="container">
-            <div class="cta-content">
-                <h2>Добавьте свой магазин</h2>
-                <p>Хотите быть в нашем блоге? Разместите свой магазин в каталоге!</p>
-                <a href="index.html#contact" class="cta-btn">
-                    <span>Добавить бесплатно</span>
-                    <span>→</span>
-                </a>
+            <div class="footer-grid">
+                <div class="footer-logo">
+                    <a href="index.html" class="logo">
+                        <div class="logo-icon">📋</div>
+                        <span class="logo-text">Флаер<strong>Гусев</strong></span>
+                    </a>
+                    <p>Каталог магазинов и товаров города Гусев, Калининградская область</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Навигация</h4>
+                    <a href="index.html">Главная</a>
+                    <a href="categories.html">Категории</a>
+                    <a href="school.html">Всё для школы</a>
+                    <a href="contacts.html">Контакты</a>
+                </div>
+                <div class="footer-categories">
+                    <h4>Категории</h4>
+                    <a href="mebel.html">Мебель в Гусеве</a>
+                    <a href="produkty.html">Продукты Гусев</a>
+                    <a href="stroymaterialy.html">Стройматериалы</a>
+                    <a href="odezhda.html">Одежда</a>
+                    <a href="kanctovary.html">Канцтовары</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 ФлаерГусев. Все права защищены.</p>
+                <p>📧 pryazhnikov24@yandex.ru | 📱 +7 (952) 796-57-85</p>
+                <p>г. Гусев, Калининградская область</p>
             </div>
         </div>
-    </section>
+    </footer>
 
-    <footer class="site-footer" style="
-    background: #0f172a;
-    border-top: 2px solid #1e293b;
-    padding: 40px 0 20px;
-    margin-top: 80px;
-">
-    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px;">
-            <div>
-                <h4 style="color: #60a5fa; margin-bottom: 15px;">О проекте</h4>
-                <p style="color: #94a3b8; line-height: 1.6;">
-                    Флаер Гусев — цифровой каталог магазинов города Гусев, Калининградская область.
-                </p>
-            </div>
-
-            <div>
-                <h4 style="color: #60a5fa; margin-bottom: 15px;">Категории</h4>
-                <ul style="list-style: none; padding: 0; color: #94a3b8;">
-                    <li style="margin-bottom: 8px;"><a href="category.html?cat=mebel" style="color: #94a3b8; text-decoration: none;">🪑 Мебель</a></li>
-                    <li style="margin-bottom: 8px;"><a href="category.html?cat=produkty" style="color: #94a3b8; text-decoration: none;">🛒 Продукты</a></li>
-                    <li style="margin-bottom: 8px;"><a href="category.html?cat=stroymaterialy" style="color: #94a3b8; text-decoration: none;">🧱 Стройматериалы</a></li>
-                    <li style="margin-bottom: 8px;"><a href="category.html?cat=odezhda" style="color: #94a3b8; text-decoration: none;">👗 Одежда</a></li>
-                    <li style="margin-bottom: 8px;"><a href="category.html?cat=tehnika" style="color: #94a3b8; text-decoration: none;">💻 Техника</a></li>
-                    <li style="margin-bottom: 8px;"><a href="category.html?cat=byt" style="color: #94a3b8; text-decoration: none;">🧴 Бытовая химия</a></li>
-                    <li style="margin-bottom: 8px;"><a href="category.html?cat=apteka" style="color: #94a3b8; text-decoration: none;">💊 Аптеки</a></li>
-                    <li style="margin-bottom: 8px;"><a href="category.html?cat=avto" style="color: #94a3b8; text-decoration: none;">🚗 Авто</a></li>
-                </ul>
-            </div>
-
-            <div>
-                <h4 style="color: #60a5fa; margin-bottom: 15px;">Полезное</h4>
-                <ul style="list-style: none; padding: 0; color: #94a3b8;">
-                    <li style="margin-bottom: 8px;"><a href="tariffs.html" style="color: #94a3b8; text-decoration: none;">💎 Тарифы</a></li>
-                    <li style="margin-bottom: 8px;"><a href="blog.html" style="color: #94a3b8; text-decoration: none;">📝 Блог</a></li>
-                    <li style="margin-bottom: 8px;"><a href="moose.html" style="color: #94a3b8; text-decoration: none;">🦌 О лосе</a></li>
-                    <li style="margin-bottom: 8px;"><a href="contacts.html" style="color: #94a3b8; text-decoration: none;">📞 Контакты</a></li>
-                </ul>
-            </div>
-        </div>
-
-        <div style="
-            text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid #1e293b;
-            color: #64748b;
-            font-size: 0.9rem;
-        ">
-            &copy; 2026 Флаер Гусев. Все права защищены. | pryazhnikov24@yandex.ru | +7 (952) 796-57-85 | г. Гусев, Калининградская обл.
-        </div>
-    </div>
-</footer>
-
-
-
+    <script>
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const category = this.dataset.category;
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                document.querySelectorAll('.blog-card').forEach(card => {
+                    if (category === 'all' || card.dataset.category === category) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
     <script src="js/main.js"></script>
 </body>
 </html>
