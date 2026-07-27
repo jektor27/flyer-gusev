@@ -285,10 +285,11 @@ function loadCategoryPage() {
     
     const grid = document.getElementById('categoryShops');
     if (grid) {
+        grid.innerHTML = '';
         if (filteredShops.length > 0) {
-            grid.innerHTML = filteredShops.map((shop, index) => 
-                createShopCard(shop, index)
-            ).join('');
+            filteredShops.forEach((shop, index) => {
+                grid.appendChild(createShopCard(shop, index));
+            });
         } else {
             grid.innerHTML = '<p style="text-align:center; color:#8892b0; grid-column:1/-1; padding:60px;">Магазины в этой категории пока не добавлены</p>';
         }
