@@ -25,6 +25,7 @@ const shopsData = [
     {id:23,name:"Деталь",category:"avto",address:"Московская ул., 39",phone:"+7 (921) 265-41-18",description:"Автозапчасти, шины, масла",products:["Запчасти","Шины","Масла"],badge:"Авто",rating:4.3},
     {id:24,name:"Канцлир",category:"kanctovary",address:"Московская ул., 28",phone:"+7 (911) 485-83-30",description:"Канцтовары — тетради, ручки, бумага, портфели",products:["Тетради","Ручки","Бумага","Портфели"],badge:"Канцтовары",rating:4.5},
     {id:25,name:"Холст с маслом",category:"kanctovary",address:"ул. Менделеева, 8А (этаж 1)",phone:"+7 (906) 237-70-13",description:"Канцтовары, художественные принадлежности",products:["Канцтовары","Художественные принадлежности","Холсты"],badge:"Канцтовары",rating:4.4},
+    {id:26,name:"ЖЁЛТЫЙ БЕГЕМОТИК",category:"kanctovary",address:"просп. Ленина, 21А (этаж 0)",phone:"+7 (906) 232-35-30",description:"Детские товары, игрушки, товары для дома",products:["Детские товары","Игрушки","Товары для дома"],badge:"Канцтовары",rating:4.5,website:"https://vk.com/begemotick39"}
 ]
 
 // Категории (ключ = slug из URL ?cat=mebel)
@@ -256,7 +257,10 @@ function searchInCategory() {
     if (!grid) return;
     
     if (results.length > 0) {
-        grid.innerHTML = results.map((shop, index) => createShopCard(shop, index)).join('');
+        grid.innerHTML = '';
+        results.forEach((shop, index) => {
+            grid.appendChild(createShopCard(shop, index));
+        });
     } else {
         grid.innerHTML = '<p style="text-align:center; color:#8892b0; grid-column:1/-1; padding:60px;">Магазины по запросу «' + query + '» не найдены в этой категории</p>';
     }
