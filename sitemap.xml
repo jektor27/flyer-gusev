@@ -2,107 +2,116 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://gusev-flyer.ru/</loc>
-    <lastmod>2025-07-25</lastmod>
+    <lastmod>2026-07-28</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://gusev-flyer.ru/categories.html</loc>
+    <lastmod>2026-07-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://gusev-flyer.ru/category.html</loc>
-    <lastmod>2025-07-25</lastmod>
+    <lastmod>2026-07-28</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://gusev-flyer.ru/mebel.html</loc>
-    <lastmod>2025-07-25</lastmod>
+    <lastmod>2026-07-28</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gusev-flyer.ru/produkty.html</loc>
-    <lastmod>2025-07-25</lastmod>
+    <lastmod>2026-07-28</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gusev-flyer.ru/stroymaterialy.html</loc>
-    <lastmod>2025-07-25</lastmod>
+    <lastmod>2026-07-28</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gusev-flyer.ru/odezhda.html</loc>
-    <lastmod>2025-07-25</lastmod>
+    <lastmod>2026-07-28</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gusev-flyer.ru/tehnika.html</loc>
-    <lastmod>2025-07-25</lastmod>
+    <lastmod>2026-07-28</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gusev-flyer.ru/byt.html</loc>
-    <lastmod>2025-07-25</lastmod>
+    <lastmod>2026-07-28</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gusev-flyer.ru/apteka.html</loc>
-    <lastmod>2025-07-25</lastmod>
+    <lastmod>2026-07-28</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gusev-flyer.ru/avto.html</loc>
-    <lastmod>2026-07-26</lastmod>
+    <lastmod>2026-07-28</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gusev-flyer.ru/kanctovary.html</loc>
-    <lastmod>2026-07-26</lastmod>
+    <lastmod>2026-07-28</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gusev-flyer.ru/tariffs.html</loc>
-    <lastmod>2025-07-25</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gusev-flyer.ru/blog.html</loc>
-    <lastmod>2025-07-25</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gusev-flyer.ru/contacts.html</loc>
-    <lastmod>2025-07-25</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gusev-flyer.ru/moose.html</loc>
-    <lastmod>2025-07-25</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gusev-flyer.ru/category-mebel.html</loc>
-    <lastmod>2025-07-25</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gusev-flyer.ru/article-stroymaterialy.html</loc>
-    <lastmod>2025-07-25</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://gusev-flyer.ru/article-add-shop.html</loc>
-    <lastmod>2025-07-25</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://gusev-flyer.ru/ozon-preview.html</loc>
-    <lastmod>2025-07-25</lastmod>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://gusev-flyer.ru/blog/gusev-history.html</loc>
-    <lastmod>2025-07-25</lastmod>
-    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://gusev-flyer.ru/school.html</loc>
     <lastmod>2026-07-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://gusev-flyer.ru/tariffs.html</loc>
+    <lastmod>2026-07-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://gusev-flyer.ru/blog.html</loc>
+    <lastmod>2026-07-28</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gusev-flyer.ru/contacts.html</loc>
+    <lastmod>2026-07-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://gusev-flyer.ru/moose.html</loc>
+    <lastmod>2026-07-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://gusev-flyer.ru/article-add-shop.html</loc>
+    <lastmod>2026-07-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://gusev-flyer.ru/blog/gusev-history.html</loc>
+    <lastmod>2026-07-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>
