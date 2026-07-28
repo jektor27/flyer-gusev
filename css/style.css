@@ -2189,3 +2189,28 @@ a.cta-button:active {
 .blog-article a:hover {
     text-decoration: underline;
 }
+
+.blog-article .btn-primary {
+    color: #0f172a;
+}
+
+.breadcrumbs {
+    padding: 15px 0;
+    font-size: 14px;
+    color: #94a3b8;
+}
+
+.breadcrumbs a {
+    color: #94a3b8;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.breadcrumbs a:hover {
+    color: #FBBF24;
+}
+
+.breadcrumbs span {
+    margin: 0 8px;
+    color: #475569;
+}
