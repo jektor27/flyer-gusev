@@ -322,35 +322,4 @@ function toggleMenu() {
     }
 }
 
-// Форма добавления магазина
-document.addEventListener('DOMContentLoaded', function() {
-    document.querySelectorAll('#addShopForm').forEach(function(form) {
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            var data = new FormData(form);
-            var name = data.get('name') || '';
-            var category = data.get('category') || '';
-            var address = data.get('address') || '';
-            var phone = data.get('phone') || '';
-            var description = data.get('description') || '';
-            var email = data.get('email') || '';
-            var message = data.get('message') || '';
 
-            var subject = encodeURIComponent('Заявка на размещение — ' + name);
-            var body = encodeURIComponent(
-                'Здравствуйте!\n\n' +
-                'Хочу разместить магазин в каталоге «ФлаерГусев».\n\n' +
-                (name ? 'Название: ' + name + '\n' : '') +
-                (category ? 'Категория: ' + category + '\n' : '') +
-                (address ? 'Адрес: ' + address + '\n' : '') +
-                (phone ? 'Телефон: ' + phone + '\n' : '') +
-                (email ? 'Email: ' + email + '\n' : '') +
-                (description ? 'Описание: ' + description + '\n' : '') +
-                (message ? 'Сообщение: ' + message + '\n' : '') +
-                '\nЖду вашего ответа!'
-            );
-
-            window.location.href = 'mailto:pryazhnikov24@yandex.ru?subject=' + subject + '&body=' + body;
-        });
-    });
-});
