@@ -2140,3 +2140,52 @@ a.cta-button:active {
         padding: 30px 20px;
     }
 }
+
+/* Стили для статей блога */
+.blog-article {
+    padding: 40px 0 80px;
+    max-width: 900px;
+    color: #e2e8f0;
+    line-height: 1.7;
+}
+
+.blog-article h2 {
+    font-size: 28px;
+    color: #fff;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    border-left: 4px solid #FBBF24;
+    padding-left: 15px;
+}
+
+.blog-article p {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.checklist, .tips-list {
+    background: #1a1f2e;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #2a3142;
+    margin: 30px 0;
+}
+
+.checklist li, .tips-list li {
+    margin-bottom: 15px;
+    font-size: 17px;
+}
+
+.tips-list li strong {
+    color: #FBBF24;
+}
+
+.blog-article a {
+    color: #FBBF24;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.blog-article a:hover {
+    text-decoration: underline;
+}
