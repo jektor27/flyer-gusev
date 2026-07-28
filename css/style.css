@@ -2194,6 +2194,19 @@ a.cta-button:active {
     color: #0f172a;
 }
 
+.ya-form-container {
+    background: #1a1f2e;
+    border-radius: 16px;
+    padding: 20px;
+    border: 1px solid #2a3142;
+    overflow: hidden;
+}
+
+.ya-form-container iframe {
+    border: none !important;
+    min-height: 500px;
+}
+
 .breadcrumbs {
     padding: 15px 0;
     font-size: 14px;
