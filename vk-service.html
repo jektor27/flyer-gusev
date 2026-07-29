@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1200">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { width: 1200px; height: 628px; overflow: hidden; font-family: 'Segoe UI', Arial, sans-serif; background: #0d1117; color: #fff; display: flex; }
+
+.left { flex: 1; padding: 60px 50px; display: flex; flex-direction: column; justify-content: center; }
+.right { width: 420px; display: flex; align-items: center; justify-content: center; position: relative; }
+
+.logo-block { display: flex; align-items: center; gap: 18px; margin-bottom: 30px; }
+.moose { font-size: 64px; filter: drop-shadow(0 0 20px rgba(255,183,77,0.4)); }
+.brand { font-size: 38px; font-weight: 800; background: linear-gradient(135deg, #FFB74D, #FF9800); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.tagline { font-size: 18px; color: #8b949e; margin-bottom: 35px; line-height: 1.5; }
+
+.services { display: flex; flex-direction: column; gap: 16px; margin-bottom: 35px; }
+.service { display: flex; align-items: center; gap: 14px; font-size: 17px; color: #c9d1d9; }
+.service-icon { width: 36px; height: 36px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
+.s1 { background: rgba(255,152,0,0.15); }
+.s2 { background: rgba(76,175,80,0.15); }
+.s3 { background: rgba(33,150,243,0.15); }
+
+.url-badge { display: inline-flex; align-items: center; gap: 10px; background: rgba(255,183,77,0.1); border: 1px solid rgba(255,183,77,0.3); border-radius: 12px; padding: 12px 22px; font-size: 18px; color: #FFB74D; font-weight: 600; letter-spacing: 0.5px; }
+
+.right-visual { position: relative; width: 320px; height: 320px; }
+.circle-bg { position: absolute; inset: 0; border-radius: 50%; background: radial-gradient(circle, rgba(255,152,0,0.12) 0%, transparent 70%); border: 2px solid rgba(255,152,0,0.15); }
+.center-moose { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); font-size: 100px; filter: drop-shadow(0 0 30px rgba(255,183,77,0.5)); }
+
+.orbit { position: absolute; width: 60px; height: 60px; border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 28px; animation: float 3s ease-in-out infinite; box-shadow: 0 4px 20px rgba(0,0,0,0.3); }
+.orbit-1 { top: 10px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, #FF9800, #F57C00); animation-delay: 0s; }
+.orbit-2 { bottom: 10px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, #4CAF50, #388E3C); animation-delay: 0.5s; }
+.orbit-3 { left: 10px; top: 50%; transform: translateY(-50%); background: linear-gradient(135deg, #2196F3, #1565C0); animation-delay: 1s; }
+.orbit-4 { right: 10px; top: 50%; transform: translateY(-50%); background: linear-gradient(135deg, #FF5722, #D84315); animation-delay: 1.5s; }
+
+.dots { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; }
+.dot { position: absolute; width: 3px; height: 3px; background: rgba(255,183,77,0.3); border-radius: 50%; }
+</style>
+</head>
+<body>
+<div class="left">
+  <div class="logo-block">
+    <div class="moose">🫎</div>
+    <div class="brand">ФЛАЕРГУСЕВ</div>
+  </div>
+  <div class="tagline">Каталог магазинов города Гусев<br>для предпринимателей и покупателей</div>
+  <div class="services">
+    <div class="service">
+      <div class="service-icon s1">🌐</div>
+      <span>Размещение на сайте <b>gusev-flyer.ru</b></span>
+    </div>
+    <div class="service">
+      <div class="service-icon s2">📱</div>
+      <span>Помощь с продвижением в соцсетях</span>
+    </div>
+    <div class="service">
+      <div class="service-icon s3">📊</div>
+      <span>SEO-оптимизация и аналитика</span>
+    </div>
+  </div>
+  <div class="url-badge">🌐 gusev-flyer.ru</div>
+</div>
+<div class="right">
+  <div class="right-visual">
+    <div class="circle-bg"></div>
+    <div class="center-moose">🫎</div>
+    <div class="orbit orbit-1">🛒</div>
+    <div class="orbit orbit-2">📱</div>
+    <div class="orbit orbit-3">🏪</div>
+    <div class="orbit orbit-4">📈</div>
+  </div>
+</div>
+</body>
+</html>
