@@ -2264,3 +2264,77 @@ a.cta-button:active {
 html {
     scroll-behavior: smooth;
 }
+
+/* Рекомендуемые магазины */
+.shop-card.featured {
+    border: 2px solid #ffd700;
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+    position: relative;
+}
+
+.shop-card.featured::before {
+    content: "⭐";
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    font-size: 24px;
+    background: white;
+    padding: 0 10px;
+    border-radius: 50%;
+}
+
+.badge.recommended {
+    background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+    color: #333;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.tag.school-tag {
+    background: #4CAF50;
+    color: white;
+}
+
+.shop-recommendation {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 30px;
+    border-radius: 15px;
+    margin: 30px 0;
+}
+
+.shop-recommendation h4 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.recommended-shop {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+}
+
+.recommended-shop h5 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #ffd700;
+}
+
+.btn-small {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 20px;
+    background: #ffd700;
+    color: #333;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: transform 0.3s;
+}
+
+.btn-small:hover {
+    transform: scale(1.05);
+}
