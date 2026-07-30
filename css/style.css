@@ -628,6 +628,17 @@ body {
     letter-spacing: 0.5px;
 }
 
+.cross-category {
+    margin-top: 10px;
+    padding: 6px 12px;
+    background: rgba(99, 102, 241, 0.1);
+    border: 1px solid rgba(99, 102, 241, 0.3);
+    border-radius: 8px;
+    font-size: 11px;
+    color: #818cf8;
+    text-align: center;
+}
+
 .shop-category {
     color: var(--accent);
     font-size: 14px;
