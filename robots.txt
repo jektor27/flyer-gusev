@@ -1,3 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /scripts/
+Disallow: /test_vk_token.py
+
 Sitemap: https://gusev-flyer.ru/sitemap.xml
+Host: gusev-flyer.ru
