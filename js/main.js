@@ -9,14 +9,14 @@ const shopsData = [
     {id:7,name:"Тёплый дом",category:"stroymaterialy",address:"Школьная ул., 11",phone:"+7 (40143) XXX-XX-XX",description:"Строительный магазин — кирпич, цемент, доски, краска, инструменты",products:["Кирпич","Цемент","Доски","Краска","Инструменты"],badge:"Стройматериалы",rating:4.9},
     {id:8,name:"Фазенда",category:"stroymaterialy",address:"Московская ул., 33А",phone:"не указан",description:"Строительный магазин — инструменты, крепёж, электрика, сантехника",products:["Инструменты","Электрика","Сантехника","Крепёж"],badge:"Стройматериалы",rating:4.3},
     {id:9,name:"Kari Гипер",category:"odezhda",address:"просп. Ленина, 21А",phone:"+7 (499) 648-05-40",description:"Магазин обуви — обувь для всей семьи",products:["Обувь","Кроссовки","Сапоги","Туфли"],badge:"Одежда",rating:4.5},
-    {id:10,name:"Золотая комета",category:"odezhda",address:"ул. Ломоносова, 5",phone:"+7 (4012) 61-40-02",description:"Магазин одежды — одежда, аксессуары",products:["Одежда","Аксессуары"],badge:"Одежда",rating:4.4},
+    {id:10,name:"Золотая комета",category:"odezhda",address:"ул. Ломоносова, 5",phone:"+7 (4012) 61-40-02",description:"Магазин одежды — одежда, аксессуары",products:["Одежда","Аксессуары"],badge:"Одежда",rating:4.4,crossCategory:"byt"},
     {id:11,name:"Супер Цены",category:"odezhda",address:"Правобережная ул., 4 (этаж 2)",phone:"+7 (962) 269-45-71",description:"Магазин одежды по доступным ценам",products:["Одежда","Брюки","Куртки","Платья"],badge:"Одежда",rating:4.3},
     {id:12,name:"Сервисный центр Девайс",category:"tehnika",address:"просп. Ленина, 35",phone:"+7 (952) 113-69-96",description:"Ремонт телефонов, планшетов, ноутбуков",products:["Ремонт телефонов","Ремонт планшетов","Ремонт ноутбуков"],badge:"Техника",rating:4.7},
     {id:13,name:"SYSтема",category:"tehnika",address:"ул. Победы, 22",phone:"+7 (921) 007-80-67",description:"Компьютеры, комплектующие, аксессуары",products:["Компьютеры","Комплектующие","Аксессуары"],badge:"Техника",rating:4.5},
     {id:14,name:"GSM-мастер",category:"tehnika",address:"Правобережная ул., 4",phone:"+7 (952) 111-12-34",description:"Ремонт телефонов, запчасти",products:["Ремонт телефонов","Запчасти","Аксессуары"],badge:"Техника",rating:4.4},
     {id:15,name:"Гранд",category:"byt",address:"просп. Ленина, 11",phone:"+7 (911) 455-51-23",description:"Бытовая химия — порошки, гели, средства для уборки",products:["Порошки","Гели","Средства для уборки"],badge:"Быт",rating:4.5},
     {id:16,name:"Калина",category:"byt",address:"просп. Ленина, 43",phone:"+7 (40143) 3-36-31",description:"Бытовая химия, товары для дома",products:["Бытовая химия","Товары для дома","Гигиена"],badge:"Быт",rating:4.4},
-    {id:17,name:"Золотая комета",category:"byt",address:"ул. Менделеева, 5",phone:"+7 (4012) 97-33-12",description:"Бытовая химия, гигиена",products:["Бытовая химия","Гигиена","Средства для уборки"],badge:"Быт",rating:4.3},
+    {id:17,name:"Золотая комета",category:"byt",address:"ул. Менделеева, 5",phone:"+7 (4012) 97-33-12",description:"Бытовая химия, гигиена",products:["Бытовая химия","Гигиена","Средства для уборки"],badge:"Быт",rating:4.3,crossCategory:"odezhda"},
     {id:18,name:"Планета здоровья",category:"apteka",address:"Московская ул., 9",phone:"8 (800) 755-05-00",description:"Аптека — лекарства, витамины, БАДы",products:["Лекарства","Витамины","БАДы"],badge:"Аптека",rating:4.8},
     {id:19,name:"Здравсити",category:"apteka",address:"Московская ул., 26",phone:"8 (800) 500-92-62",description:"Сеть аптек — лекарства, медицинские товары",products:["Лекарства","Медицинские товары","Витамины"],badge:"Аптека",rating:4.7},
     {id:20,name:"Апрель",category:"apteka",address:"Московская ул., 52",phone:"не указан",description:"Аптека — лекарства, витамины, медтехника",products:["Лекарства","Витамины","Медтехника"],badge:"Аптека",rating:4.5},
@@ -114,6 +114,14 @@ function createShopCard(shop, index) {
     card.appendChild(address);
     card.appendChild(phone);
     card.appendChild(products);
+    
+    if (shop.crossCategory) {
+        const cross = document.createElement('div');
+        cross.className = 'cross-category';
+        const catNames = {odezhda:'Одежда',byt:'Быт',mebel:'Мебель',produkty:'Продукты',stroymaterialy:'Стройматериалы',tehnika:'Техника',apteka:'Аптеки',avto:'Авто',kanctovary:'Канцтовары'};
+        cross.textContent = `Также в категории: ${catNames[shop.crossCategory]||shop.crossCategory}`;
+        card.appendChild(cross);
+    }
     
     return card;
 }
