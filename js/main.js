@@ -26,7 +26,8 @@ const shopsData = [
     {id:24,name:"Канцлир",category:"kanctovary",address:"Московская ул., 28",phone:"+7 (911) 485-83-30",description:"Канцтовары — тетради, ручки, бумага, портфели",products:["Тетради","Ручки","Бумага","Портфели"],badge:"Канцтовары",rating:4.5},
     {id:25,name:"Холст с маслом",category:"kanctovary",address:"ул. Менделеева, 8А (этаж 1)",phone:"+7 (906) 237-70-13",description:"Канцтовары, художественные принадлежности",products:["Канцтовары","Художественные принадлежности","Холсты"],badge:"Канцтовары",rating:4.4},
     {id:26,name:"ЖЁЛТЫЙ БЕГЕМОТИК",category:"kanctovary",address:"просп. Ленина, 21А (этаж 0)",phone:"+7 (906) 232-35-30",description:"Детские товары, игрушки, товары для дома",products:["Детские товары","Игрушки","Товары для дома"],badge:"Канцтовары",rating:4.5,website:"https://vk.com/begemotick39"},
-    {id:27,name:"Муравейник",category:"odezhda",address:"Московская ул., 9",phone:"+7 909 796-95-76",description:"Одежда для взрослых и детей. Популярное место для школьных покупок!",products:["Одежда","Детская одежда","Школьная форма","Взрослая одежда"],badge:"Одежда",rating:4.6,featured:true,schoolRelated:true}
+    {id:27,name:"Муравейник",category:"odezhda",address:"Московская ул., 9",phone:"+7 909 796-95-76",description:"Одежда для взрослых и детей. Популярное место для школьных покупок!",products:["Одежда","Детская одежда","Школьная форма","Взрослая одежда"],badge:"Одежда",rating:4.6,featured:true,schoolRelated:true},
+    {id:28,name:"Кафе Гараж",category:"cafe",address:"г. Гусев",phone:"+7 (967) 355-46-42",description:"Вкусная пицца, мясные блюда, разнообразные супы. Доставка на дом. Работаем с 09:30 до 22:00.",products:["Пицца","Доставка","Мясные блюда","Супы"],badge:"Кафе",rating:4.6,website:"https://cafegarage.ru/"}
 ]
 
 // Категории (ключ = slug из URL ?cat=mebel)
@@ -39,7 +40,8 @@ const categories = {
     "byt": { name: "Бытовая химия", icon: "🧴", description: "Бытовая химия и товары для дома в Гусеве" },
     "apteka": { name: "Аптеки", icon: "💊", description: "Аптеки и лекарства в Гусеве" },
     "avto": { name: "Авто", icon: "🚗", description: "Автозапчасти и автотовары в Гусеве" },
-    "kanctovary": { name: "Канцтовары", icon: "📎", description: "Канцтовары и офисные принадлежности в Гусеве" }
+    "kanctovary": { name: "Канцтовары", icon: "📎", description: "Канцтовары и офисные принадлежности в Гусеве" },
+    "cafe": { name: "Кафе и рестораны", icon: "☕", description: "Кафе, рестораны, столовые и доставка еды в Гусеве" }
 };
 
 // Инициализация
@@ -116,10 +118,22 @@ function createShopCard(shop, index) {
     card.appendChild(phone);
     card.appendChild(products);
     
+    if (shop.website) {
+        const website = document.createElement('div');
+        website.className = 'shop-phone';
+        const websiteLink = document.createElement('a');
+        websiteLink.href = shop.website;
+        websiteLink.target = '_blank';
+        websiteLink.textContent = '🌐 Сайт';
+        websiteLink.style.color = '#60a5fa';
+        website.appendChild(websiteLink);
+        card.appendChild(website);
+    }
+    
     if (shop.crossCategory) {
         const cross = document.createElement('div');
         cross.className = 'cross-category';
-        const catNames = {odezhda:'Одежда',byt:'Быт',mebel:'Мебель',produkty:'Продукты',stroymaterialy:'Стройматериалы',tehnika:'Техника',apteka:'Аптеки',avto:'Авто',kanctovary:'Канцтовары'};
+        const catNames = {odezhda:'Одежда',byt:'Быт',mebel:'Мебель',produkty:'Продукты',stroymaterialy:'Стройматериалы',tehnika:'Техника',apteka:'Аптеки',avto:'Авто',kanctovary:'Канцтовары',cafe:'Кафе'};
         cross.textContent = `Также в категории: ${catNames[shop.crossCategory]||shop.crossCategory}`;
         card.appendChild(cross);
     }
@@ -195,7 +209,15 @@ function search() {
         "тетради": "kanctovary",
         "ручки": "kanctovary",
         "бумага": "kanctovary",
-        "офис": "kanctovary"
+        "офис": "kanctovary",
+        "кафе": "cafe",
+        "ресторан": "cafe",
+        "столовая": "cafe",
+        "кофейня": "cafe",
+        "пицца": "cafe",
+        "еда": "cafe",
+        "обед": "cafe",
+        "доставка": "cafe"
     };
     
     let category = null;
