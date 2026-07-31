@@ -1,7 +1,16 @@
 User-agent: *
 Allow: /
-Disallow: /scripts/
+Disallow: /vk-*.html
+Disallow: /icon-*.html
+Disallow: /navigation.html
+Disallow: /breadcrumbs.html
+Disallow: /presentation-for-elena.html
+Disallow: /ozon-preview.html
+Disallow: /ozon-points-preview.html
 Disallow: /test_vk_token.py
+Disallow: /audit_site.py
+Disallow: /create_landing_pages.py
+Disallow: /scripts/
 
 Sitemap: https://gusev-flyer.ru/sitemap.xml
 Host: gusev-flyer.ru
