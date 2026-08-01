@@ -203,46 +203,22 @@
     </style>
 </head>
 <body>
-    <header class="site-header" style="
-    background: #0f172a;
-    border-bottom: 2px solid #1e293b;
-    padding: 20px 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-">
-    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-        <div style="display: flex; justify-content: space-between; align-items: center;">
-            <a href="index.html" style="text-decoration: none;">
-                <div style="display: flex; align-items: center; gap: 10px;">
-                    <span style="font-size: 2rem;"></span>
-                    <span style="
-                        font-size: 1.5rem;
-                        font-weight: bold;
-                        background: linear-gradient(135deg, #60a5fa, #a78bfa);
-                        -webkit-background-clip: text;
-                        -webkit-text-fill-color: transparent;
-                    ">ФлаерГусев</span>
-                </div>
+    <header class="site-header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">📋</div>
+                <span class="logo-text">Флаер<strong>Гусев</strong></span>
             </a>
-
-            <nav class="main-nav">
-                <ul style="
-                    display: flex;
-                    gap: 25px;
-                    list-style: none;
-                    margin: 0;
-                    padding: 0;
-                ">
-                    <li><a href="index.html" style="color: #e2e8f0; text-decoration: none; font-weight: 500;">Главная</a></li>
-                    <li><a href="categories.html" style="color: #e2e8f0; text-decoration: none; font-weight: 500;">Категории</a></li>
-                    <li><a href="tariffs.html" style="color: #e2e8f0; text-decoration: none; font-weight: 500;">Тарифы</a></li>
-                    <li><a href="blog.html" style="color: #e2e8f0; text-decoration: none; font-weight: 500;">Блог</a></li>
-                    <li><a href="contacts.html" style="color: #e2e8f0; text-decoration: none; font-weight: 500;">Контакты</a></li>
-                </ul>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Главная</a>
+                <a href="categories.html" class="nav-link">Категории</a>
+                <a href="tariffs.html" class="nav-link">Тарифы</a>
+                <a href="blog.html" class="nav-link">Блог</a>
+                <a href="contacts.html" class="nav-link">Контакты</a>
             </nav>
+            <button class="menu-btn" onclick="toggleMenu()">☰</button>
         </div>
-    </div>
+    </header>
 </header>
 
 <main class="main">
