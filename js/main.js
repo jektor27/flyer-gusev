@@ -6,7 +6,7 @@ const shopsData = [
     {id:4,name:"Домашний",category:"produkty",address:"Московская ул., 64А",phone:"не указан",description:"Продуктовый магазин — продукты питания, молочные изделия, хлеб",products:["Хлеб","Молоко","Мясо","Овощи","Фрукты"],badge:"Продукты",rating:4.5},
     {id:5,name:"Прусский мясной комбинат",category:"produkty",address:"Московская ул., 24",phone:"не указан",description:"Мясной комбинат — мясо, колбасы, мясные изделия",products:["Мясо","Колбасы","Мясные изделия"],badge:"Продукты",rating:4.6},
     {id:6,name:"Светофор",category:"produkty",address:"просп. Ленина, 41А",phone:"не указан",description:"Продуктовый магазин — продукты, напитки, бакалея",products:["Продукты","Напитки","Бакалея"],badge:"Продукты",rating:4.4},
-    {id:7,name:"Тёплый дом",category:"stroymaterialy",address:"Школьная ул., 11",phone:"+7 (40143) XXX-XX-XX",description:"Строительный магазин — кирпич, цемент, доски, краска, инструменты",products:["Кирпич","Цемент","Доски","Краска","Инструменты"],badge:"Стройматериалы",rating:4.9},
+    {id:7,name:"Тёплый дом",category:"stroymaterialy",address:"Школьная ул., 11",phone:"не указан",description:"Строительный магазин — кирпич, цемент, доски, краска, инструменты",products:["Кирпич","Цемент","Доски","Краска","Инструменты"],badge:"Стройматериалы",rating:4.9},
     {id:8,name:"Фазенда",category:"stroymaterialy",address:"Московская ул., 33А",phone:"не указан",description:"Строительный магазин — инструменты, крепёж, электрика, сантехника",products:["Инструменты","Электрика","Сантехника","Крепёж"],badge:"Стройматериалы",rating:4.3},
     {id:9,name:"Kari Гипер",category:"odezhda",address:"просп. Ленина, 21А",phone:"+7 (499) 648-05-40",description:"Магазин обуви — обувь для всей семьи",products:["Обувь","Кроссовки","Сапоги","Туфли"],badge:"Одежда",rating:4.5},
     {id:10,name:"Золотая комета",category:"odezhda",address:"ул. Ломоносова, 5",phone:"+7 (4012) 61-40-02",description:"Магазин одежды — одежда, аксессуары",products:["Одежда","Аксессуары"],badge:"Одежда",rating:4.4,crossCategory:"byt"},
@@ -333,7 +333,7 @@ function loadCategoryPage() {
 
 // Эффекты скролла
 function initScrollEffects() {
-    const header = document.getElementById('header');
+    const header = document.querySelector('.site-header') || document.getElementById('header');
     if (!header) return;
     
     window.addEventListener('scroll', () => {
@@ -347,7 +347,7 @@ function initScrollEffects() {
 
 // Переключение мобильного меню
 function toggleMenu() {
-    const nav = document.querySelector('.main-nav');
+    const nav = document.querySelector('.nav') || document.querySelector('.main-nav');
     if (nav) {
         nav.classList.toggle('active');
     }
