@@ -72,6 +72,28 @@ body {
     box-shadow: 0 10px 40px rgba(0,0,0,0.5);
 }
 
+/* Header (modern pages: index, categories, blog, etc.) */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(10, 10, 26, 0.95);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+    transition: all 0.3s ease;
+}
+
+.site-header.scrolled {
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
+
+.site-header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+}
+
 .header .container {
     display: flex;
     align-items: center;
