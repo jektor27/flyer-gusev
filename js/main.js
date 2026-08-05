@@ -47,8 +47,12 @@ const categories = {
 // Инициализация
 document.addEventListener('DOMContentLoaded', function() {
     loadShops();
+    loadPopularQueries();
     initSearch();
     loadCategoryPage();
+    if (window.location.pathname.indexOf('cafe.html') !== -1) {
+        registerCategoryClick('cafe');
+    }
     initScrollEffects();
     const form = document.getElementById('addShopForm');
     if (form) {
@@ -75,6 +79,46 @@ function registerShopClick(id) {
         clicks[id] = (clicks[id] || 0) + 1;
         localStorage.setItem('flyer_shop_clicks', JSON.stringify(clicks));
     } catch (e) { /* ignore */ }
+}
+
+// Просмотры категорий (localStorage)
+function getCategoryClicks() {
+    try {
+        return JSON.parse(localStorage.getItem('flyer_cat_clicks') || '{}');
+    } catch (e) {
+        return {};
+    }
+}
+
+function registerCategoryClick(cat) {
+    try {
+        const clicks = getCategoryClicks();
+        clicks[cat] = (clicks[cat] || 0) + 1;
+        localStorage.setItem('flyer_cat_clicks', JSON.stringify(clicks));
+    } catch (e) { /* ignore */ }
+}
+
+// Сортировка популярных запросов по просмотрам категорий
+function loadPopularQueries() {
+    const container = document.querySelector('.popular-buttons');
+    if (!container) return;
+
+    const clicks = getCategoryClicks();
+    const buttons = Array.from(container.querySelectorAll('button[data-cat]'));
+
+    buttons.sort((a, b) => (clicks[b.dataset.cat] || 0) - (clicks[a.dataset.cat] || 0));
+
+    buttons.forEach(btn => {
+        container.appendChild(btn);
+        btn.addEventListener('click', function() {
+            const cat = this.dataset.cat;
+            if (cat === 'cafe') {
+                window.location.href = 'cafe.html';
+            } else {
+                window.location.href = 'category.html?cat=' + cat;
+            }
+        });
+    });
 }
 
 // Загрузка магазинов
@@ -345,6 +389,8 @@ function loadCategoryPage() {
         document.getElementById('categoryTitle').textContent = 'Категория не найдена';
         return;
     }
+    
+    registerCategoryClick(cat.toLowerCase());
     
     document.getElementById('categoryTitle').textContent = `${category.icon} ${category.name} в Гусеве`;
     document.getElementById('categoryDesc').textContent = category.description;
