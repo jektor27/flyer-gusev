@@ -60,22 +60,58 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+// Клики по магазинам (localStorage)
+function getShopClicks() {
+    try {
+        return JSON.parse(localStorage.getItem('flyer_shop_clicks') || '{}');
+    } catch (e) {
+        return {};
+    }
+}
+
+function registerShopClick(id) {
+    try {
+        const clicks = getShopClicks();
+        clicks[id] = (clicks[id] || 0) + 1;
+        localStorage.setItem('flyer_shop_clicks', JSON.stringify(clicks));
+    } catch (e) { /* ignore */ }
+}
+
 // Загрузка магазинов
 function loadShops() {
     const grid = document.getElementById('shopsGrid');
     if (!grid) return;
     
     grid.innerHTML = '';
-    shopsData.slice(0, 6).forEach((shop, index) => {
-        grid.appendChild(createShopCard(shop, index));
+    const clicks = getShopClicks();
+    const scored = shopsData.map(shop => ({
+        shop,
+        score: (clicks[shop.id] || 0) + (shop.featured ? 0.01 : 0)
+    }));
+    scored.sort((a, b) => b.score - a.score);
+    scored.slice(0, 6).forEach((item, index) => {
+        grid.appendChild(createShopCard(item.shop, index, true));
     });
 }
 
 // Создание карточки магазина (безопасное создание DOM-элементов)
-function createShopCard(shop, index) {
+function createShopCard(shop, index, clickable) {
     const card = document.createElement('div');
     card.className = 'shop-card';
     card.style.animation = `fadeInUp 0.6s ease ${index * 0.1}s both`;
+    if (clickable) {
+        card.classList.add('shop-card-clickable');
+        card.setAttribute('role', 'link');
+        card.tabIndex = 0;
+        const go = function() {
+            registerShopClick(shop.id);
+            window.location.href = 'category.html?cat=' + shop.category;
+        };
+        card.addEventListener('click', go);
+        card.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); }
+        });
+    }
     
     const header = document.createElement('div');
     header.className = 'shop-header';

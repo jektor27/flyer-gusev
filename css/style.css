@@ -629,6 +629,31 @@ body {
     box-shadow: 0 20px 50px rgba(212,175,55,0.15);
 }
 
+.shop-card-clickable {
+    cursor: pointer;
+}
+
+.shop-card-clickable:focus-visible {
+    outline: 2px solid rgba(212,175,55,0.6);
+    outline-offset: 3px;
+}
+
+.shop-card-clickable::after {
+    content: '→';
+    position: absolute;
+    right: 22px;
+    bottom: 18px;
+    font-size: 18px;
+    opacity: 0;
+    color: rgba(212,175,55,0.8);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.shop-card-clickable:hover::after {
+    opacity: 1;
+    transform: translateX(4px);
+}
+
 .shop-header {
     display: flex;
     justify-content: space-between;
