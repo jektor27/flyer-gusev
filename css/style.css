@@ -1055,7 +1055,7 @@ body {
     }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1140px) {
     .nav {
         display: none;
         position: absolute;
@@ -1077,7 +1077,9 @@ body {
     .menu-btn {
         display: block;
     }
-    
+}
+
+@media (max-width: 992px) {
     .hero h1 {
         font-size: 42px;
     }
