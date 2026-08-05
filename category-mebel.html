@@ -71,47 +71,22 @@
     </script>
 </head>
 <body>
-    <header class="site-header" style="
-    background: #0f172a;
-    border-bottom: 2px solid #1e293b;
-    padding: 20px 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-">
-    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-        <div style="display: flex; justify-content: space-between; align-items: center;">
-            <a href="index.html" style="text-decoration: none;">
-                <div style="display: flex; align-items: center; gap: 10px;">
-                    <span style="font-size: 2rem;"></span>
-                    <span style="
-                        font-size: 1.5rem;
-                        font-weight: bold;
-                        background: linear-gradient(135deg, #60a5fa, #a78bfa);
-                        -webkit-background-clip: text;
-                        -webkit-text-fill-color: transparent;
-                    ">ФлаерГусев</span>
-                </div>
+        <header class="site-header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon"><svg viewBox="0 0 100 100" width="34" height="34" aria-hidden="true"><path d="M28 62 L28 44 Q28 34 36 30 Q44 26 50 26 Q56 26 64 30 Q72 34 72 44 L72 62 Q72 70 64 72 Q56 74 50 74 Q44 74 36 72 Q28 70 28 62 Z" fill="#ffffff"/><path d="M22 38 Q14 30 20 16 L34 18 Q38 24 32 30 Z" fill="#ffffff"/><path d="M78 38 Q86 30 80 16 L66 18 Q62 24 68 30 Z" fill="#ffffff"/><circle cx="41" cy="50" r="4.5" fill="#e94560"/><circle cx="59" cy="50" r="4.5" fill="#e94560"/><rect x="44" y="60" width="12" height="7" rx="3.5" fill="#e94560"/></svg></div>
+                <span class="logo-text">Флаер<strong>Гусев</strong></span>
             </a>
-
-            <nav class="main-nav">
-                <ul style="
-                    display: flex;
-                    gap: 25px;
-                    list-style: none;
-                    margin: 0;
-                    padding: 0;
-                ">
-                    <li><a href="index.html" style="color: #e2e8f0; text-decoration: none; font-weight: 500;">Главная</a></li>
-                    <li><a href="category.html?cat=mebel" style="color: #e2e8f0; text-decoration: none; font-weight: 500;">Категории</a></li>
-                    <li><a href="tariffs.html" style="color: #e2e8f0; text-decoration: none; font-weight: 500;">Тарифы</a></li>
-                    <li><a href="blog.html" style="color: #e2e8f0; text-decoration: none; font-weight: 500;">Блог</a></li>
-                    <li><a href="contacts.html" style="color: #e2e8f0; text-decoration: none; font-weight: 500;">Контакты</a></li>
-                </ul>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Главная</a>
+                <a href="categories.html" class="nav-link">Категории</a>
+                <a href="tariffs.html" class="nav-link">Тарифы</a>
+                <a href="blog.html" class="nav-link">Блог</a>
+                <a href="contacts.html" class="nav-link">Контакты</a>
             </nav>
+            <button class="menu-btn" onclick="toggleMenu()">&#9776;</button>
         </div>
-    </div>
-</header>
+    </header>
 
 <main class="main">
         <section class="hero">
