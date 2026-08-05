@@ -201,7 +201,7 @@ template = """<!DOCTYPE html>
     <header class="header" id="header">
         <div class="container">
             <a href="index.html" class="logo">
-                <div class="logo-icon">📋</div>
+                        <div class="logo-icon"><svg viewBox="0 0 100 100" width="34" height="34" aria-hidden="true"><text x="36" y="54" font-family="Segoe UI, Arial, sans-serif" font-size="72" font-weight="900" fill="#ffffff" text-anchor="middle" dominant-baseline="central">Ф</text><text x="83" y="54" font-family="Segoe UI, Arial, sans-serif" font-size="72" font-weight="900" fill="#e94560" text-anchor="middle" dominant-baseline="central">Г</text></svg></div>
                 <span class="logo-text">Флаер<strong>Гусев</strong></span>
             </a>
             <nav class="nav">
@@ -264,7 +264,7 @@ template = """<!DOCTYPE html>
             <div class="footer-grid">
                 <div class="footer-logo">
                     <a href="index.html" class="logo">
-                        <div class="logo-icon">📋</div>
+                <div class="logo-icon"><svg viewBox="0 0 100 100" width="34" height="34" aria-hidden="true"><text x="36" y="54" font-family="Segoe UI, Arial, sans-serif" font-size="72" font-weight="900" fill="#ffffff" text-anchor="middle" dominant-baseline="central">Ф</text><text x="83" y="54" font-family="Segoe UI, Arial, sans-serif" font-size="72" font-weight="900" fill="#e94560" text-anchor="middle" dominant-baseline="central">Г</text></svg></div>
                         <span class="logo-text">Флаер<strong>Гусев</strong></span>
                     </a>
                     <p>Каталог магазинов и товаров города Гусев, Калининградская область</p>
