@@ -450,6 +450,7 @@ body {
     font-weight: 800;
     margin-bottom: 20px;
     line-height: 1.2;
+    overflow-wrap: break-word;
 }
 
 .section-subtitle {
@@ -1096,6 +1097,11 @@ body {
     .about-grid,
     .contact-grid {
         grid-template-columns: 1fr;
+    }
+
+    .about-grid > *,
+    .contact-grid > * {
+        min-width: 0;
     }
     
     .footer-grid {
