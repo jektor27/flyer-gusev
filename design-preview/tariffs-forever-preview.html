@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Превью: Тарифы — модель «990 ₽ навсегда» — ФлаерГусев</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        body { background: #0f0f23; color: #fff; font-family: 'Segoe UI', Arial, sans-serif; padding: 40px 0; }
+        .preview-note { max-width: 1000px; margin: 0 auto 30px; padding: 16px 20px; background: #16213e; border-left: 4px solid #e94560; border-radius: 8px; font-size: 14px; color: #8892b0; }
+        .preview-note strong { color: #ff6b6b; }
+        .page { max-width: 1000px; margin: 0 auto; }
+
+        .tariffs-grid-new { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin: 30px 0; }
+        .tariff-card-new { background: #16213e; border: 1px solid #2a3142; border-radius: 14px; padding: 26px 24px; display: flex; flex-direction: column; }
+        .tariff-card-new.featured { border-color: #d4af37; box-shadow: 0 0 0 1px #d4af37, 0 10px 30px rgba(212,175,55,0.15); }
+        .tariff-card-new .icon { font-size: 30px; margin-bottom: 12px; }
+        .tariff-card-new .name { font-size: 20px; font-weight: 700; margin-bottom: 4px; }
+        .tariff-card-new .sub { color: #8892b0; font-size: 13px; margin-bottom: 16px; }
+        .tariff-card-new .price-row { display: flex; align-items: baseline; gap: 8px; margin-bottom: 18px; }
+        .tariff-card-new .amount { font-size: 34px; font-weight: 800; color: #fff; }
+        .tariff-card-new .period { color: #60a5fa; font-size: 14px; font-weight: 600; }
+        .tariff-card-new ul { list-style: none; padding: 0; margin: 0 0 20px; flex: 1; }
+        .tariff-card-new li { padding: 6px 0; font-size: 14px; color: #c8d0e0; border-bottom: 1px dashed #232a3a; }
+        .tariff-card-new li .price { color: #d4af37; font-weight: 700; margin-left: 6px; }
+        .tariff-card-new li.note { color: #8892b0; font-size: 13px; border-bottom: none; }
+        .tariff-btn-new { display: block; text-align: center; padding: 13px 20px; border-radius: 10px; font-weight: 600; text-decoration: none; font-size: 15px; }
+        .tariff-btn-new.primary { background: linear-gradient(135deg, #e94560, #d4af37); color: #fff; }
+        .tariff-btn-new.outline { border: 1px solid #2a3142; color: #c8d0e0; }
+        .card-badge { position: absolute; }
+
+        .how-works { margin: 40px 0; }
+        .how-works h2, .compare h2 { font-size: 24px; margin-bottom: 16px; color: #fff; }
+        .how-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+        .how-step { background: #16213e; border: 1px solid #2a3142; border-radius: 12px; padding: 18px; }
+        .how-step .n { color: #e94560; font-weight: 800; font-size: 14px; }
+        .how-step .t { font-weight: 700; margin: 6px 0 4px; font-size: 15px; }
+        .how-step .d { color: #8892b0; font-size: 13px; line-height: 1.5; }
+
+        .compare { margin: 40px 0; }
+        .compare table { width: 100%; border-collapse: collapse; background: #16213e; border-radius: 12px; overflow: hidden; font-size: 14px; }
+        .compare th { text-align: left; padding: 12px 16px; background: #1a1f2e; color: #8892b0; font-size: 13px; }
+        .compare td { padding: 12px 16px; border-top: 1px solid #232a3a; }
+        .compare .hl td { background: rgba(212,175,55,0.08); color: #d4af37; font-weight: 600; }
+
+        .faq-block { margin: 40px 0; }
+        .faq-block h2 { font-size: 24px; margin-bottom: 16px; }
+        .faq-item { background: #16213e; border: 1px solid #2a3142; border-radius: 10px; padding: 16px 18px; margin-bottom: 12px; }
+        .faq-item .q { font-weight: 700; font-size: 15px; margin-bottom: 6px; }
+        .faq-item .a { color: #8892b0; font-size: 14px; line-height: 1.5; }
+
+        .cta-block { margin: 40px 0; padding: 30px; background: linear-gradient(135deg, rgba(233,69,96,0.15), rgba(212,175,55,0.1)); border: 1px solid rgba(233,69,96,0.3); border-radius: 14px; text-align: center; }
+        .cta-block h2 { font-size: 22px; margin-bottom: 8px; }
+        .cta-block p { color: #8892b0; margin-bottom: 18px; }
+
+        @media (max-width: 800px) {
+            .tariffs-grid-new { grid-template-columns: 1fr; }
+            .how-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="preview-note">
+            <strong>Превью-макет.</strong> Новая страница «Тарифы» под модель <strong>«990 ₽ разово = карточка навсегда»</strong>. Вместо трёх абонентских тарифов (Старт/Бизнес/Премиум) — одна базовая цена + доплаты. Показываю web и mobile версии.
+        </div>
+
+        <div class="page">
+            <section class="hero" style="text-align:center; padding: 40px 0 10px;">
+                <h1>Размещение во «Флаер Гусев»</h1>
+                <p class="subtitle" style="color:#8892b0;">Платите один раз — карточка в каталоге навсегда.</p>
+            </section>
+
+            <section class="tariffs-grid-new">
+                <div class="tariff-card-new">
+                    <div class="icon">🌱</div>
+                    <div class="name">Базовая карточка</div>
+                    <div class="sub">Размещение навсегда</div>
+                    <div class="price-row"><span class="amount">990 ₽</span><span class="period">разово</span></div>
+                    <ul>
+                        <li>Карточка в категории — навсегда</li>
+                        <li>Название, описание, адрес, телефон</li>
+                        <li>Теги товаров и услуг</li>
+                        <li>Обновление контента раз в месяц — бесплатно</li>
+                        <li>Акции и новые цены — по вашей заявке</li>
+                        <li class="note">Никакой ежемесячной подписки</li>
+                    </ul>
+                    <a href="index.html#contact" class="tariff-btn-new primary">Разместить за 990 ₽</a>
+                </div>
+
+                <div class="tariff-card-new featured">
+                    <div class="icon">🚀</div>
+                    <div class="name">Приоритетная карточка</div>
+                    <div class="sub">Доплата к базовой</div>
+                    <div class="price-row"><span class="amount">+500 ₽</span><span class="period">разово</span></div>
+                    <ul>
+                        <li>Всё из базовой карточки</li>
+                        <li>Позиция выше в списке категории</li>
+                        <li>Более заметное выделение</li>
+                        <li class="note">Карточка навсегда — доплата разовая</li>
+                    </ul>
+                    <a href="index.html#contact" class="tariff-btn-new outline">Добавить приоритет</a>
+                </div>
+
+                <div class="tariff-card-new">
+                    <div class="icon">🔗</div>
+                    <div class="name">Активная ссылка</div>
+                    <div class="sub">Доплата к базовой</div>
+                    <div class="price-row"><span class="amount">+500 ₽</span><span class="period">разово</span></div>
+                    <ul>
+                        <li>Всё из базовой карточки</li>
+                        <li>Кликабельная ссылка на сайт / ВК</li>
+                        <li>Прямой переход с карточки</li>
+                        <li class="note">В базовой карточке ссылок нет</li>
+                    </ul>
+                    <a href="index.html#contact" class="tariff-btn-new outline">Добавить ссылку</a>
+                </div>
+            </section>
+
+            <section class="how-works">
+                <h2>Как это работает</h2>
+                <div class="how-grid">
+                    <div class="how-step"><div class="n">01</div><div class="t">Вы платите один раз</div><div class="d">990 ₽ за карточку. Без подписок и ежемесячных платежей.</div></div>
+                    <div class="how-step"><div class="n">02</div><div class="t">Карточка навсегда</div><div class="d">Работает 24/7, пока существует каталог gusev-flyer.ru.</div></div>
+                    <div class="how-step"><div class="n">03</div><div class="t">Обновляем по заявке</div><div class="d">Правки раз в месяц бесплатно, срочные — 300 ₽ за раз.</div></div>
+                </div>
+            </section>
+
+            <section class="compare">
+                <h2>Сравнение с другими каналами</h2>
+                <table>
+                    <thead><tr><th>Канал</th><th>Стоимость</th><th>Результат</th></tr></thead>
+                    <tbody>
+                        <tr><td>Бумажные флаеры (100 шт.)</td><td>3 000–6 000 ₽</td><td>Раздались — выбросили</td></tr>
+                        <tr><td>Пост в ВК (таргет)</td><td>от 1 000 ₽</td><td>5–15 клиентов за раз</td></tr>
+                        <tr class="hl"><td>«Флаер Гусев» — карточка</td><td>990 ₽ разово</td><td>Работает постоянно</td></tr>
+                    </tbody>
+                </table>
+                <p style="color:#8892b0; font-size:13px; margin-top:10px;">Флаер живёт 3 секунды — ваш карточка работает каждый день.</p>
+            </section>
+
+            <section class="faq-block">
+                <h2>Частые вопросы</h2>
+                <div class="faq-item"><div class="q">Это правда навсегда?</div><div class="a">Да. Один платёж 990 ₽ — и карточка остаётся в каталоге навсегда, пока существует gusev-flyer.ru. Никакой ежемесячной оплаты.</div></div>
+                <div class="faq-item"><div class="q">Как часто обновляется контент?</div><div class="a">Раз в месяц — бесплатно по вашей заявке. Срочные правки вне графика (например, акция на завтра) — 300 ₽ за раз.</div></div>
+                <div class="faq-item"><div class="q">Что входит в базовую карточку?</div><div class="a">Карточка в категории: название, описание, адрес, телефон, теги товаров. Ссылки на сайт/соцсети — дополнительно 500 ₽.</div></div>
+            </section>
+
+            <section class="cta-block">
+                <h2>Готовы представить ваш бизнес Гусеву?</h2>
+                <p>Оставьте заявку — разместим карточку за 1 день.</p>
+                <a href="index.html#contact" class="cta-btn"><span>Оставить заявку</span><span>→</span></a>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
