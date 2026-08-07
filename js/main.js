@@ -123,7 +123,7 @@ function loadPopularQueries() {
             if (cat === 'cafe') {
                 window.location.href = 'cafe.html';
             } else {
-                window.location.href = 'category.html?cat=' + cat;
+                window.location.href = cat + '.html';
             }
         });
     });
@@ -157,7 +157,7 @@ function createShopCard(shop, index, clickable) {
         card.tabIndex = 0;
         const go = function() {
             registerShopClick(shop.id);
-            window.location.href = 'category.html?cat=' + shop.category;
+            window.location.href = shop.category + '.html';
         };
         card.addEventListener('click', go);
         card.addEventListener('keydown', function(e) {
@@ -317,7 +317,7 @@ function search() {
     }
     
     if (category) {
-        window.location.href = `category.html?cat=${category}`;
+        window.location.href = `${category}.html`;
         return;
     }
     
@@ -337,7 +337,7 @@ function search() {
             </div>
             <div class="search-results-list">
                 ${results.map(shop => `
-                    <a href="category.html?cat=${shop.category}" class="search-result-card">
+                    <a href="${shop.category}.html" class="search-result-card">
                         <div class="search-result-name">${shop.name}</div>
                         <div class="search-result-addr">${shop.address}</div>
                         <div class="search-result-desc">${shop.description}</div>
