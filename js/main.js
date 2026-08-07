@@ -35,7 +35,20 @@ const shopsData = [
     {id:33,name:"Щи Борщи",category:"cafe",address:"просп. Ленина, 21",phone:"+7 (906) 238-89-38",description:"Столовая — домашняя еда каждый день: борщ, щи, комплексные обеды, завтраки. Ежедневно 10:00–20:00.",products:["Борщ","Щи","Комплексные обеды","Завтраки"],badge:"Столовая",rating:4.8},
     {id:34,name:"Закусочная Восток",category:"cafe",address:"ул. Победы, 29",phone:"не указан",description:"Столовая-закусочная — супы, горячие блюда, комплексные обеды",products:["Комплексные обеды","Супы","Горячие блюда"],badge:"Столовая",rating:4.0},
     {id:35,name:"Столовка",category:"cafe",address:"ул. Достоевского, 5г",phone:"не указан",description:"Столовая — обеденный зал, комплексные обеды, супы и горячие блюда",products:["Комплексные обеды","Супы","Мясные блюда"],badge:"Столовая",rating:4.0},
-    {id:36,name:"Столовая",category:"cafe",address:"ул. Зворыкина, 6",phone:"не указан",description:"Столовая — домашние обеды, супы, гарниры, выпечка",products:["Комплексные обеды","Супы","Выпечка"],badge:"Столовая",rating:4.0}
+    {id:36,name:"Столовая",category:"cafe",address:"ул. Зворыкина, 6",phone:"не указан",description:"Столовая — домашние обеды, супы, гарниры, выпечка",products:["Комплексные обеды","Супы","Выпечка"],badge:"Столовая",rating:4.0},
+    {id:37,name:"Первый мебельный",category:"mebel",address:"Московская ул.",phone:"+7 (906) 210-19-27",description:"Мебельный магазин — мебель для дома",products:["Мебель","Шкафы","Столы","Диваны"],badge:"Мебель",rating:4.3},
+    {id:38,name:"Boxx",category:"mebel",address:"ул. Победы, 29",phone:"+7 (963) 294-36-36",description:"Мебельный магазин — мебель для дома и офиса",products:["Мебель","Шкафы","Столы","Комоды"],badge:"Мебель",rating:4.4},
+    {id:39,name:"Днестровский",category:"produkty",address:"Железнодорожная ул., 47",phone:"не указан",description:"Продуктовый магазин — продукты питания, напитки",products:["Продукты","Напитки","Бакалея"],badge:"Продукты",rating:4.2},
+    {id:40,name:"Ольвия",category:"produkty",address:"Железнодорожная ул., 20",phone:"не указан",description:"Продуктовый магазин — продукты питания",products:["Продукты","Молочные изделия","Хлеб"],badge:"Продукты",rating:4.2},
+    {id:41,name:"Молоко",category:"produkty",address:"Московская ул., 23",phone:"не указан",description:"Продуктовый магазин — молочная продукция, продукты",products:["Молочная продукция","Продукты","Напитки"],badge:"Продукты",rating:4.1},
+    {id:42,name:"Baden",category:"odezhda",address:"Правобережная ул., 4",phone:"не указан",description:"Магазин одежды — стильная одежда для всей семьи",products:["Одежда","Женская одежда","Мужская одежда"],badge:"Одежда",rating:4.2},
+    {id:43,name:"1000 мелочей",category:"byt",address:"ул. Победы, 7А",phone:"не указан",description:"Хозяйственный магазин — товары для дома, бытовая химия",products:["Товары для дома","Бытовая химия","Хозтовары"],badge:"Быт",rating:4.1},
+    {id:44,name:"Гамма",category:"byt",address:"ул. Победы, 7А",phone:"+7 (921) 265-36-50",description:"Бытовая химия, товары для дома",products:["Бытовая химия","Товары для дома","Гигиена"],badge:"Быт",rating:4.2},
+    {id:45,name:"100 Den",category:"odezhda",address:"Правобережная ул., 4",phone:"+7 (911) 467-90-96",description:"Магазин колготок и женской одежды — 100 Den",products:["Колготки","Чулки","Женская одежда"],badge:"Одежда",rating:4.3},
+    {id:46,name:"Балтика",category:"byt",address:"Московская ул., 14",phone:"не указан",description:"Торговый центр — товары для дома и отдыха",products:["Товары для дома","Товары для отдыха"],badge:"Быт",rating:4.1},
+    {id:47,name:"Берёза",category:"produkty",address:"Правобережная ул., 4",phone:"не указан",description:"Продуктовый магазин — продукты питания",products:["Продукты","Бакалея","Напитки"],badge:"Продукты",rating:4.2},
+    {id:48,name:"ЗооМаркет",category:"zootovary",address:"Правобережная ул., 4 (этаж 1)",phone:"+7 (4012) 92-25-98",description:"Зоомагазин — корма, товары для животных",products:["Корма","Товары для животных","Аксессуары"],badge:"Зоотовары",rating:4.4},
+    {id:49,name:"Пицца и… талия",category:"cafe",address:"Правобережная ул., 4",phone:"+7 (921) 854-12-92",description:"Пиццерия — пицца, горячие блюда",products:["Пицца","Горячие блюда"],badge:"Пиццерия",rating:4.3}
 ]
 
 // Категории (ключ = slug из URL ?cat=mebel)
@@ -49,7 +62,8 @@ const categories = {
     "apteka": { name: "Аптеки", icon: "💊", description: "Аптеки и лекарства в Гусеве" },
     "avto": { name: "Авто", icon: "🚗", description: "Автозапчасти и автотовары в Гусеве" },
     "kanctovary": { name: "Канцтовары", icon: "📎", description: "Канцтовары и офисные принадлежности в Гусеве" },
-    "cafe": { name: "Кафе и рестораны", icon: "☕", description: "Кафе, рестораны, столовые и доставка еды в Гусеве" }
+    "cafe": { name: "Кафе и рестораны", icon: "☕", description: "Кафе, рестораны, столовые и доставка еды в Гусеве" },
+    "zootovary": { name: "Зоотовары", icon: "🐾", description: "Зоомагазины и товары для животных в Гусеве" }
 };
 
 // Инициализация
@@ -60,6 +74,9 @@ document.addEventListener('DOMContentLoaded', function() {
     loadCategoryPage();
     if (window.location.pathname.indexOf('cafe.html') !== -1) {
         registerCategoryClick('cafe');
+    }
+    if (window.location.pathname.indexOf('zootovary.html') !== -1) {
+        registerCategoryClick('zootovary');
     }
     initScrollEffects();
     const form = document.getElementById('addShopForm');
@@ -221,7 +238,7 @@ function createShopCard(shop, index, clickable) {
     if (shop.crossCategory) {
         const cross = document.createElement('div');
         cross.className = 'cross-category';
-        const catNames = {odezhda:'Одежда',byt:'Быт',mebel:'Мебель',produkty:'Продукты',stroymaterialy:'Стройматериалы',tehnika:'Техника',apteka:'Аптеки',avto:'Авто',kanctovary:'Канцтовары',cafe:'Кафе'};
+        const catNames = {odezhda:'Одежда',byt:'Быт',mebel:'Мебель',produkty:'Продукты',stroymaterialy:'Стройматериалы',tehnika:'Техника',apteka:'Аптеки',avto:'Авто',kanctovary:'Канцтовары',cafe:'Кафе',zootovary:'Зоотовары'};
         cross.textContent = `Также в категории: ${catNames[shop.crossCategory]||shop.crossCategory}`;
         card.appendChild(cross);
     }
@@ -305,7 +322,13 @@ function search() {
         "пицца": "cafe",
         "еда": "cafe",
         "обед": "cafe",
-        "доставка": "cafe"
+        "доставка": "cafe",
+        "зоо": "zootovary",
+        "зоомагазин": "zootovary",
+        "корм": "zootovary",
+        "животные": "zootovary",
+        "питомцы": "zootovary",
+        "ветеринар": "zootovary"
     };
     
     let category = null;

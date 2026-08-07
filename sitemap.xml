@@ -14,13 +14,13 @@
   </url>
   <url>
     <loc>https://gusev-flyer.ru/mebel.html</loc>
-    <lastmod>2026-08-06</lastmod>
+    <lastmod>2026-08-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gusev-flyer.ru/produkty.html</loc>
-    <lastmod>2026-07-28</lastmod>
+    <lastmod>2026-08-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -32,13 +32,19 @@
   </url>
   <url>
     <loc>https://gusev-flyer.ru/odezhda.html</loc>
-    <lastmod>2026-07-28</lastmod>
+    <lastmod>2026-08-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gusev-flyer.ru/cafe.html</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gusev-flyer.ru/zootovary.html</loc>
+    <lastmod>2026-08-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -50,7 +56,7 @@
   </url>
   <url>
     <loc>https://gusev-flyer.ru/byt.html</loc>
-    <lastmod>2026-07-28</lastmod>
+    <lastmod>2026-08-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
