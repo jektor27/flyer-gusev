@@ -8,7 +8,7 @@
     <meta name="robots" content="index, follow">
     
     <meta property="og:title" content="Флаер Гусев — Каталог магазинов и товаров города Гусев | 51 организация">
-    <meta property="og:description" content="Удобный каталог магазинов Гусева (Калининградская область). Проверенные организации: мебель, продукты, одежда, техника и другие. Актуальные адреса и телефоны. Размещение для бизнеса — 990 ₽ за карточку навсегда.">
+    <meta property="og:description" content="Удобный каталог магазинов Гусева (Калининградская область). Проверенные организации: мебель, продукты, одежда, техника и другие. Актуальные адреса и телефоны.">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="ru_RU">
     <meta property="og:image" content="https://gusev-flyer.ru/og-image.jpg">
@@ -295,19 +295,6 @@
         </div>
     </section>
 
-    <section class="cta">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Добавьте свой магазин</h2>
-                <p>Разместите магазин в каталоге Флаер Гусев. Карточка навсегда — 990 ₽ разово, без подписок.</p>
-                <a href="#ya-form" class="cta-btn cta-pulse">
-                    <span>Разместить за 990 ₽</span>
-                    <span>→</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
     <section class="about" id="about">
         <div class="container">
             <div class="about-grid">
@@ -331,10 +318,6 @@
                         <li>
                             <span class="about-list-icon">✅</span>
                             <span>Удобный поиск</span>
-                        </li>
-                        <li>
-                            <span class="about-list-icon">✅</span>
-                            <span>Размещение для бизнеса — 990 ₽ разово</span>
                         </li>
                     </ul>
                 </div>
@@ -406,9 +389,43 @@
             <div class="contact-grid">
                 <div class="contact-form">
                     <h3>Форма заявки</h3>
-                    <div id="ya-form" class="ya-form-container">
-                        <script src="https://forms.yandex.ru/_static/embed.js"></script><iframe src="https://forms.yandex.ru/u/6a693aa5591330375d0c1a79?iframe=1" frameborder="0" name="ya-form-6a693aa5591330375d0c1a79" width="100%"></iframe>
-                    </div>
+                    <form action="https://api.web3forms.com/submit" method="POST" class="shop-form" id="contact-form-index">
+                        <input type="hidden" name="access_key" value="0f206c4a-b0d2-4372-ae70-8da7b5fb35b2">
+                        <input type="hidden" name="subject" value="Заявка с ФлаерГусев (главная)">
+                        <input type="hidden" name="from_name" value="ФлаерГусев">
+                        <input type="checkbox" name="botcheck" style="display: none;">
+                        <label for="shop-name-index">Название магазина *</label>
+                        <input type="text" id="shop-name-index" name="Название магазина" required placeholder="Например: Софа">
+                        <label for="shop-cat-index">Категория *</label>
+                        <select id="shop-cat-index" name="Категория" required>
+                            <option value="">Выберите категорию</option>
+                            <option>Мебель</option>
+                            <option>Продукты</option>
+                            <option>Стройматериалы</option>
+                            <option>Одежда</option>
+                            <option>Техника</option>
+                            <option>Бытовая химия</option>
+                            <option>Аптеки</option>
+                            <option>Авто</option>
+                            <option>Канцтовары</option>
+                            <option>Кафе и рестораны</option>
+                            <option>Зоотовары</option>
+                            <option>Детские товары</option>
+                        </select>
+                        <label for="shop-phone-index">Телефон *</label>
+                        <input type="tel" id="shop-phone-index" name="Телефон" required placeholder="+7 (___) ___-__-__">
+                        <label for="shop-contact-index">Ваше имя</label>
+                        <input type="text" id="shop-contact-index" name="Имя" placeholder="Как к вам обращаться">
+                        <label for="shop-address-index">Адрес</label>
+                        <input type="text" id="shop-address-index" name="Адрес" placeholder="Адрес магазина">
+                        <label for="shop-desc-index">Описание товаров</label>
+                        <textarea id="shop-desc-index" name="Описание товаров" rows="3" placeholder="Что продаёте (до 10 позиций)"></textarea>
+                        <button type="submit" class="cta-btn">
+                            <span>Отправить заявку</span>
+                            <span>→</span>
+                        </button>
+                    </form>
+                    <div id="form-success-index" style="display:none; margin-top:15px; padding:15px; background:rgba(16,185,129,0.1); border:1px solid rgba(16,185,129,0.4); border-radius:8px; color:#34d399;">Заявка отправлена! Мы свяжемся с вами в течение 24 часов.</div>
                 </div>
                 <div class="contact-info">
                     <h3>Для рекламы</h3>
@@ -421,28 +438,60 @@
                         <div class="contact-icon">📱</div>
                         <div class="contact-text">+7 (952) 796-57-85</div>
                     </div>
-                    <a href="tariffs.html" class="cta-button" style="
+                    <a href="tariffs.html" class="btn-primary" style="
     display: inline-block;
-    padding: 18px 40px;
+    padding: 14px 32px;
     background: linear-gradient(135deg, #3b82f6, #8b5cf6);
     color: white;
     text-decoration: none;
     border-radius: 12px;
     font-weight: bold;
-    font-size: 1.1rem;
+    font-size: 1rem;
     box-shadow: 0 10px 25px rgba(59, 130, 246, 0.4);
     transition: all 0.3s ease;
     border: 2px solid transparent;
     margin: 20px 0;
 ">
-    🎁 Карточка навсегда — 990 ₽ разово →
+    Тарифы размещения →
 </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <div class="promo" style="text-align:center;padding:20px;">🎁 Карточка навсегда — 990 ₽ разово, без подписок!</div>
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var form = document.getElementById('contact-form-index');
+        if (form) {
+            form.addEventListener('submit', async function (e) {
+                e.preventDefault();
+                var btn = form.querySelector('button[type="submit"]');
+                var original = btn.innerHTML;
+                btn.disabled = true;
+                btn.innerHTML = 'Отправка...';
+                try {
+                    var res = await fetch(form.action, {
+                        method: 'POST',
+                        body: new FormData(form),
+                        headers: { 'Accept': 'application/json' }
+                    });
+                    var data = await res.json();
+                    if (data.success) {
+                        form.style.display = 'none';
+                        document.getElementById('form-success-index').style.display = 'block';
+                    } else {
+                        alert('Ошибка отправки: ' + (data.message || 'попробуйте ещё раз'));
+                    }
+                } catch (err) {
+                    alert('Ошибка отправки. Напишите нам на pryazhnikov24@yandex.ru');
+                }
+                btn.disabled = false;
+                btn.innerHTML = original;
+            });
+        }
+    });
+    </script>
+
 
 <style>
     .cta-button:hover {
@@ -500,6 +549,7 @@
                 <h4 style="color: #60a5fa; margin-bottom: 15px;">Полезное</h4>
                 <ul style="list-style: none; padding: 0; color: #94a3b8;">
                     <li style="margin-bottom: 8px;"><a href="tariffs.html" style="color: #94a3b8; text-decoration: none;">💎 Тарифы</a></li>
+                    <li style="margin-bottom: 8px;"><a href="contacts.html" style="color: #94a3b8; text-decoration: none;">📋 Для владельцев магазинов</a></li>
                     <li style="margin-bottom: 8px;"><a href="blog.html" style="color: #94a3b8; text-decoration: none;">📝 Блог</a></li>
                     <li style="margin-bottom: 8px;"><a href="moose.html" style="color: #94a3b8; text-decoration: none;">🦌 О лосе</a></li>
                     <li style="margin-bottom: 8px;"><a href="contacts.html" style="color: #94a3b8; text-decoration: none;">📞 Контакты</a></li>
@@ -529,7 +579,7 @@
             <div class="about-project-content">
                 <p>«Флаер Гусев» — это цифровой каталог магазинов города Гусева Калининградской области. Мы создали удобную платформу, где жители и гости города могут быстро найти любой магазин, магазин или сервис — от мебели и продуктов до автосервисов и аптек.</p>
                 <p>В нашем каталоге представлены <strong>12 основных категорий</strong>: <a href="mebel.html">мебель</a>, <a href="produkty.html">продукты</a>, <a href="stroymaterialy.html">строительные материалы</a>, <a href="odezhda.html">одежда</a>, <a href="tehnika.html">техника</a>, <a href="byt.html">бытовая химия</a>, <a href="apteka.html">аптеки</a>, <a href="avto.html">авто</a>, <a href="kanctovary.html">канцтовары</a>, <a href="cafe.html">кафе и рестораны</a>, <a href="zootovary.html">зоотовары</a> и <a href="detskie-tovary.html">детские товары</a>. Каждая категория содержит список магазинов с адресами, телефонами и ассортиментом.</p>
-                <p>Размещение для магазинов — <strong>990 ₽ разово</strong>, карточка остаётся в каталоге <strong>навсегда</strong>. Никаких ежемесячных платежей: обновление контента раз в месяц бесплатно. Дополнительно — приоритетная позиция в категории и активная ссылка на сайт/группу по 500 ₽. Подробнее — на странице <a href="tariffs.html">Тарифы</a>.</p>
+                <p>Размещение для магазинов — один раз, карточка остаётся в каталоге <strong>навсегда</strong>, без ежемесячных платежей. Обновление контента раз в месяц бесплатно. Подробнее — на странице <a href="tariffs.html">Тарифы</a>.</p>
                 <p>Гусев — небольшой город с населением около <strong>28 000 человек</strong>, расположенный в восточной части Калининградской области. Символ города — <strong>лось</strong>, который можно увидеть на гербе и как памятник в центре города. Гусев — город с богатой историей, где местный бизнес играет важную роль в жизни сообщества. «Флаер Гусев» помогает этому бизнесу быть найденным.</p>
             </div>
         </div>

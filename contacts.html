@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Контакты — Флаер Гусев | Адрес и телефон каталога</title>
-    <meta name="description" content="Свяжитесь с нами по любым вопросам. Адрес, телефон, email, режим работы. Разместим ваш магазин в каталоге — карточка навсегда за 990 ₽.">
+    <meta name="description" content="Свяжитесь с нами по любым вопросам. Адрес, телефон, email, режим работы. Добавьте свой магазин в каталог ФлаерГусев.">
     <meta property="og:title" content="Контакты — Флаер Гусев | Адрес и телефон каталога">
     <meta property="og:description" content="Свяжитесь с нами по любым вопросам. Адрес, телефон, email, режим работы.">
     <meta property="og:type" content="website">
@@ -99,10 +99,41 @@
                 <div class="contact-form-section">
                     <h2>Добавить магазин</h2>
                     <p>Заполните форму, и мы свяжемся с вами</p>
-                    
-                    <div id="ya-form" class="ya-form-container">
-                        <script src="https://forms.yandex.ru/_static/embed.js"></script><iframe src="https://forms.yandex.ru/u/6a693aa5591330375d0c1a79?iframe=1" frameborder="0" name="ya-form-6a693aa5591330375d0c1a79" width="100%"></iframe>
-                    </div>
+
+                    <form action="https://api.web3forms.com/submit" method="POST" class="shop-form" id="contact-form-contacts">
+                        <input type="hidden" name="access_key" value="0f206c4a-b0d2-4372-ae70-8da7b5fb35b2">
+                        <input type="hidden" name="subject" value="Заявка с ФлаерГусев (контакты)">
+                        <input type="hidden" name="from_name" value="ФлаерГусев">
+                        <input type="checkbox" name="botcheck" style="display: none;">
+                        <label for="shop-name-contacts">Название магазина *</label>
+                        <input type="text" id="shop-name-contacts" name="Название магазина" required placeholder="Например: Софа">
+                        <label for="shop-cat-contacts">Категория *</label>
+                        <select id="shop-cat-contacts" name="Категория" required>
+                            <option value="">Выберите категорию</option>
+                            <option>Мебель</option>
+                            <option>Продукты</option>
+                            <option>Стройматериалы</option>
+                            <option>Одежда</option>
+                            <option>Техника</option>
+                            <option>Бытовая химия</option>
+                            <option>Аптеки</option>
+                            <option>Авто</option>
+                            <option>Канцтовары</option>
+                            <option>Кафе и рестораны</option>
+                            <option>Зоотовары</option>
+                            <option>Детские товары</option>
+                        </select>
+                        <label for="shop-phone-contacts">Телефон *</label>
+                        <input type="tel" id="shop-phone-contacts" name="Телефон" required placeholder="+7 (___) ___-__-__">
+                        <label for="shop-contact-contacts">Ваше имя</label>
+                        <input type="text" id="shop-contact-contacts" name="Имя" placeholder="Как к вам обращаться">
+                        <label for="shop-address-contacts">Адрес</label>
+                        <input type="text" id="shop-address-contacts" name="Адрес" placeholder="Адрес магазина">
+                        <label for="shop-desc-contacts">Описание товаров</label>
+                        <textarea id="shop-desc-contacts" name="Описание товаров" rows="3" placeholder="Что продаёте (до 10 позиций)"></textarea>
+                        <button type="submit" class="btn-primary">Отправить заявку</button>
+                    </form>
+                    <div id="form-success-contacts" style="display:none; margin-top:15px; padding:15px; background:rgba(16,185,129,0.1); border:1px solid rgba(16,185,129,0.4); border-radius:8px; color:#34d399;">Заявка отправлена! Мы свяжемся с вами в течение 24 часов.</div>
                 </div>
 
                 <div class="map-section">
@@ -131,13 +162,43 @@
             <div class="cta-section">
                 <h2>Добавьте свой магазин</h2>
                 <p>Хотите разместить информацию о вашем магазине в каталоге? Свяжитесь с нами!</p>
-                <div class="cta-highlight">
-                    <span class="cta-badge">🎁 Карточка навсегда — 990 ₽ разово!</span>
-                </div>
-                <a href="mailto:pryazhnikov24@yandex.ru" class="btn-primary">Написать нам</a>
+                <a href="#shop-name-contacts" class="btn-primary">Заполнить форму</a>
             </div>
         </div>
     </section>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var form = document.getElementById('contact-form-contacts');
+        if (form) {
+            form.addEventListener('submit', async function (e) {
+                e.preventDefault();
+                var btn = form.querySelector('button[type="submit"]');
+                var original = btn.innerHTML;
+                btn.disabled = true;
+                btn.innerHTML = 'Отправка...';
+                try {
+                    var res = await fetch(form.action, {
+                        method: 'POST',
+                        body: new FormData(form),
+                        headers: { 'Accept': 'application/json' }
+                    });
+                    var data = await res.json();
+                    if (data.success) {
+                        form.style.display = 'none';
+                        document.getElementById('form-success-contacts').style.display = 'block';
+                    } else {
+                        alert('Ошибка отправки: ' + (data.message || 'попробуйте ещё раз'));
+                    }
+                } catch (err) {
+                    alert('Ошибка отправки. Напишите нам на pryazhnikov24@yandex.ru');
+                }
+                btn.disabled = false;
+                btn.innerHTML = original;
+            });
+        }
+    });
+    </script>
 
     <footer class="site-footer">
         <div class="container">
@@ -156,6 +217,7 @@
                     <a href="tariffs.html">Тарифы</a>
                     <a href="blog.html">Блог</a>
                     <a href="contacts.html">Контакты</a>
+                    <a href="tariffs.html">Для владельцев магазинов</a>
                 </div>
                 <div class="footer-categories">
                     <h4>Категории</h4>
