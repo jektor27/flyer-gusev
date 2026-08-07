@@ -48,7 +48,9 @@ const shopsData = [
     {id:46,name:"Балтика",category:"byt",address:"Московская ул., 14",phone:"не указан",description:"Торговый центр — товары для дома и отдыха",products:["Товары для дома","Товары для отдыха"],badge:"Быт",rating:4.1},
     {id:47,name:"Берёза",category:"produkty",address:"Правобережная ул., 4",phone:"не указан",description:"Продуктовый магазин — продукты питания",products:["Продукты","Бакалея","Напитки"],badge:"Продукты",rating:4.2},
     {id:48,name:"ЗооМаркет",category:"zootovary",address:"Правобережная ул., 4 (этаж 1)",phone:"+7 (4012) 92-25-98",description:"Зоомагазин — корма, товары для животных",products:["Корма","Товары для животных","Аксессуары"],badge:"Зоотовары",rating:4.4},
-    {id:49,name:"Пицца и… талия",category:"cafe",address:"Правобережная ул., 4",phone:"+7 (921) 854-12-92",description:"Пиццерия — пицца, горячие блюда",products:["Пицца","Горячие блюда"],badge:"Пиццерия",rating:4.3}
+    {id:49,name:"Пицца и… талия",category:"cafe",address:"Правобережная ул., 4",phone:"+7 (921) 854-12-92",description:"Пиццерия — пицца, горячие блюда",products:["Пицца","Горячие блюда"],badge:"Пиццерия",rating:4.3},
+    {id:50,name:"Суши Love",category:"cafe",address:"Московская ул., 23А",phone:"+7 (4012) 40-10-16",description:"Доставка суши и роллов в Гусеве",products:["Суши","Роллы","Доставка"],badge:"Суши-бар",rating:4.5},
+    {id:51,name:"Хоббит",category:"detskie-tovary",address:"ул. Ломоносова, 8 (ТЦ Сити)",phone:"не указан",website:"https://hobbit39.ru",description:"Детский магазин — игрушки, детские товары, канцтовары",products:["Игрушки","Детские товары","Детская одежда","Канцтовары"],badge:"Детский магазин",rating:4.5}
 ]
 
 // Категории (ключ = slug из URL ?cat=mebel)
@@ -63,7 +65,8 @@ const categories = {
     "avto": { name: "Авто", icon: "🚗", description: "Автозапчасти и автотовары в Гусеве" },
     "kanctovary": { name: "Канцтовары", icon: "📎", description: "Канцтовары и офисные принадлежности в Гусеве" },
     "cafe": { name: "Кафе и рестораны", icon: "☕", description: "Кафе, рестораны, столовые и доставка еды в Гусеве" },
-    "zootovary": { name: "Зоотовары", icon: "🐾", description: "Зоомагазины и товары для животных в Гусеве" }
+    "zootovary": { name: "Зоотовары", icon: "🐾", description: "Зоомагазины и товары для животных в Гусеве" },
+    "detskie-tovary": { name: "Детские товары", icon: "🧸", description: "Детские магазины и товары для детей в Гусеве" }
 };
 
 // Инициализация
@@ -77,6 +80,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     if (window.location.pathname.indexOf('zootovary.html') !== -1) {
         registerCategoryClick('zootovary');
+    }
+    if (window.location.pathname.indexOf('detskie-tovary.html') !== -1) {
+        registerCategoryClick('detskie-tovary');
     }
     initScrollEffects();
     const form = document.getElementById('addShopForm');
@@ -238,7 +244,7 @@ function createShopCard(shop, index, clickable) {
     if (shop.crossCategory) {
         const cross = document.createElement('div');
         cross.className = 'cross-category';
-        const catNames = {odezhda:'Одежда',byt:'Быт',mebel:'Мебель',produkty:'Продукты',stroymaterialy:'Стройматериалы',tehnika:'Техника',apteka:'Аптеки',avto:'Авто',kanctovary:'Канцтовары',cafe:'Кафе',zootovary:'Зоотовары'};
+        const catNames = {odezhda:'Одежда',byt:'Быт',mebel:'Мебель',produkty:'Продукты',stroymaterialy:'Стройматериалы',tehnika:'Техника',apteka:'Аптеки',avto:'Авто',kanctovary:'Канцтовары',cafe:'Кафе',zootovary:'Зоотовары','detskie-tovary':'Детские товары'};
         cross.textContent = `Также в категории: ${catNames[shop.crossCategory]||shop.crossCategory}`;
         card.appendChild(cross);
     }
@@ -323,12 +329,20 @@ function search() {
         "еда": "cafe",
         "обед": "cafe",
         "доставка": "cafe",
+        "суши": "cafe",
+        "роллы": "cafe",
         "зоо": "zootovary",
         "зоомагазин": "zootovary",
         "корм": "zootovary",
         "животные": "zootovary",
         "питомцы": "zootovary",
-        "ветеринар": "zootovary"
+        "ветеринар": "zootovary",
+        "детские товары": "detskie-tovary",
+        "детский магазин": "detskie-tovary",
+        "игрушки": "detskie-tovary",
+        "детское": "detskie-tovary",
+        "коляски": "detskie-tovary",
+        "хоббит": "detskie-tovary"
     };
     
     let category = null;
