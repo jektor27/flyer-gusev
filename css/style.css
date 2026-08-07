@@ -933,6 +933,7 @@ body {
 }
 
 .contact-form input,
+.contact-form select,
 .contact-form textarea {
     width: 100%;
     padding: 18px 22px;
@@ -946,11 +947,31 @@ body {
     font-family: inherit;
 }
 
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #94a3b8;
+    font-size: 15px;
+    font-weight: 500;
+}
+
 .contact-form input:focus,
+.contact-form select:focus,
 .contact-form textarea:focus {
     outline: none;
     border-color: var(--accent);
     box-shadow: 0 0 20px rgba(233,69,96,0.2);
+}
+
+.contact-form select {
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+}
+
+.contact-form select option {
+    background: #1e293b;
+    color: var(--light);
 }
 
 .contact-form textarea {
@@ -2086,6 +2107,65 @@ a.cta-button:active {
 .form-group input::placeholder,
 .form-group textarea::placeholder {
     color: #4b5563;
+}
+
+.shop-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.shop-form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #8b92a8;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.shop-form input,
+.shop-form select,
+.shop-form textarea {
+    width: 100%;
+    padding: 14px 18px;
+    border: 1px solid #2a3142;
+    border-radius: 8px;
+    background: #0f172a;
+    color: #fff;
+    font-size: 16px;
+    font-family: inherit;
+    margin-bottom: 18px;
+    transition: all 0.3s;
+    box-sizing: border-box;
+}
+
+.shop-form input:focus,
+.shop-form select:focus,
+.shop-form textarea:focus {
+    outline: none;
+    border-color: #FBBF24;
+    box-shadow: 0 0 0 3px rgba(251, 191, 36, 0.1);
+}
+
+.shop-form input::placeholder,
+.shop-form textarea::placeholder {
+    color: #4b5563;
+}
+
+.shop-form select {
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+}
+
+.shop-form select option {
+    background: #1a1f2e;
+    color: #fff;
+}
+
+.shop-form .btn-primary,
+.shop-form button[type="submit"] {
+    align-self: flex-start;
+    cursor: pointer;
 }
 
 .btn-submit {
