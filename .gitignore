@@ -19,3 +19,8 @@ Thumbs.db
 # Temporary
 *.tmp
 *.temp
+
+# VK working files (не публикуются на сайте)
+vk-*.html
+vk-*.png
+vk-*.jpg
