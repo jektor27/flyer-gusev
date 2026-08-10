@@ -230,18 +230,6 @@ function createShopCard(shop, index, clickable) {
     card.appendChild(phone);
     card.appendChild(products);
     
-    if (shop.website) {
-        const website = document.createElement('div');
-        website.className = 'shop-phone';
-        const websiteLink = document.createElement('a');
-        websiteLink.href = shop.website;
-        websiteLink.target = '_blank';
-        websiteLink.textContent = '🌐 Сайт';
-        websiteLink.style.color = '#60a5fa';
-        website.appendChild(websiteLink);
-        card.appendChild(website);
-    }
-    
     if (shop.crossCategory) {
         const cross = document.createElement('div');
         cross.className = 'cross-category';
