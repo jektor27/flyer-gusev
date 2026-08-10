@@ -30,8 +30,9 @@
 gusev-flyer.ru/
 ├── index.html              (Главная — canonical, 13 pages in sitemap)
 ├── tariffs.html            (Тарифы размещения)
-├── blog.html               (Блог — 2 articles)
+├── blog.html               (Блог — 3 articles)
 ├── article-stroymaterialy.html (Статья: стройматериалы)
+├── article-stroymaterialy-remont.html (Статья: стройматериалы для ремонта)
 ├── article-add-shop.html      (Статья: добавить магазин)
 ├── category.html           (Шаблон категории — ?cat=)
 ├── category-mebel.html     (Детализация категории мебель)
