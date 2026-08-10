@@ -2485,3 +2485,181 @@ html {
 .btn-small:hover {
     transform: scale(1.05);
 }
+
+/* ===== Тарифы (дизайн: Квен, Qwen Studio) ===== */
+.fg-tariffs-wrap {
+    background: #0a0a1a;
+    padding: 48px 16px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    color: #ffffff;
+}
+
+.fg-tariffs-head {
+    max-width: 760px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+.fg-tariffs-head h1 {
+    margin: 0 0 12px;
+    font-size: 32px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.fg-tariffs-head p {
+    margin: 0;
+    color: #8892b0;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.fg-tariffs-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.fg-tariff {
+    background: #16213e;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: transform .2s ease, border-color .2s ease;
+}
+
+.fg-tariff:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.fg-tariff-name {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #8892b0;
+    margin: 0 0 8px;
+}
+
+.fg-tariff-price {
+    font-size: 40px;
+    font-weight: 800;
+    color: #ffffff;
+    margin: 0 0 4px;
+    line-height: 1;
+}
+
+.fg-tariff-price small {
+    font-size: 16px;
+    font-weight: 500;
+    color: #8892b0;
+    margin-left: 4px;
+}
+
+.fg-tariff-sub {
+    font-size: 13px;
+    color: #8892b0;
+    margin: 0 0 24px;
+}
+
+.fg-tariff-list {
+    list-style: none;
+    margin: 0 0 28px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+}
+
+.fg-tariff-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 14px;
+    color: #ffffff;
+    line-height: 1.4;
+}
+
+.fg-tariff-list li.muted {
+    color: #8892b0;
+    text-decoration: line-through;
+    text-decoration-color: rgba(136, 146, 176, 0.5);
+}
+
+.fg-yes {
+    color: #e94560;
+    font-weight: 700;
+    flex: none;
+}
+
+.fg-no {
+    color: #8892b0;
+    flex: none;
+}
+
+.fg-btn {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 700;
+    transition: opacity .2s ease;
+    margin-top: auto;
+}
+
+.fg-btn:hover { opacity: 0.85; }
+
+.fg-btn-ghost {
+    background: transparent;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.fg-btn-accent {
+    background: #e94560;
+    color: #ffffff;
+}
+
+.fg-btn-gold {
+    background: linear-gradient(135deg, #e94560 0%, #d4af37 100%);
+    color: #ffffff;
+}
+
+.fg-tariff.fg-top {
+    background:
+        linear-gradient(#16213e, #16213e) padding-box,
+        linear-gradient(135deg, #e94560 0%, #d4af37 100%) border-box;
+    border: 2px solid transparent;
+    box-shadow: 0 8px 32px rgba(212, 175, 55, 0.15), 0 0 0 1px rgba(233, 69, 96, 0.2);
+}
+
+.fg-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #d4af37;
+    color: #0a0a1a;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    padding: 6px 16px;
+    border-radius: 999px;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+    .fg-tariffs-grid { grid-template-columns: 1fr; gap: 28px; max-width: 420px; }
+    .fg-tariffs-head h1 { font-size: 26px; }
+    .fg-tariff-price { font-size: 34px; }
+}
