@@ -38,7 +38,7 @@ gusev-flyer.ru/
 ├── contacts.html           (Контакты)
 ├── mebel.html              (📦 Мебель — 2 магазина)
 ├── produkty.html           (🛒 Продукты — 3 магазина)
-├── stroymaterialy.html     (🧱 Стройматериалы — 2 магазина)
+├── stroymaterialy.html     (🧱 Стройматериалы — 3 магазина)
 ├── odezhda.html            (👗 Одежда — 1+ магазины)
 ├── tehnika.html            (💻 Техника — 2 магазина)
 ├── byt.html                (🧴 Бытовая химия — 2 магазина)
