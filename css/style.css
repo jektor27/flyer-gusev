@@ -884,61 +884,151 @@ body {
     gap: 25px;
 }
 
-.category-card {
-    background: linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
-    border: 1px solid var(--border);
-    border-radius: 20px;
-    padding: 35px;
+.home-categories {
+    background: #0a0a1a;
+    padding: 80px 0;
+}
+
+.home-cat-head {
     text-align: center;
-    text-decoration: none;
+    margin-bottom: 44px;
+}
+
+.home-cat-title {
+    margin: 0 0 10px;
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 800;
+    letter-spacing: -0.02em;
     color: var(--light);
-    transition: all 0.4s ease;
-    position: relative;
-    overflow: hidden;
 }
 
-.category-card::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(135deg, var(--accent), var(--gold));
-    opacity: 0;
-    transition: opacity 0.4s ease;
-    z-index: 0;
-}
-
-.category-card:hover {
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: var(--shadow);
-}
-
-.category-card:hover::after {
-    opacity: 0.1;
-}
-
-.category-icon {
-    font-size: 56px;
-    display: block;
-    margin-bottom: 20px;
-    position: relative;
-    z-index: 1;
-    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3));
-}
-
-.category-name {
-    font-size: 20px;
-    font-weight: 700;
-    display: block;
-    margin-bottom: 10px;
-    position: relative;
-    z-index: 1;
-}
-
-.category-count {
+.home-cat-sub {
+    margin: 0;
+    font-size: 15px;
     color: var(--gray);
-    font-size: 14px;
+}
+
+.home-categories .categories-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.home-categories .category-card {
     position: relative;
-    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    min-height: 150px;
+    padding: 20px;
+    background: var(--primary-light);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    text-decoration: none;
+    box-sizing: border-box;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.home-categories .category-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(233, 69, 96, 0.5);
+    box-shadow: 0 12px 32px rgba(233, 69, 96, 0.15);
+}
+
+.home-categories .category-icon {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    filter: grayscale(1);
+    opacity: 0.85;
+    transition: filter 0.25s ease, opacity 0.25s ease;
+}
+
+.home-categories .category-card:hover .category-icon {
+    filter: none;
+    opacity: 1;
+}
+
+.home-categories .category-name {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--light);
+    line-height: 1.3;
+}
+
+.home-categories .category-count {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    font-size: 11px;
+    padding: 3px 9px;
+    border-radius: 999px;
+    color: var(--gray);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    white-space: nowrap;
+}
+
+.home-categories .category-count.cat-hot {
+    color: var(--gold);
+    border-color: rgba(212, 175, 55, 0.4);
+    background: rgba(212, 175, 55, 0.08);
+}
+
+.home-categories .cat-arrow {
+    position: absolute;
+    bottom: 14px;
+    right: 16px;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--accent);
+    opacity: 0;
+    transform: translateX(-8px);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.home-categories .category-card:hover .cat-arrow {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+@media (max-width: 1140px) {
+    .home-categories .categories-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .home-categories {
+        padding: 56px 0;
+    }
+
+    .home-categories .categories-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+    }
+
+    .home-categories .category-card {
+        min-height: 140px;
+        padding: 16px;
+    }
+
+    .home-categories .category-count {
+        top: 12px;
+        right: 12px;
+        font-size: 10px;
+    }
+
+    .home-categories .cat-arrow {
+        bottom: 12px;
+        right: 12px;
+    }
 }
 
 /* Shops */
