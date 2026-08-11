@@ -107,9 +107,9 @@
                         <input type="hidden" name="from_name" value="ФлаерГусев">
                         <input type="checkbox" name="botcheck" style="display: none;">
                         <label for="shop-name-contacts">Название магазина *</label>
-                        <input type="text" id="shop-name-contacts" name="Название магазина" required placeholder="Например: Софа">
+                        <input type="text" id="shop-name-contacts" name="shop_name" required placeholder="Например: Софа">
                         <label for="shop-cat-contacts">Категория *</label>
-                        <select id="shop-cat-contacts" name="Категория" required>
+                        <select id="shop-cat-contacts" name="category" required>
                             <option value="">Выберите категорию</option>
                             <option>Мебель</option>
                             <option>Продукты</option>
@@ -125,13 +125,13 @@
                             <option>Детские товары</option>
                         </select>
                         <label for="shop-phone-contacts">Телефон *</label>
-                        <input type="tel" id="shop-phone-contacts" name="Телефон" required placeholder="+7 (___) ___-__-__">
+                        <input type="tel" id="shop-phone-contacts" name="phone" required placeholder="+7 (___) ___-__-__">
                         <label for="shop-contact-contacts">Ваше имя</label>
-                        <input type="text" id="shop-contact-contacts" name="Имя" placeholder="Как к вам обращаться">
+                        <input type="text" id="shop-contact-contacts" name="contact_name" placeholder="Как к вам обращаться">
                         <label for="shop-address-contacts">Адрес</label>
-                        <input type="text" id="shop-address-contacts" name="Адрес" placeholder="Адрес магазина">
+                        <input type="text" id="shop-address-contacts" name="address" placeholder="Адрес магазина">
                         <label for="shop-desc-contacts">Описание товаров</label>
-                        <textarea id="shop-desc-contacts" name="Описание товаров" rows="3" placeholder="Что продаёте (до 10 позиций)"></textarea>
+                        <textarea id="shop-desc-contacts" name="description" rows="3" placeholder="Что продаёте (до 10 позиций)"></textarea>
                         <button type="submit" class="btn-primary">Отправить заявку</button>
                     </form>
                     <div id="form-success-contacts" style="display:none; margin-top:15px; padding:15px; background:rgba(16,185,129,0.1); border:1px solid rgba(16,185,129,0.4); border-radius:8px; color:#34d399;">Заявка отправлена! Мы свяжемся с вами в течение 24 часов.</div>
