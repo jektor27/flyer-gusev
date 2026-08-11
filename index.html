@@ -131,23 +131,21 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-badge">
-                    <span>🫎</span>
-                    <span>Город Гусев — Гордость лосей!</span>
+                    <span class="hero-badge-ico">🫎</span>
+                    <span class="hero-badge-text">Город Гусев — Гордость лосей!</span>
                 </div>
                 <h1>Найдите <span class="gradient-text">лучшие товары</span> в Гусеве</h1>
                 <p class="hero-subtitle">Более 52 магазинов и товаров в одном месте. Удобный поиск, актуальные цены, проверенные продавцы.</p>
-                
+
                 <div class="search-box">
-                    <input type="text" id="searchInput" placeholder="Что ищете? Например: мебель, продукты..." class="search-input">
+                    <span class="search-ico">🔍</span>
+                    <input id="searchInput" class="search-input" placeholder="Что ищете? Например: мебель, продукты...">
                     <button class="search-btn" onclick="search()">Найти</button>
                 </div>
-                
+
                 <div id="search-results" class="search-results"></div>
-                <div id="loader" class="loader" style="display:none;">
-                    <div class="spinner"></div>
-                    <span>Поиск...</span>
-                </div>
-                
+                <div id="loader" class="loader" style="display:none;"><div class="spinner"></div><span>Поиск...</span></div>
+
                 <div class="popular-queries">
                     <p class="popular-label">Популярные запросы:</p>
                     <div class="popular-buttons">
@@ -166,18 +164,35 @@
                     </div>
                 </div>
                 <div class="hero-stats">
-                    <div class="hero-stat">
-                        <div class="hero-stat-number">52</div>
-                        <div class="hero-stat-label">Магазинов</div>
+                    <div class="stat"><span class="stat-num">52</span><span class="stat-label">Магазинов</span></div>
+                    <div class="stat"><span class="stat-num">120+</span><span class="stat-label">Товаров</span></div>
+                    <div class="stat"><span class="stat-num">28K</span><span class="stat-label">Жителей</span></div>
+                </div>
+            </div>
+            <div class="hero-visual" aria-hidden="true">
+                <div class="glass-card">
+                    <div class="glass-top">
+                        <span class="glass-emo">🛒</span>
+                        <span class="glass-name">Светофор</span>
+                        <span class="glass-rate">★ 4.4</span>
                     </div>
-                    <div class="hero-stat">
-                        <div class="hero-stat-number">120+</div>
-                        <div class="hero-stat-label">Товаров</div>
+                    <div class="glass-meta">Продукты · просп. Ленина, 41А</div>
+                </div>
+                <div class="glass-card">
+                    <div class="glass-top">
+                        <span class="glass-emo">🪑</span>
+                        <span class="glass-name">Софа</span>
+                        <span class="glass-tag">Мебель</span>
                     </div>
-                    <div class="hero-stat">
-                        <div class="hero-stat-number">28K</div>
-                        <div class="hero-stat-label">Жителей</div>
+                    <div class="glass-meta">Мебель · ул. Менделеева, 4</div>
+                </div>
+                <div class="glass-card">
+                    <div class="glass-top">
+                        <span class="glass-emo">🧱</span>
+                        <span class="glass-name">Тёплый дом</span>
+                        <span class="glass-rate">★ 4.9</span>
                     </div>
+                    <div class="glass-meta">Стройматериалы · Школьная ул., 11</div>
                 </div>
             </div>
         </div>
