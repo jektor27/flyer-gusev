@@ -1390,6 +1390,333 @@ body {
     }
 }
 
+/* ===== Блок «О проекте» (главная) ===== */
+.home-about {
+    background: #0a0a1a;
+    padding: 80px 0;
+}
+
+.home-about-head {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.home-about-title {
+    margin: 0 0 10px;
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+}
+
+.home-about-intro {
+    margin: 0;
+    font-size: 15px;
+    color: #8892b0;
+}
+
+.home-about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.home-about-text {
+    max-width: 720px;
+    margin: 0 auto;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #8892b0;
+}
+
+.home-about-text p {
+    margin: 0 0 16px;
+}
+
+.home-about-text p:last-child {
+    margin-bottom: 0;
+}
+
+.home-about-stats {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    padding: 24px 0;
+}
+
+.home-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 0 32px;
+    border-left: 1px solid rgba(255,255,255,0.1);
+}
+
+.home-stat:first-child {
+    border-left: none;
+    padding-left: 0;
+}
+
+.home-stat-num {
+    font-size: 40px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: #e94560;
+    line-height: 1;
+}
+
+.home-stat-label {
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: #8892b0;
+}
+
+.home-about-cta {
+    background: #16213e;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 16px;
+    padding: 32px;
+}
+
+.home-cta-content {
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.home-cta-title {
+    margin: 0 0 12px;
+    font-size: 22px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.home-cta-text {
+    margin: 0 0 24px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #8892b0;
+}
+
+.home-cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.home-cta-btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 12px 28px;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 700;
+    transition: box-shadow .25s ease, transform .25s ease, background .25s ease, border-color .25s ease;
+}
+
+.home-cta-btn-primary {
+    background: linear-gradient(135deg, #e94560 0%, #d4af37 100%);
+    color: #ffffff;
+    border: 1px solid transparent;
+}
+
+.home-cta-btn-primary:hover {
+    box-shadow: 0 0 26px rgba(233,69,96,0.5);
+    transform: translateY(-1px);
+}
+
+.home-cta-btn-ghost {
+    background: transparent;
+    color: #ffffff;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.home-cta-btn-ghost:hover {
+    border-color: #e94560;
+    color: #e94560;
+}
+
+.home-about-contacts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.home-contact-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px;
+    background: #16213e;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 16px;
+    transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+}
+
+.home-contact-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(233,69,96,0.5);
+    box-shadow: 0 12px 32px rgba(233,69,96,0.15);
+}
+
+.home-contact-icon {
+    width: 44px;
+    height: 44px;
+    flex: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 12px;
+    filter: grayscale(1);
+    opacity: .85;
+    transition: filter .25s ease, opacity .25s ease;
+}
+
+.home-contact-card:hover .home-contact-icon {
+    filter: none;
+    opacity: 1;
+}
+
+.home-contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+}
+
+.home-contact-label {
+    font-size: 11px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: #8892b0;
+}
+
+.home-contact-value {
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    text-decoration: none;
+    transition: color .2s ease;
+    overflow-wrap: anywhere;
+}
+
+a.home-contact-value:hover {
+    color: #e94560;
+}
+
+@media (max-width:1140px){
+    .home-about-contacts {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+    }
+    .home-contact-card {
+        padding: 16px;
+        gap: 12px;
+    }
+    .home-contact-value {
+        font-size: 13px;
+    }
+}
+
+@media (max-width:800px){
+    .home-about {
+        padding: 64px 0;
+    }
+    .home-about-stats {
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: flex-start;
+    }
+    .home-stat {
+        flex: 1 1 calc(50% - 20px);
+        padding: 0 20px;
+        border-left: none;
+    }
+    .home-stat:first-child {
+        padding-left: 20px;
+    }
+    .home-stat-num {
+        font-size: 34px;
+    }
+    .home-about-cta {
+        padding: 24px 20px;
+    }
+    .home-cta-title {
+        font-size: 20px;
+    }
+    .home-cta-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .home-cta-btn {
+        text-align: center;
+        padding: 14px 20px;
+    }
+    .home-about-contacts {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    .home-contact-card {
+        padding: 16px;
+    }
+}
+
+@media (max-width:400px){
+    .home-about {
+        padding: 48px 0;
+    }
+    .home-about-head {
+        margin-bottom: 32px;
+    }
+    .home-about-content {
+        gap: 32px;
+    }
+    .home-about-text {
+        font-size: 14px;
+    }
+    .home-about-stats {
+        gap: 16px;
+    }
+    .home-stat {
+        flex: 1 1 100%;
+        padding: 12px 16px;
+        background: #16213e;
+        border: 1px solid rgba(255,255,255,0.1);
+        border-radius: 12px;
+    }
+    .home-stat-num {
+        font-size: 28px;
+    }
+    .home-stat-label {
+        font-size: 11px;
+    }
+    .home-about-cta {
+        padding: 20px 16px;
+    }
+    .home-cta-title {
+        font-size: 18px;
+    }
+    .home-cta-text {
+        font-size: 14px;
+    }
+    .home-contact-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+    .home-contact-label {
+        font-size: 10px;
+    }
+    .home-contact-value {
+        font-size: 13px;
+    }
+}
+
 .tag {
     background: rgba(255,255,255,0.08);
     border: 1px solid var(--border);
