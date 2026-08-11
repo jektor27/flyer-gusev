@@ -551,82 +551,68 @@
         </div>
     </section>
 
-    <section class="contact" id="contact">
+    <section class="home-contact" id="contact">
         <div class="container">
-            <div class="section-header">
-                <div class="section-badge">📬 Связаться</div>
-                <h2 class="section-title">Добавить магазин</h2>
-                <p class="section-subtitle">Заполните форму и мы свяжемся с вами</p>
+            <div class="home-contact-head">
+                <h2 class="home-contact-title">Разместите <span class="gradient-text">свой магазин</span></h2>
+                <p class="home-contact-sub">Базовая карточка — бесплатно и навсегда. Заполните форму, и мы свяжемся с вами в течение 24 часов</p>
             </div>
-            
-            <div class="contact-grid">
-                <div class="contact-form">
-                    <h3>Форма заявки</h3>
-                    <form action="https://api.web3forms.com/submit" method="POST" class="shop-form" id="contact-form-index">
+            <div class="home-contact-content">
+                <div class="home-contact-form-wrap">
+                    <form class="home-contact-form" action="https://api.web3forms.com/submit" method="POST" id="contact-form-index">
                         <input type="hidden" name="access_key" value="0f206c4a-b0d2-4372-ae70-8da7b5fb35b2">
                         <input type="hidden" name="subject" value="Заявка с ФлаерГусев (главная)">
                         <input type="hidden" name="from_name" value="ФлаерГусев">
                         <input type="checkbox" name="botcheck" style="display: none;">
-                        <label for="shop-name-index">Название магазина *</label>
-                        <input type="text" id="shop-name-index" name="shop_name" required placeholder="Например: Софа">
-                        <label for="shop-cat-index">Категория *</label>
-                        <select id="shop-cat-index" name="category" required>
-                            <option value="">Выберите категорию</option>
-                            <option>Мебель</option>
-                            <option>Продукты</option>
-                            <option>Стройматериалы</option>
-                            <option>Одежда</option>
-                            <option>Техника</option>
-                            <option>Бытовая химия</option>
-                            <option>Аптеки</option>
-                            <option>Авто</option>
-                            <option>Канцтовары</option>
-                            <option>Кафе и рестораны</option>
-                            <option>Зоотовары</option>
-                            <option>Детские товары</option>
-                        </select>
-                        <label for="shop-phone-index">Телефон *</label>
-                        <input type="tel" id="shop-phone-index" name="phone" required placeholder="+7 (___) ___-__-__">
-                        <label for="shop-contact-index">Ваше имя</label>
-                        <input type="text" id="shop-contact-index" name="contact_name" placeholder="Как к вам обращаться">
-                        <label for="shop-address-index">Адрес</label>
-                        <input type="text" id="shop-address-index" name="address" placeholder="Адрес магазина">
-                        <label for="shop-desc-index">Описание товаров</label>
-                        <textarea id="shop-desc-index" name="description" rows="3" placeholder="Что продаёте (до 10 позиций)"></textarea>
-                        <button type="submit" class="cta-btn">
-                            <span>Отправить заявку</span>
-                            <span>→</span>
-                        </button>
+                        <div class="form-field">
+                            <label class="form-label" for="shop-name-index">Название магазина <span>*</span></label>
+                            <input class="form-input" type="text" id="shop-name-index" name="shop_name" placeholder="Например: ПрофСтайл" required>
+                        </div>
+                        <div class="form-field">
+                            <label class="form-label" for="shop-cat-index">Категория <span>*</span></label>
+                            <select class="form-select" id="shop-cat-index" name="category" required>
+                                <option value="">Выберите категорию</option>
+                                <option value="mebel">Мебель</option>
+                                <option value="produkty">Продукты</option>
+                                <option value="stroymaterialy">Стройматериалы</option>
+                                <option value="odezhda">Одежда</option>
+                                <option value="tehnika">Техника</option>
+                                <option value="byt">Бытовая химия</option>
+                                <option value="apteka">Аптеки</option>
+                                <option value="avto">Авто</option>
+                                <option value="kanctovary">Канцтовары</option>
+                                <option value="cafe">Кафе и рестораны</option>
+                                <option value="zootovary">Зоотовары</option>
+                                <option value="detskie-tovary">Детские товары</option>
+                            </select>
+                        </div>
+                        <div class="form-field">
+                            <label class="form-label" for="shop-phone-index">Телефон <span>*</span></label>
+                            <input class="form-input" type="tel" id="shop-phone-index" name="phone" placeholder="+7 (___) ___-__-__" required>
+                        </div>
+                        <div class="form-field">
+                            <label class="form-label" for="shop-contact-index">Ваше имя</label>
+                            <input class="form-input" type="text" id="shop-contact-index" name="contact_name" placeholder="Как к вам обращаться?">
+                        </div>
+                        <div class="form-field">
+                            <label class="form-label" for="shop-address-index">Адрес</label>
+                            <input class="form-input" type="text" id="shop-address-index" name="address" placeholder="Улица, дом">
+                        </div>
+                        <div class="form-field">
+                            <label class="form-label" for="shop-desc-index">Описание товаров</label>
+                            <textarea class="form-textarea" id="shop-desc-index" name="description" rows="3" placeholder="Что продаёте, какие услуги оказываете?"></textarea>
+                        </div>
+                        <button class="form-submit" type="submit">Отправить заявку →</button>
                     </form>
                     <div id="form-success-index" style="display:none; margin-top:15px; padding:15px; background:rgba(16,185,129,0.1); border:1px solid rgba(16,185,129,0.4); border-radius:8px; color:#34d399;">Заявка отправлена! Мы свяжемся с вами в течение 24 часов.</div>
                 </div>
-                <div class="contact-info">
-                    <h3>Для рекламы</h3>
-                    <p>Хотите разместить информацию о вашем магазине в каталоге Флаер Гусев? Свяжитесь с нами!</p>
-                    <div class="contact-item">
-                        <div class="contact-icon">📧</div>
-                        <div class="contact-text">pryazhnikov24@yandex.ru</div>
+                <div class="home-contact-questions">
+                    <h3 class="home-questions-title">Есть вопросы?</h3>
+                    <p class="home-questions-text">Позвоните или напишите — обсудим размещение, тарифы и продвижение вашего магазина</p>
+                    <div class="home-questions-buttons">
+                        <a class="home-questions-btn home-questions-btn-primary" href="tel:+79527965785">📱 Позвонить</a>
+                        <a class="home-questions-btn home-questions-btn-ghost" href="mailto:pryazhnikov24@yandex.ru">📧 Написать</a>
                     </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">📱</div>
-                        <div class="contact-text">+7 (952) 796-57-85</div>
-                    </div>
-                    <a href="tariffs.html" class="btn-primary" style="
-    display: inline-block;
-    padding: 14px 32px;
-    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
-    color: white;
-    text-decoration: none;
-    border-radius: 12px;
-    font-weight: bold;
-    font-size: 1rem;
-    box-shadow: 0 10px 25px rgba(59, 130, 246, 0.4);
-    transition: all 0.3s ease;
-    border: 2px solid transparent;
-    margin: 20px 0;
-">
-    Тарифы размещения →
-</a>
                 </div>
             </div>
         </div>
