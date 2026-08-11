@@ -523,6 +523,213 @@ body {
     line-height: 1.8;
 }
 
+/* Feature demo (визуальные примеры в карточках) */
+.demo {
+    background: var(--darker);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: inset 0 2px 14px rgba(0,0,0,0.55);
+    padding: 12px;
+    min-height: 218px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+/* Демо 1: поиск */
+.demo-chips { display: flex; gap: 6px; }
+
+.demo-chip {
+    font-size: 9px;
+    color: var(--gray);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 3px 9px;
+}
+
+.demo-chip-active {
+    color: var(--light);
+    border-color: var(--accent);
+    background: rgba(233,69,96,0.15);
+}
+
+.demo-searchbar {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--primary-light);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 6px 9px;
+}
+
+.demo-search-ico { font-size: 10px; }
+
+.demo-query { font-size: 11px; color: var(--light); }
+
+.demo-caret {
+    width: 1px;
+    height: 12px;
+    background: var(--accent);
+    animation: demo-blink 1s steps(1) infinite;
+}
+
+@keyframes demo-blink { 50% { opacity: 0; } }
+
+.demo-clear { margin-left: auto; color: var(--gray); font-size: 11px; }
+
+.demo-summary { font-size: 9px; color: var(--gray); }
+
+.demo-summary b { color: var(--gold); font-weight: 700; }
+
+.demo-results { display: flex; flex-direction: column; gap: 6px; }
+
+.demo-result {
+    background: var(--primary-light);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 6px 8px;
+}
+
+.demo-result-top { display: flex; justify-content: space-between; align-items: center; gap: 6px; }
+
+.demo-result-name { font-size: 10px; font-weight: 700; color: var(--light); }
+
+.demo-badge {
+    font-size: 8px;
+    color: var(--accent);
+    white-space: nowrap;
+    border: 1px solid rgba(233,69,96,0.4);
+    border-radius: 999px;
+    padding: 1px 7px;
+}
+
+.demo-result-meta { display: flex; align-items: center; gap: 5px; margin-top: 3px; font-size: 9px; color: var(--gray); }
+
+.demo-stars { color: var(--gold); font-size: 9px; letter-spacing: 1px; }
+
+.demo-star { font-style: normal; }
+.demo-star.half { opacity: 0.45; }
+.demo-star.dim { opacity: 0.22; }
+
+.demo-rating { color: var(--gold); font-weight: 700; }
+
+.demo-addr { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+/* Демо 2: телефон */
+.demo-mobile { align-items: center; justify-content: center; }
+
+.demo-phone {
+    width: 118px;
+    height: 218px;
+    box-sizing: border-box;
+    background: var(--darker);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: inset 0 2px 10px rgba(0,0,0,0.6);
+    padding: 6px 7px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.demo-notch { width: 34px; height: 5px; border-radius: 999px; background: var(--primary-light); margin: 0 auto; }
+
+.demo-status { display: flex; justify-content: space-between; align-items: center; font-size: 7px; color: var(--gray); }
+
+.demo-status-right { display: flex; align-items: center; gap: 2px; }
+
+.demo-dot { width: 2px; height: 2px; border-radius: 50%; background: var(--gray); }
+
+.demo-batt { width: 9px; height: 5px; border: 1px solid rgba(255,255,255,0.3); border-radius: 1px; position: relative; }
+
+.demo-batt::after { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 70%; background: var(--gold); }
+
+.demo-phone-head { font-size: 8px; font-weight: 700; color: var(--light); }
+
+.demo-phone-head i { font-style: normal; color: var(--accent); }
+
+.demo-phone-search {
+    font-size: 7px;
+    color: var(--gray);
+    background: var(--primary-light);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 3px 6px;
+}
+
+.demo-phone-card {
+    background: var(--primary-light);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 4px 6px;
+}
+
+.demo-phone-name { display: flex; justify-content: space-between; gap: 3px; font-size: 7px; font-weight: 700; color: var(--light); }
+
+.demo-phone-rate { color: var(--gold); font-weight: 400; }
+
+.demo-phone-addr { font-size: 7px; color: var(--gray); margin-top: 1px; }
+
+.demo-phone-nav {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 2px;
+    font-size: 6px;
+    color: var(--gray);
+    border-top: 1px solid var(--border);
+    padding-top: 4px;
+}
+
+.demo-nav-active { color: var(--accent); }
+
+/* Демо 3: проверенные магазины */
+.demo-verify-head { display: flex; flex-direction: column; align-items: flex-start; gap: 3px; }
+
+.demo-verify-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 9px;
+    font-weight: 700;
+    color: var(--gold);
+    border: 1px solid rgba(212,175,55,0.45);
+    background: rgba(212,175,55,0.12);
+    border-radius: 999px;
+    padding: 3px 9px;
+}
+
+.demo-verify-date { font-size: 8px; color: var(--gray); }
+
+.demo-verify-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    background: var(--primary-light);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 6px 8px;
+}
+
+.demo-check { color: var(--gold); font-size: 11px; font-weight: 800; line-height: 1.2; }
+
+.demo-verify-info { flex: 1; min-width: 0; }
+
+.demo-verify-top { display: flex; justify-content: space-between; gap: 6px; }
+
+.demo-verify-name { font-size: 10px; font-weight: 700; color: var(--light); }
+
+.demo-verify-rate { font-size: 9px; font-weight: 700; color: var(--gold); }
+
+.demo-verify-meta { font-size: 9px; color: var(--gray); margin-top: 2px; }
+
+.demo-more { margin-top: auto; align-self: flex-end; font-size: 10px; color: var(--accent); text-decoration: none; }
+
+.demo-more:hover { text-decoration: underline; }
+
 /* Categories */
 .categories {
     padding: 120px 0;
