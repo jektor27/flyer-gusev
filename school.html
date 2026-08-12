@@ -35,7 +35,7 @@
     </script>
 </head>
 <body>
-    <header class="header" id="header">
+        <header class="site-header">
         <div class="container">
             <a href="index.html" class="logo">
                 <div class="logo-icon"><svg viewBox="0 0 100 100" width="34" height="34" aria-hidden="true"><text x="36" y="54" font-family="Segoe UI, Arial, sans-serif" font-size="72" font-weight="900" fill="#ffffff" text-anchor="middle" dominant-baseline="central">Ф</text><text x="83" y="54" font-family="Segoe UI, Arial, sans-serif" font-size="72" font-weight="900" fill="#e94560" text-anchor="middle" dominant-baseline="central">Г</text></svg></div>
@@ -43,39 +43,38 @@
             </a>
             <nav class="nav">
                 <a href="index.html" class="nav-link">Главная</a>
-                <a href="categories.html" class="nav-link">Категории</a>
-                <a href="school.html" class="nav-link active">Всё для школы</a>
+                <a href="categories.html" class="nav-link active">Категории</a>
+                <a href="tariffs.html" class="nav-link">Тарифы</a>
+                <a href="blog.html" class="nav-link">Блог</a>
                 <a href="contacts.html" class="nav-link">Контакты</a>
             </nav>
             <button class="menu-btn" onclick="toggleMenu()">☰</button>
         </div>
     </header>
 
-    <div class="container">
-        <nav class="breadcrumbs">
-            <a href="index.html">Главная</a>
-            <span>→</span>
-            <strong>Всё для школы</strong>
-        </nav>
-    </div>
+    <nav class="breadcrumbs"><div class="container"><a href="index.html">Главная</a> <span>→ </span> <strong>Всё для школы</strong></div></nav>
 
-    <section class="hero" style="padding: 60px 0;">
+        <section class="category-hero">
         <div class="container">
-            <div class="hero-badge">
-                <span>🎒</span>
-                <span>Всё для школы</span>
+            <div class="category-head">
+                <h1 class="category-title"><span class="gradient-text">Всё для школы</span> в Гусеве</h1>
+                <p class="category-sub">🎒 Каталог с адресами, телефонами и режимом работы</p>
             </div>
-            <h1>🎒 Всё для школы в Гусеве</h1>
-            <p class="subtitle">Готовимся к 1 сентября вместе! Собрали все магазины города, где можно купить канцтовары, школьную форму, рюкзаки и товары для творчества.</p>
+            <div class="category-meta">
+                <div class="category-meta-item"><span class="category-meta-ico">🛍️</span><span><b>3</b> магазинов</span></div>
+                <div class="category-meta-item"><span class="category-meta-ico">📍</span><span>г. Гусев</span></div>
+                <div class="category-meta-item"><span class="category-meta-ico">✅</span><span>Данные проверены</span></div>
+            </div>
+            <p class="category-lead">Готовимся к 1 сентября вместе! Собрали все магазины города, где можно купить канцтовары, школьную форму, рюкзаки и товары для творчества.</p>
         </div>
     </section>
 
-    <section class="shops" style="padding: 60px 0;">
+    <section class="shops">
         <div class="container">
             <h2 class="section-title">Магазины «Всё для школы»</h2>
             <div class="shops-grid">
 
-        <div class="shop-card" style="animation: fadeInUp 0.6s ease 0.0s both">
+        <div class="shop-card">
             <div class="shop-header">
                 <span class="shop-name">Жёлтый Бегемотик</span>
                 <span class="shop-badge">Канцтовары</span>
@@ -86,7 +85,7 @@
                 <span class="product-tag">Тетради</span><span class="product-tag">Краски</span><span class="product-tag">Пластилин</span><span class="product-tag">Рюкзаки</span>
             </div>
         </div>
-        <div class="shop-card" style="animation: fadeInUp 0.6s ease 0.1s both">
+        <div class="shop-card">
             <div class="shop-header">
                 <span class="shop-name">Канцлир</span>
                 <span class="shop-badge">Канцтовары</span>
@@ -97,7 +96,7 @@
                 <span class="product-tag">Тетради</span><span class="product-tag">Ручки</span><span class="product-tag">Бумага</span><span class="product-tag">Портфели</span>
             </div>
         </div>
-        <div class="shop-card" style="animation: fadeInUp 0.6s ease 0.2s both">
+        <div class="shop-card">
             <div class="shop-header">
                 <span class="shop-name">Холст с маслом</span>
                 <span class="shop-badge">Канцтовары</span>
@@ -113,26 +112,26 @@
         </div>
     </section>
 
-    <section class="seo-text" style="padding: 60px 0;">
+        <section class="article-section">
         <div class="container">
-            <h2 class="section-title">Всё для школы в Гусеве: канцтовары, форма и творчество</h2>
-            <div class="seo-content">
+            <h2>Всё для школы в Гусеве: канцтовары, форма и творчество</h2>
+            <div class="article-content">
                 <p>Гусев — город, где к школе готовятся заранее. В нашем каталоге собраны магазины, в которых есть всё необходимое для первоклассника и школьников постарше: тетради и ручки, ранцы с ортопедической спинкой, школьная форма, спортивная одежда, а также товары для уроков ИЗО и труда — краски, гуашь, кисточки, пластилин, цветная бумага и картон.</p>
                 <p>Для уроков труда и ИЗО понадобятся отдельные наборы: цветная бумага (двусторонняя и односторонняя), клей-карандаш и ПВА, ножницы с тупыми концами, альбом для рисования, акварель, фломастеры, кисточки и стакан-непроливайка. Не забудьте подписать вещи — фамилию, имя и класс, это спасёт их от потери.</p>
                 <p>Мы постоянно обновляем информацию о магазинах и ассортименте, чтобы вы могли найти самые актуальные предложения перед 1 сентября. Все магазины проходят проверку — мы гарантируем качество данных.</p>
-                <div style="columns: 2; column-gap: 40px; margin-top: 20px;">
-                    <p style="break-inside: avoid;">🎒 <strong>Ранец и портфель</strong> — с ортопедической спинкой и светоотражателями</p>
-                    <p style="break-inside: avoid;">👕 <strong>Школьная и спортивная форма</strong> — по уставу школы</p>
-                    <p style="break-inside: avoid;">✏️ <strong>Канцтовары</strong> — тетради, ручки, карандаши, обложки</p>
-                    <p style="break-inside: avoid;">🎨 <strong>Для ИЗО</strong> — краски, кисти, альбомы, фломастеры</p>
-                    <p style="break-inside: avoid;">🧵 <strong>Для труда</strong> — бумага, картон, клей, пластилин</p>
-                    <p style="break-inside: avoid;">📖 <strong>Дневник и обложки</strong> — с символикой России</p>
-                </div>
+                                    <ul class="checklist">
+                    <li>🎒 <strong>Ранец и портфель</strong> — с ортопедической спинкой и светоотражателями</li>
+                    <li>👕 <strong>Школьная и спортивная форма</strong> — по уставу школы</li>
+                    <li>✏️ <strong>Канцтовары</strong> — тетради, ручки, карандаши, обложки</li>
+                    <li>🎨 <strong>Для ИЗО</strong> — краски, кисти, альбомы, фломастеры</li>
+                    <li>🧵 <strong>Для труда</strong> — бумага, картон, клей, пластилин</li>
+                    <li>📖 <strong>Дневник и обложки</strong> — с символикой России</li>
+                    </ul>
             </div>
         </div>
     </section>
 
-    <footer class="footer">
+        <footer class="site-footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-logo">
@@ -146,17 +145,23 @@
                     <h4>Навигация</h4>
                     <a href="index.html">Главная</a>
                     <a href="categories.html">Категории</a>
-                    <a href="school.html">Всё для школы</a>
+                    <a href="tariffs.html">Тарифы</a>
+                    <a href="blog.html">Блог</a>
                     <a href="contacts.html">Контакты</a>
-                    <a href="tariffs.html">Для владельцев магазинов</a>
+                    <a href="contacts.html">Для владельцев магазинов</a>
                 </div>
                 <div class="footer-categories">
                     <h4>Категории</h4>
-                    <a href="mebel.html">Мебель в Гусеве</a>
-                    <a href="produkty.html">Продукты Гусев</a>
+                    <a href="mebel.html">Мебель</a>
+                    <a href="produkty.html">Продукты</a>
                     <a href="stroymaterialy.html">Стройматериалы</a>
                     <a href="odezhda.html">Одежда</a>
+                    <a href="tehnika.html">Техника</a>
+                    <a href="byt.html">Бытовая химия</a>
+                    <a href="apteka.html">Аптеки</a>
+                    <a href="avto.html">Авто</a>
                     <a href="kanctovary.html">Канцтовары</a>
+                    <a href="cafe.html">Кафе и рестораны</a>
                     <a href="zootovary.html">Зоотовары</a>
                     <a href="detskie-tovary.html">Детские товары</a>
                 </div>
