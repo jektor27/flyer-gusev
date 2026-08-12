@@ -4111,7 +4111,8 @@ html {
     text-align: center;
 }
 
-.fg-tariffs-head h1 {
+.fg-tariffs-head h1,
+.fg-tariffs-head h2 {
     margin: 0 0 12px;
     font-size: 32px;
     font-weight: 700;
@@ -4271,7 +4272,7 @@ html {
 
 @media (max-width: 900px) {
     .fg-tariffs-grid { grid-template-columns: 1fr; gap: 28px; max-width: 420px; }
-    .fg-tariffs-head h1 { font-size: 26px; }
+    .fg-tariffs-head h1, .fg-tariffs-head h2 { font-size: 26px; }
     .fg-tariff-price { font-size: 34px; }
 }
 
