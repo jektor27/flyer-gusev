@@ -89,7 +89,7 @@
     </script>
 </head>
 <body>
-    <header class="header" id="header">
+        <header class="site-header">
         <div class="container">
             <a href="index.html" class="logo">
                 <div class="logo-icon"><svg viewBox="0 0 100 100" width="34" height="34" aria-hidden="true"><text x="36" y="54" font-family="Segoe UI, Arial, sans-serif" font-size="72" font-weight="900" fill="#ffffff" text-anchor="middle" dominant-baseline="central">Ф</text><text x="83" y="54" font-family="Segoe UI, Arial, sans-serif" font-size="72" font-weight="900" fill="#e94560" text-anchor="middle" dominant-baseline="central">Г</text></svg></div>
@@ -97,10 +97,10 @@
             </a>
             <nav class="nav">
                 <a href="index.html" class="nav-link">Главная</a>
-                <a href="categories.html" class="nav-link">Категории</a>
-                <a href="index.html#shops" class="nav-link">Магазины</a>
-                <a href="index.html#about" class="nav-link">О нас</a>
-                <a href="index.html#contact" class="nav-link">Контакты</a>
+                <a href="categories.html" class="nav-link active">Категории</a>
+                <a href="tariffs.html" class="nav-link">Тарифы</a>
+                <a href="blog.html" class="nav-link">Блог</a>
+                <a href="contacts.html" class="nav-link">Контакты</a>
             </nav>
             <button class="menu-btn" onclick="toggleMenu()">☰</button>
         </div>
@@ -108,23 +108,27 @@
 
     <nav class="breadcrumbs"><div class="container"><a href="index.html">Главная</a> <span>→</span> <a href="categories.html">Категории</a> <span>→</span> <strong>Продукты</strong></div></nav>
 
-    <section class="hero" style="padding: 60px 0;">
+        <section class="category-hero">
         <div class="container">
-            <div class="hero-badge">
-                <span>🛒</span>
-                <span>Продукты в Гусеве</span>
+            <div class="category-head">
+                <h1 class="category-title">Магазины <span class="gradient-text">продуктов</span> в Гусеве</h1>
+                <p class="category-sub">🛒 Каталог с адресами, телефонами и режимом работы</p>
             </div>
-            <h1>🛒 Продукты — лучшие магазины города Гусев</h1>
-            <p class="subtitle">Продуктовые магазины в Гусеве (Калининградская область). Молоко, хлеб, мясо, овощи, фрукты. Актуальные адреса и телефоны магазинов.</p>
+            <div class="category-meta">
+                <div class="category-meta-item"><span class="category-meta-ico">🛍️</span><span><b>7</b> магазинов</span></div>
+                <div class="category-meta-item"><span class="category-meta-ico">📍</span><span>г. Гусев</span></div>
+                <div class="category-meta-item"><span class="category-meta-ico">✅</span><span>Данные проверены</span></div>
+            </div>
+            <p class="category-lead">Продуктовые магазины в Гусеве (Калининградская область). Молоко, хлеб, мясо, овощи, фрукты. Актуальные адреса и телефоны магазинов.</p>
         </div>
     </section>
 
-    <section class="shops" style="padding: 60px 0;">
+    <section class="shops">
         <div class="container">
             <h2 class="section-title">Магазины категории "Продукты"</h2>
             <div class="shops-grid">
                 
-        <div class="shop-card" style="animation: fadeInUp 0.6s ease 0.0s both">
+        <div class="shop-card">
             <div class="shop-header">
                 <span class="shop-name">Домашний</span>
                 <span class="shop-badge">Продукты</span>
@@ -135,7 +139,7 @@
                 <span class="product-tag">Продукты питания</span><span class="product-tag">молочные изделия</span><span class="product-tag">хлеб</span>
             </div>
         </div>
-        <div class="shop-card" style="animation: fadeInUp 0.6s ease 0.1s both">
+        <div class="shop-card">
             <div class="shop-header">
                 <span class="shop-name">Прусский мясной комбинат</span>
                 <span class="shop-badge">Продукты</span>
@@ -146,7 +150,7 @@
                 <span class="product-tag">Мясо</span><span class="product-tag">колбасы</span><span class="product-tag">мясные изделия</span>
             </div>
         </div>
-        <div class="shop-card" style="animation: fadeInUp 0.6s ease 0.2s both">
+        <div class="shop-card">
             <div class="shop-header">
                 <span class="shop-name">Светофор</span>
                 <span class="shop-badge">Продукты</span>
@@ -157,7 +161,7 @@
                 <span class="product-tag">Продукты</span><span class="product-tag">напитки</span><span class="product-tag">бакалея</span>
             </div>
         </div>
-        <div class="shop-card" style="animation: fadeInUp 0.6s ease 0.3s both">
+        <div class="shop-card">
             <div class="shop-header">
                 <span class="shop-name">Днестровский</span>
                 <span class="shop-badge">Продукты</span>
@@ -168,7 +172,7 @@
                 <span class="product-tag">Продукты</span><span class="product-tag">напитки</span><span class="product-tag">бакалея</span>
             </div>
         </div>
-        <div class="shop-card" style="animation: fadeInUp 0.6s ease 0.4s both">
+        <div class="shop-card">
             <div class="shop-header">
                 <span class="shop-name">Ольвия</span>
                 <span class="shop-badge">Продукты</span>
@@ -179,7 +183,7 @@
                 <span class="product-tag">Продукты</span><span class="product-tag">молочные изделия</span><span class="product-tag">хлеб</span>
             </div>
         </div>
-        <div class="shop-card" style="animation: fadeInUp 0.6s ease 0.5s both">
+        <div class="shop-card">
             <div class="shop-header">
                 <span class="shop-name">Молоко</span>
                 <span class="shop-badge">Продукты</span>
@@ -190,7 +194,7 @@
                 <span class="product-tag">Молочная продукция</span><span class="product-tag">продукты</span><span class="product-tag">напитки</span>
             </div>
         </div>
-        <div class="shop-card" style="animation: fadeInUp 0.6s ease 0.6s both">
+        <div class="shop-card">
             <div class="shop-header">
                 <span class="shop-name">Берёза</span>
                 <span class="shop-badge">Продукты</span>
@@ -205,10 +209,10 @@
         </div>
     </section>
 
-    <section class="seo-text" style="padding: 60px 0;">
+        <section class="article-section">
         <div class="container">
-            <h2 class="section-title">Продукты в Гусеве — всё для вашего комфорта</h2>
-            <div class="seo-content">
+            <h2>Продукты в Гусеве — всё для вашего комфорта</h2>
+            <div class="article-content">
                 <p>Гусев — город с богатой инфраструктурой и развитой торговлей. В нашем каталоге собраны лучшие магазины категории "Продукты" в Гусеве.</p>
                 <p>Мы постоянно обновляем информацию о магазинах и товарах, чтобы вы могли найти самые актуальные предложения. Все магазины проходят проверку — мы гарантируем качество данных.</p>
                 <p>Вы владелец продуктового магазина в Гусеве? Вы можете добавить свою организацию в каталог — подробности на странице <a href="tariffs.html">Тарифы</a>.</p>
@@ -217,7 +221,7 @@
     </section>
 
 
-    <footer class="footer">
+        <footer class="site-footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-logo">
@@ -230,17 +234,24 @@
                 <div class="footer-links">
                     <h4>Навигация</h4>
                     <a href="index.html">Главная</a>
-                    <a href="index.html#categories">Категории</a>
-                    <a href="index.html#shops">Магазины</a>
-                    <a href="index.html#about">О нас</a>
-                    <a href="tariffs.html">Для владельцев магазинов</a>
+                    <a href="categories.html">Категории</a>
+                    <a href="tariffs.html">Тарифы</a>
+                    <a href="blog.html">Блог</a>
+                    <a href="contacts.html">Контакты</a>
+                    <a href="contacts.html">Для владельцев магазинов</a>
                 </div>
                 <div class="footer-categories">
                     <h4>Категории</h4>
-                    <a href="mebel.html">Мебель в Гусеве</a>
-                    <a href="produkty.html">Продукты Гусев</a>
+                    <a href="mebel.html">Мебель</a>
+                    <a href="produkty.html">Продукты</a>
                     <a href="stroymaterialy.html">Стройматериалы</a>
                     <a href="odezhda.html">Одежда</a>
+                    <a href="tehnika.html">Техника</a>
+                    <a href="byt.html">Бытовая химия</a>
+                    <a href="apteka.html">Аптеки</a>
+                    <a href="avto.html">Авто</a>
+                    <a href="kanctovary.html">Канцтовары</a>
+                    <a href="cafe.html">Кафе и рестораны</a>
                     <a href="zootovary.html">Зоотовары</a>
                     <a href="detskie-tovary.html">Детские товары</a>
                 </div>
