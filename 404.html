@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница не найдена — 404 | Флаер Гусев</title>
+    <meta name="description" content="К сожалению, запрашиваемая страница не найдена. Вернитесь на главную или загляните в каталог магазинов Гусева.">
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .error-page {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 80vh;
+            text-align: center;
+            padding: 20px;
+        }
+        .error-content {
+            max-width: 600px;
+        }
+        .error-code {
+            font-size: clamp(80px, 15vw, 150px);
+            font-weight: 900;
+            line-height: 1;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, var(--accent), var(--gold));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            filter: drop-shadow(0 10px 20px rgba(233,69,96,0.3));
+        }
+        .error-title {
+            font-size: 24px;
+            color: var(--light);
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        .error-text {
+            color: var(--gray);
+            font-size: 17px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        .error-actions {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .btn-error {
+            padding: 12px 24px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 15px;
+        }
+        .btn-error-primary {
+            background: var(--accent);
+            color: #fff;
+        }
+        .btn-error-primary:hover {
+            background: var(--accent-light);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(233,69,96,0.4);
+        }
+        .btn-error-secondary {
+            background: rgba(255,255,255,0.05);
+            color: var(--light);
+            border: 1px solid var(--border);
+        }
+        .btn-error-secondary:hover {
+            background: rgba(255,255,255,0.1);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="bg-dark">
+    <header class="site-header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon"><svg viewBox="0 0 100 100" width="34" height="34" aria-hidden="true"><text x="36" y="54" font-family="Segoe UI, Arial, sans-serif" font-size="72" font-weight="900" fill="#ffffff" text-anchor="middle" dominant-baseline="central">Ф</text><text x="83" y="54" font-family="Segoe UI, Arial, sans-serif" font-size="72" font-weight="900" fill="#e94560" text-anchor="middle" dominant-baseline="central">Г</text></svg></div>
+                <span class="logo-text">Флаер<strong>Гусев</strong></span>
+            </a>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Главная</a>
+                <a href="categories.html" class="nav-link">Категории</a>
+                <a href="tariffs.html" class="nav-link">Тарифы</a>
+                <a href="blog.html" class="nav-link">Блог</a>
+                <a href="contacts.html" class="nav-link">Контакты</a>
+            </nav>
+            <button class="menu-btn" onclick="toggleMenu()">☰</button>
+        </div>
+    </header>
+
+    <main class="error-page">
+        <div class="error-content">
+            <div class="error-code">404</div>
+            <h1 class="error-title">Ой! Страница потерялась</h1>
+            <p class="error-text">Похоже, страница, которую вы ищете, была перемещена или больше не существует. Но не расстраивайтесь — в нашем каталоге всё ещё много полезного!</p>
+            <div class="error-actions">
+                <a href="index.html" class="btn-error btn-error-primary">На главную</a>
+                <a href="categories.html" class="btn-error btn-error-secondary">В каталог магазинов</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-logo">
+                    <a href="index.html" class="logo">
+                        <div class="logo-icon"><svg viewBox="0 0 100 100" width="34" height="34" aria-hidden="true"><text x="36" y="54" font-family="Segoe UI, Arial, sans-serif" font-size="72" font-weight="900" fill="#ffffff" text-anchor="middle" dominant-baseline="central">Ф</text><text x="83" y="54" font-family="Segoe UI, Arial, sans-serif" font-size="72" font-weight="900" fill="#e94560" text-anchor="middle" dominant-baseline="central">Г</text></svg></div>
+                        <span class="logo-text">Флаер<strong>Гусев</strong></span>
+                    </a>
+                    <p>Каталог магазинов и товаров города Гусев, Калининградская область</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Навигация</h4>
+                    <a href="index.html">Главная</a>
+                    <a href="categories.html">Категории</a>
+                    <a href="tariffs.html">Тарифы</a>
+                    <a href="blog.html">Блог</a>
+                    <a href="contacts.html">Контакты</a>
+                </div>
+                <div class="footer-categories">
+                    <h4>Категории</h4>
+                    <a href="mebel.html">Мебель</a>
+                    <a href="produkty.html">Продукты</a>
+                    <a href="stroymaterialy.html">Стройматериалы</a>
+                    <a href="odezhda.html">Одежда</a>
+                    <a href="tehnika.html">Техника</a>
+                    <a href="byt.html">Бытовая химия</a>
+                    <a href="apteka.html">Аптеки</a>
+                    <a href="avto.html">Авто</a>
+                    <a href="kanctovary.html">Канцтовары</a>
+                    <a href="cafe.html">Кафе и рестораны</a>
+                    <a href="zootovary.html">Зоотовары</a>
+                    <a href="detskie-tovary.html">Детские товары</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 ФлаерГусев. Все права защищены. | <a href="politika-pd.html">Политика обработки ПДн</a></p>
+                <p>📧 pryazhnikov24@yandex.ru | 📱 <a href="tel:79527965785">+7 (952) 796-57-85</a></p>
+                <p>г. Гусев, Калининградская область</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
