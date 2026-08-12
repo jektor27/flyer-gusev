@@ -426,13 +426,22 @@ function loadCategoryPage() {
     
     registerCategoryClick(cat.toLowerCase());
     
-    document.getElementById('categoryTitle').textContent = `${category.icon} ${category.name} в Гусеве`;
-    document.getElementById('categoryDesc').textContent = category.description;
+    document.getElementById('categoryTitle').innerHTML = `<span class="gradient-text">${category.name}</span> в Гусеве`;
+    document.getElementById('categoryDesc').textContent = `${category.icon} Каталог с адресами, телефонами и режимом работы`;
     document.title = `${category.name} в Гусеве — Флаер Гусев`;
     
     const filteredShops = shopsData.filter(shop => 
         shop.category === cat.toLowerCase()
     );
+    
+    const crumb = document.getElementById('categoryCrumb');
+    if (crumb) crumb.textContent = category.name;
+    
+    const lead = document.getElementById('categoryLead');
+    if (lead) lead.textContent = `${category.description}. Актуальные адреса, телефоны и режим работы проверены — выбирайте магазин и отправляйтесь за покупками.`;
+    
+    const metaShops = document.getElementById('metaShops');
+    if (metaShops) metaShops.innerHTML = `<b>${filteredShops.length}</b> магазинов`;
     
     const grid = document.getElementById('categoryShops');
     if (grid) {
