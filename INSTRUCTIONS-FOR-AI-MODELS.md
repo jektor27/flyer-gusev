@@ -27,7 +27,7 @@ GitHub Pages обновляется **только после push**. Локал
 cd D:\Jastas\projects\flyer-gusev
 git add -A
 git commit -m "fix: короткое описание"
-git push https://jekor27:<TOKEN>@github.com/jektor27/flyer-gusev.git main
+git push https://jektor27:<TOKEN>@github.com/jektor27/flyer-gusev.git main
 ```
 
 > ⚠️ `<TOKEN>` — персональный токен GitHub (PAT) пользователя. Токен живёт **только в памяти ассистента/окружении**, в репозиторий его писать ЗАПРЕЩЕНО — GitHub блокирует push с секретами (push protection). При публикации замените `<TOKEN>` на актуальный токен.
