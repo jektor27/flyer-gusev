@@ -1094,6 +1094,44 @@ body {
     transform: translateX(4px);
 }
 
+.shop-meta-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 0 12px;
+    flex-wrap: wrap;
+}
+
+.shop-rating {
+    color: #d4af37;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+.shop-rating b {
+    font-size: 14px;
+    font-family: inherit;
+}
+
+.shop-top-badge {
+    background: linear-gradient(135deg, #e94560, #d4af37);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 800;
+    padding: 4px 12px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.shops-note {
+    color: var(--gray);
+    font-size: 13px;
+    line-height: 1.5;
+    margin: 0 0 20px;
+    opacity: 0.75;
+}
+
 .shop-header {
     display: flex;
     justify-content: space-between;
