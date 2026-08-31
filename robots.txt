@@ -7,6 +7,11 @@ Disallow: /breadcrumbs.html
 Disallow: /presentation-for-elena.html
 Disallow: /ozon-preview.html
 Disallow: /ozon-points-preview.html
+Disallow: /shop-premium-preview.html
+Disallow: /category.html
+Disallow: /404.html
+Disallow: /design-preview/
+Disallow: /vk-presentation/
 Disallow: /test_vk_token.py
 Disallow: /audit_site.py
 Disallow: /create_landing_pages.py
