@@ -4903,3 +4903,12 @@ html {
     .article-cta{ padding:24px 20px; }
     .article-cta-title{ font-size:20px; }
 }
+/* SEO text blocks (Jasta, 02.09.2026) */
+.seo-text { padding: 45px 0 10px; }
+.seo-text .container { max-width: 1100px; }
+.seo-text h2 { font-size: 1.7rem; color: #fff; margin-bottom: 14px; }
+.seo-text h3 { font-size: 1.15rem; color: #ff6b6b; margin: 22px 0 8px; }
+.seo-text p { color: #8892b0; line-height: 1.7; margin-bottom: 10px; font-size: 0.98rem; }
+.seo-text ul { margin: 0 0 12px 20px; color: #8892b0; line-height: 1.7; }
+.seo-text a { color: #ff6b6b; }
+.seo-text a:hover { text-decoration: underline; }
