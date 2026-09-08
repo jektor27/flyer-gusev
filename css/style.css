@@ -47,6 +47,27 @@ body {
     color: var(--light);
     line-height: 1.7;
     overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent) var(--primary-light);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--primary-light);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    border-radius: 8px;
+    border: 2px solid var(--primary-light);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-light);
 }
 
 .container {
@@ -188,10 +209,10 @@ body {
     overflow: hidden;
     padding: 96px 0 80px;
     background-image:
-        linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px),
-        linear-gradient(160deg, var(--darker) 0%, var(--dark) 55%, var(--darker) 100%);
-    background-size: 44px 44px, 44px 44px, 100% 100%;
+        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px),
+        radial-gradient(ellipse 120% 90% at 30% 0%, var(--dark) 0%, var(--darker) 70%);
+    background-size: 48px 48px, 48px 48px, 100% 100%;
 }
 
 .hero::before,
@@ -450,14 +471,26 @@ body {
 .popular-buttons { display: flex; flex-wrap: wrap; gap: 10px; }
 
 .popular-buttons button {
-    padding: 9px 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    min-height: 36px;
+    padding: 6px 16px;
     border-radius: 999px;
     border: 1px solid var(--border);
     background: rgba(22,33,62,0.5);
     color: var(--gray);
     font-size: 13px;
+    line-height: 1;
     cursor: pointer;
     transition: transform .2s ease, border-color .2s ease, color .2s ease, box-shadow .2s ease;
+}
+
+.popular-buttons button > span,
+.popular-buttons button::before {
+    font-size: 15px;
+    line-height: 1;
 }
 
 .popular-buttons button:hover {
@@ -483,6 +516,8 @@ body {
     font-size: 34px;
     font-weight: 800;
     letter-spacing: -0.02em;
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
     color: var(--accent);
 }
 
@@ -527,7 +562,16 @@ body {
 
 .glass-top { display: flex; align-items: center; gap: 8px; }
 
-.glass-emo { font-size: 18px; }
+.glass-emo {
+    flex: none;
+    font-size: 18px;
+    line-height: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+}
 
 .glass-name { flex: 1; font-size: 14px; font-weight: 700; color: var(--light); }
 
@@ -1524,6 +1568,7 @@ body {
     letter-spacing: -0.02em;
     color: #e94560;
     line-height: 1;
+    font-variant-numeric: tabular-nums;
 }
 
 .home-stat-label {
@@ -3331,21 +3376,34 @@ a.home-contact-value:hover {
 }
 
 .popular-buttons button {
-    padding: 12px 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    min-height: 38px;
+    padding: 8px 20px;
     min-width: 120px;
-    background: #1e293b;
-    border: 1px solid #334155;
-    border-radius: 8px;
-    color: #e2e8f0;
+    background: rgba(22,33,62,0.5);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    color: var(--gray);
     cursor: pointer;
     transition: all 0.3s ease;
-    font-size: 14px;
+    font-size: 13px;
+    line-height: 1;
+}
+
+.popular-buttons button > span {
+    font-size: 15px;
+    line-height: 1;
 }
 
 .popular-buttons button:hover {
-    background: #3b82f6;
-    border-color: #60a5fa;
+    background: rgba(233,69,96,0.15);
+    border-color: rgba(233,69,96,0.5);
     transform: translateY(-2px);
+    color: var(--light);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.35);
 }
 
 @media (max-width: 640px) {
