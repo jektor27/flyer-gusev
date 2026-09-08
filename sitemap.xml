@@ -92,9 +92,15 @@
   </url>
   <url>
     <loc>https://gusev-flyer.ru/tariffs.html</loc>
-    <lastmod>2026-08-31</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://gusev-flyer.ru/for-business.html</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gusev-flyer.ru/blog.html</loc>

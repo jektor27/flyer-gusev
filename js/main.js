@@ -203,6 +203,24 @@ function createShopCard(shop, index, clickable) {
     
     header.appendChild(name);
     header.appendChild(badge);
+
+    if (shop.tariff === 'top' || shop.verified) {
+        const statusRow = document.createElement('div');
+        statusRow.className = 'shop-status-row';
+        if (shop.verified) {
+            const v = document.createElement('span');
+            v.className = 'shop-status-badge shop-status-verified';
+            v.textContent = '✔ Проверено';
+            statusRow.appendChild(v);
+        }
+        if (shop.tariff === 'top') {
+            const t = document.createElement('span');
+            t.className = 'shop-status-badge shop-status-top';
+            t.textContent = '🔥 ТОП';
+            statusRow.appendChild(t);
+        }
+        card.appendChild(statusRow);
+    }
     
     const category = document.createElement('div');
     category.className = 'shop-category';
