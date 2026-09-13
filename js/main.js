@@ -8,7 +8,7 @@ const shopsData = [
     {id:6,name:"Светофор",category:"produkty",address:"просп. Ленина, 41А",phone:"не указан",description:"Продуктовый магазин — продукты, напитки, бакалея",products:["Продукты","Напитки","Бакалея"],badge:"Продукты",rating:4.4},
     {id:7,name:"Тёплый дом",category:"stroymaterialy",address:"Школьная ул., 11",phone:"+7 (40143) 3-50-11",description:"Строительный магазин — кирпич, цемент, доски, краска, инструменты",products:["Кирпич","Цемент","Доски","Краска","Инструменты"],badge:"Стройматериалы",rating:4.9},
     {id:8,name:"Фазенда",category:"stroymaterialy",address:"Московская ул., 33А",phone:"+7 (40143) 3-50-03",description:"Строительный магазин — инструменты, крепёж, электрика, сантехника",products:["Инструменты","Электрика","Сантехника","Крепёж"],badge:"Стройматериалы",rating:4.3},
-    {id:52,name:"ПрофСтайл",category:"stroymaterialy",address:"ул. Достоевского, 3",phone:"+7 (40143) 3-80-80",description:"Строительный магазин — стройматериалы, отделочные материалы, товары для ремонта",products:["Стройматериалы","Отделочные материалы","Краски","Сухие смеси","Инструменты"],badge:"Стройматериалы",rating:4.8,hours:"пн–пт 08:30–19:00, сб 08:30–17:00, вс 09:00–15:00"},
+    {id:52,name:"ПрофСтайл",category:"stroymaterialy",address:"ул. Достоевского, 3",phone:"+7 (40143) 3-80-80",description:"Строительный магазин — стройматериалы, отделочные материалы, товары для ремонта",products:["Стройматериалы","Отделочные материалы","Краски","Сухие смеси","Инструменты"],badge:"Стройматериалы",rating:4.8,hours:{"пн":["08:30","19:00"],"вт":["08:30","19:00"],"ср":["08:30","19:00"],"чт":["08:30","19:00"],"пт":["08:30","19:00"],"сб":["08:30","17:00"],"вс":["09:00","15:00"]}},
     {id:9,name:"Kari Гипер",category:"odezhda",address:"просп. Ленина, 21А",phone:"+7 (499) 648-05-40",description:"Магазин обуви — обувь для всей семьи",products:["Обувь","Кроссовки","Сапоги","Туфли"],badge:"Одежда",rating:4.5},
     {id:10,name:"Золотая комета",category:"byt",address:"ул. Ломоносова, 5",phone:"+7 (4012) 61-40-02",description:"Бытовая химия, косметика, парфюмерия, товары для дома",products:["Бытовая химия","Косметика","Парфюмерия","Товары для дома"],badge:"Быт",rating:4.4},
     {id:11,name:"Супер Цены",category:"odezhda",address:"Правобережная ул., 4 (этаж 2)",phone:"+7 (962) 269-45-71",description:"Магазин одежды по доступным ценам",products:["Одежда","Брюки","Куртки","Платья"],badge:"Одежда",rating:4.3},
@@ -28,12 +28,12 @@ const shopsData = [
     {id:25,name:"Холст с маслом",category:"kanctovary",address:"ул. Менделеева, 8А (этаж 1)",phone:"+7 (906) 237-70-13",description:"Канцтовары, художественные принадлежности",products:["Канцтовары","Художественные принадлежности","Холсты"],badge:"Канцтовары",rating:4.4},
     {id:26,name:"ЖЁЛТЫЙ БЕГЕМОТИК",category:"kanctovary",address:"просп. Ленина, 21А (этаж 0)",phone:"+7 (906) 232-35-30",description:"Детские товары, игрушки, товары для дома",products:["Детские товары","Игрушки","Товары для дома"],badge:"Канцтовары",rating:4.5},
     {id:27,name:"Муравейник",category:"odezhda",address:"Московская ул., 9",phone:"+7 909 796-95-76",description:"Одежда для взрослых и детей. Популярное место для школьных покупок!",products:["Одежда","Детская одежда","Школьная форма","Взрослая одежда"],badge:"Одежда",rating:4.6,featured:true,schoolRelated:true},
-    {id:28,name:"Кафе Гараж",category:"cafe",address:"г. Гусев",phone:"+7 (967) 355-46-42",description:"Вкусная пицца, мясные блюда, разнообразные супы. Доставка на дом. Работаем с 09:30 до 22:00.",products:["Пицца","Доставка","Мясные блюда","Супы"],badge:"Кафе",rating:4.6},
+    {id:28,name:"Кафе Гараж",category:"cafe",address:"г. Гусев",phone:"+7 (967) 355-46-42",description:"Вкусная пицца, мясные блюда, разнообразные супы. Доставка на дом. Работаем с 09:00 до 21:00.",products:["Пицца","Доставка","Мясные блюда","Супы"],badge:"Кафе",rating:4.6,hours:{"пн":["09:00","21:00"],"вт":["09:00","21:00"],"ср":["09:00","21:00"],"чт":["09:00","21:00"],"пт":["09:00","21:00"],"сб":["09:00","21:00"],"вс":["09:00","21:00"]},hoursNote:"приём заказов"},
     {id:29,name:"Мир одежды и обуви",category:"odezhda",address:"ул. Победы, 7Б",phone:"+7 (952) 053-65-62",description:"Магазин одежды и обуви для всей семьи",products:["Одежда","Обувь","Верхняя одежда"],badge:"Одежда",rating:4.1},
     {id:30,name:"Кроп-топ",category:"odezhda",address:"Правобережная ул., 4",phone:"не указан",description:"Магазин одежды — женская и молодёжная одежда",products:["Женская одежда","Молодёжная одежда"],badge:"Одежда",rating:4.5},
     {id:31,name:"Пуговица",category:"odezhda",address:"Московская ул., 23А",phone:"не указан",description:"Магазин одежды — повседневная одежда",products:["Одежда","Повседневная одежда"],badge:"Одежда",rating:3.8},
     {id:32,name:"Фамилия",category:"odezhda",address:"г. Гусев",phone:"не указан",description:"Магазин одежды — ассортимент для всей семьи",products:["Одежда","Аксессуары"],badge:"Одежда",rating:3.7},
-    {id:33,name:"Щи Борщи",category:"cafe",address:"просп. Ленина, 21",phone:"+7 (906) 238-89-38",description:"Столовая — домашняя еда каждый день: борщ, щи, комплексные обеды, завтраки. Ежедневно 10:00–20:00.",products:["Борщ","Щи","Комплексные обеды","Завтраки"],badge:"Столовая",rating:4.8},
+    {id:33,name:"Щи Борщи",category:"cafe",address:"просп. Ленина, 21",phone:"+7 (906) 238-89-38",description:"Столовая — домашняя еда каждый день: борщ, щи, комплексные обеды, завтраки. Ежедневно 09:00–20:00.",products:["Борщ","Щи","Комплексные обеды","Завтраки"],badge:"Столовая",rating:4.8,hours:{"пн":["09:00","20:00"],"вт":["09:00","20:00"],"ср":["09:00","20:00"],"чт":["09:00","20:00"],"пт":["09:00","20:00"],"сб":["09:00","20:00"],"вс":["09:00","20:00"]}},
     {id:34,name:"Закусочная Восток",category:"cafe",address:"ул. Победы, 29",phone:"не указан",description:"Столовая-закусочная — супы, горячие блюда, комплексные обеды",products:["Комплексные обеды","Супы","Горячие блюда"],badge:"Столовая",rating:4.0},
     {id:35,name:"Столовка",category:"cafe",address:"ул. Достоевского, 5г",phone:"не указан",description:"Столовая — обеденный зал, комплексные обеды, супы и горячие блюда",products:["Комплексные обеды","Супы","Мясные блюда"],badge:"Столовая",rating:4.0},
     {id:36,name:"Столовая",category:"cafe",address:"ул. Зворыкина, 6",phone:"не указан",description:"Столовая — домашние обеды, супы, гарниры, выпечка",products:["Комплексные обеды","Супы","Выпечка"],badge:"Столовая",rating:4.0},
@@ -52,6 +52,10 @@ const shopsData = [
     {id:49,name:"Пицца и… талия",category:"cafe",address:"Правобережная ул., 4",phone:"+7 (921) 854-12-92",description:"Пиццерия — пицца, горячие блюда",products:["Пицца","Горячие блюда"],badge:"Пиццерия",rating:4.3},
     {id:50,name:"Суши Love",category:"cafe",address:"Московская ул., 23А",phone:"+7 (4012) 40-10-16",description:"Доставка суши и роллов в Гусеве",products:["Суши","Роллы","Доставка"],badge:"Суши-бар",rating:4.5},
     {id:51,name:"Хоббит",category:"detskie-tovary",address:"ул. Ломоносова, 8 (ТЦ Сити)",phone:"не указан",description:"Детский магазин — игрушки, детские товары, канцтовары",products:["Игрушки","Детские товары","Детская одежда","Канцтовары"],badge:"Детский магазин",rating:4.5},
+    {id:54,name:"Тополёк",category:"cafe",address:"ул. Толстого, 1",phone:"+7 (921) 103-03-63",description:"Кафе — работает ежедневно до 01:00, вечером и в выходные",products:["Кафе","Вечером","Выходные"],badge:"Кафе",rating:4.5,hours:{"пн":["12:00","01:00"],"вт":["12:00","01:00"],"ср":["12:00","01:00"],"чт":["12:00","01:00"],"пт":["12:00","01:00"],"сб":["10:00","01:00"],"вс":["10:00","01:00"]}},
+    {id:55,name:"Аэлита",category:"cafe",address:"ул. Зои Космодемьянской, 2",phone:"+7 (40143) 3-37-94",description:"Кафе и бар — ежедневно с 07:00 до 00:00",products:["Кафе","Бар","Ранний завтрак"],badge:"Кафе",rating:4.4,hours:{"пн":["07:00","00:00"],"вт":["07:00","00:00"],"ср":["07:00","00:00"],"чт":["07:00","00:00"],"пт":["07:00","00:00"],"сб":["07:00","00:00"],"вс":["07:00","00:00"]}},
+    {id:56,name:"Красная шапочка",category:"cafe",address:"Московская ул., 5",phone:"+7 (905) 248-83-51",description:"Кафе — ежедневно с 10:00 до 22:00",products:["Кафе","В центре"],badge:"Кафе",rating:4.4,hours:{"пн":["10:00","22:00"],"вт":["10:00","22:00"],"ср":["10:00","22:00"],"чт":["10:00","22:00"],"пт":["10:00","22:00"],"сб":["10:00","22:00"],"вс":["10:00","22:00"]}},
+    {id:57,name:"Ресторан Глория",category:"cafe",address:"ул. Победы, 5",phone:"+7 (40143) 3-03-66",description:"Ресторан при гостинице — ежедневно с 12:00 до 22:00",products:["Ресторан","Гостиница"],badge:"Ресторан",rating:4.5,hours:{"пн":["12:00","22:00"],"вт":["12:00","22:00"],"ср":["12:00","22:00"],"чт":["12:00","22:00"],"пт":["12:00","22:00"],"сб":["12:00","22:00"],"вс":["12:00","22:00"]}},
     {id:53,name:"ЦентрСтрой",category:"stroymaterialy",address:"Артиллерийская ул., 5",phone:"+7 (4012) 64-05-45",description:"Строительный гипермаркет — стройматериалы для дома и ремонта: кирпич, цемент, отделочные материалы, инструменты",products:["Стройматериалы","Кирпич","Цемент","Отделочные материалы","Инструменты"],badge:"Стройматериалы",rating:4.6}
 ]
 
@@ -171,6 +175,45 @@ function loadShops() {
     });
 }
 
+// Работа с часами магазинов
+// hours — объект вида {"пн":["08:30","19:00"], ...} или строка "пн–пт 08:30–19:00"
+const DAY_NAMES = ["вс", "пн", "вт", "ср", "чт", "пт", "сб"];
+
+// Проверка, открыт ли магазин сейчас. Возвращает true/false/null (null — часы не заданы)
+function isShopOpenNow(shop) {
+    if (!shop.hours) return null;
+    if (typeof shop.hours === 'string') return null; // текстовый формат — без автоматической проверки
+    const now = new Date();
+    const day = DAY_NAMES[now.getDay()];
+    const pair = shop.hours[day];
+    if (!pair) return false;
+    const [open, close] = pair;
+    const toMin = s => { const p = s.split(':'); return parseInt(p[0], 10) * 60 + parseInt(p[1], 10); };
+    const cur = now.getHours() * 60 + now.getMinutes();
+    const o = toMin(open), c = toMin(close);
+    if (c < o) return cur >= o || cur < c; // ночной режим (напр. 22:00–05:00)
+    return cur >= o && cur < c;
+}
+
+// Форматирование текстовых часов из объекта в "пн–пт 08:30–19:00, сб 08:30–17:00"
+function formatHoursText(shop) {
+    if (!shop.hours) return null;
+    if (typeof shop.hours === 'string') return shop.hours;
+    const days = ["пн", "вт", "ср", "чт", "пт", "сб", "вс"];
+    const matches = [];
+    let i = 0;
+    while (i < 7) {
+        const pair = shop.hours[days[i]];
+        const range = pair ? pair.join('–') : 'выходной';
+        let j = i;
+        while (j + 1 < 7 && (shop.hours[days[j + 1]] ? shop.hours[days[j + 1]].join('–') : 'выходной') === range) j++;
+        const d = i === j ? days[i] : days[i] + '–' + days[j];
+        matches.push(d + ' ' + range);
+        i = j + 1;
+    }
+    return matches.join(', ');
+}
+
 // Создание карточки магазина (безопасное создание DOM-элементов)
 function createShopCard(shop, index, clickable) {
     const card = document.createElement('div');
@@ -225,6 +268,22 @@ function createShopCard(shop, index, clickable) {
     const category = document.createElement('div');
     category.className = 'shop-category';
     category.textContent = shop.category;
+
+    const openStatus = isShopOpenNow(shop);
+    if (openStatus !== null) {
+        const hoursRow = document.createElement('div');
+        hoursRow.className = 'shop-hours-row';
+        const status = document.createElement('span');
+        status.className = openStatus ? 'shop-open-now' : 'shop-closed-now';
+        status.textContent = openStatus ? '● Открыто сейчас' : '● Закрыто сейчас';
+        hoursRow.appendChild(status);
+        const hoursText = document.createElement('span');
+        hoursText.className = 'shop-hours-text';
+        hoursText.textContent = formatHoursText(shop) || '';
+        if (shop.hoursNote) hoursText.textContent += ' (' + shop.hoursNote + ')';
+        hoursRow.appendChild(hoursText);
+        card.hoursRow = hoursRow;
+    }
     
     const address = document.createElement('div');
     address.className = 'shop-address';
@@ -245,6 +304,7 @@ function createShopCard(shop, index, clickable) {
     
     card.appendChild(header);
     card.appendChild(category);
+    if (card.hoursRow) card.appendChild(card.hoursRow);
     card.appendChild(address);
     card.appendChild(phone);
     card.appendChild(products);
