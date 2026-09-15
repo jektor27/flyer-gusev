@@ -26,7 +26,7 @@ const shopsData = [
     {id:23,name:"Деталь",category:"avto",address:"Московская ул., 39",phone:"+7 (921) 265-41-18",description:"Автозапчасти, шины, масла",products:["Запчасти","Шины","Масла"],badge:"Авто",rating:4.3},
     {id:24,name:"Канцлир",category:"kanctovary",address:"Московская ул., 28",phone:"+7 (911) 485-83-30",description:"Канцтовары — тетради, ручки, бумага, портфели",products:["Тетради","Ручки","Бумага","Портфели"],badge:"Канцтовары",rating:4.5},
     {id:25,name:"Холст с маслом",category:"kanctovary",address:"ул. Менделеева, 8А (этаж 1)",phone:"+7 (906) 237-70-13",description:"Канцтовары, художественные принадлежности",products:["Канцтовары","Художественные принадлежности","Холсты"],badge:"Канцтовары",rating:4.4},
-    {id:26,name:"Жёлтый Бегемотик",category:"detskie-tovary",address:"просп. Ленина, 42а",phone:"+7 (962) 252-54-75",description:"Детский магазин — игрушки, самокаты, велосипеды, канцтовары",products:["Игрушки","Самокаты","Велосипеды","Канцтовары"],badge:"Детский магазин",rating:4.5},
+    {id:26,name:"Жёлтый Бегемотик",category:"detskie-tovary",categories:["detskie-tovary","kanctovary"],address:"просп. Ленина, 42а",phone:"+7 (962) 252-54-75",description:"Детский магазин — игрушки, самокаты, велосипеды, канцтовары",products:["Игрушки","Самокаты","Велосипеды","Канцтовары"],badge:"Детский магазин",rating:4.5},
     {id:27,name:"Муравейник",category:"odezhda",address:"Московская ул., 9",phone:"+7 909 796-95-76",description:"Одежда для взрослых и детей. Популярное место для школьных покупок!",products:["Одежда","Детская одежда","Школьная форма","Взрослая одежда"],badge:"Одежда",rating:4.6,featured:true,schoolRelated:true},
     {id:28,name:"Кафе Гараж",category:"cafe",address:"г. Гусев",phone:"+7 (967) 355-46-42",description:"Вкусная пицца, мясные блюда, разнообразные супы. Доставка на дом. Работаем с 09:00 до 21:00.",products:["Пицца","Доставка","Мясные блюда","Супы"],badge:"Кафе",rating:4.6,hours:{"пн":["09:00","21:00"],"вт":["09:00","21:00"],"ср":["09:00","21:00"],"чт":["09:00","21:00"],"пт":["09:00","21:00"],"сб":["09:00","21:00"],"вс":["09:00","21:00"]},hoursNote:"приём заказов"},
     {id:29,name:"Мир одежды и обуви",category:"odezhda",address:"ул. Победы, 7Б",phone:"+7 (952) 053-65-62",description:"Магазин одежды и обуви для всей семьи",products:["Одежда","Обувь","Верхняя одежда"],badge:"Одежда",rating:4.1},
@@ -56,7 +56,14 @@ const shopsData = [
     {id:55,name:"Аэлита",category:"cafe",address:"ул. Зои Космодемьянской, 2",phone:"+7 (40143) 3-37-94",description:"Кафе и бар — ежедневно с 07:00 до 00:00",products:["Кафе","Бар","Ранний завтрак"],badge:"Кафе",rating:4.4,hours:{"пн":["07:00","00:00"],"вт":["07:00","00:00"],"ср":["07:00","00:00"],"чт":["07:00","00:00"],"пт":["07:00","00:00"],"сб":["07:00","00:00"],"вс":["07:00","00:00"]}},
     {id:56,name:"Красная шапочка",category:"cafe",address:"Московская ул., 5",phone:"+7 (905) 248-83-51",description:"Кафе — ежедневно с 10:00 до 22:00",products:["Кафе","В центре"],badge:"Кафе",rating:4.4,hours:{"пн":["10:00","22:00"],"вт":["10:00","22:00"],"ср":["10:00","22:00"],"чт":["10:00","22:00"],"пт":["10:00","22:00"],"сб":["10:00","22:00"],"вс":["10:00","22:00"]}},
     {id:57,name:"Ресторан Глория",category:"cafe",address:"ул. Победы, 5",phone:"+7 (40143) 3-03-66",description:"Ресторан при гостинице — ежедневно с 12:00 до 22:00",products:["Ресторан","Гостиница"],badge:"Ресторан",rating:4.5,hours:{"пн":["12:00","22:00"],"вт":["12:00","22:00"],"ср":["12:00","22:00"],"чт":["12:00","22:00"],"пт":["12:00","22:00"],"сб":["12:00","22:00"],"вс":["12:00","22:00"]}},
-    {id:53,name:"ЦентрСтрой",category:"stroymaterialy",address:"Артиллерийская ул., 5",phone:"+7 (4012) 64-05-45",description:"Строительный гипермаркет — стройматериалы для дома и ремонта: кирпич, цемент, отделочные материалы, инструменты",products:["Стройматериалы","Кирпич","Цемент","Отделочные материалы","Инструменты"],badge:"Стройматериалы",rating:4.6}
+    {id:53,name:"ЦентрСтрой",category:"stroymaterialy",address:"Артиллерийская ул., 5",phone:"+7 (4012) 64-05-45",description:"Строительный гипермаркет — стройматериалы для дома и ремонта: кирпич, цемент, отделочные материалы, инструменты",products:["Стройматериалы","Кирпич","Цемент","Отделочные материалы","Инструменты"],badge:"Стройматериалы",rating:4.6},
+    {id:65,name:"Бургомистр",category:"cafe",address:"Московская ул., 23А",phone:"не указан",description:"Быстрое питание в Гусеве",products:["Быстрое питание"],badge:"Быстрое питание",rating:4.3},
+    {id:66,name:"Денер кафе",category:"cafe",address:"ул. Зои Космодемьянской, 2",phone:"+7 (921) 106-00-91",description:"Кафе — денеры, горячие блюда",products:["Кафе","Денер"],badge:"Кафе",rating:4.3},
+    {id:67,name:"Ива",category:"cafe",address:"просп. Ленина, 24",phone:"+7 (981) 455-91-91",description:"Кафе в центре Гусева",products:["Кафе","В центре"],badge:"Кафе",rating:4.4},
+    {id:68,name:"Кофебар Арабика",category:"cafe",address:"Московская ул., 1",phone:"+7 (921) 618-56-34",description:"Кофейня — кофе, напитки",products:["Кофейня","Кофе"],badge:"Кофейня",rating:4.4},
+    {id:69,name:"КрамБургер",category:"cafe",address:"ул. Победы, 13",phone:"+7 (909) 792-07-63",description:"Быстрое питание — бургеры и закуски",products:["Быстрое питание"],badge:"Быстрое питание",rating:4.3},
+    {id:70,name:"Трио",category:"cafe",address:"просп. Ленина, 50А",phone:"+7 (921) 711-50-84",description:"Кафе в Гусеве",products:["Кафе"],badge:"Кафе",rating:4.3},
+    {id:71,name:"Хайпожоры",category:"cafe",address:"просп. Ленина, 21",phone:"+7 (963) 295-79-76",description:"Быстрое питание в Гусеве",products:["Быстрое питание"],badge:"Быстрое питание",rating:4.2}
 ]
 
 // Категории (ключ = slug из URL ?cat=mebel)
@@ -471,7 +478,7 @@ function searchInCategory() {
     const cat = params.get('cat');
     
     const results = shopsData.filter(shop => {
-        if (cat && shop.category !== cat.toLowerCase()) return false;
+        if (cat && !shopInCategory(shop, cat.toLowerCase())) return false;
         return shop.name.toLowerCase().includes(query) ||
                shop.description.toLowerCase().includes(query) ||
                shop.products.some(p => p.toLowerCase().includes(query));
@@ -488,6 +495,12 @@ function searchInCategory() {
     } else {
         grid.innerHTML = '<p style="text-align:center; color:#8892b0; grid-column:1/-1; padding:60px;">Магазины по запросу «' + query + '» не найдены в этой категории</p>';
     }
+}
+
+// Магазин в категории (поддержка нескольких категорий через поле categories)
+function shopInCategory(shop, cat) {
+    if (shop.category === cat) return true;
+    return Array.isArray(shop.categories) && shop.categories.includes(cat);
 }
 
 // Страница категории
@@ -510,7 +523,7 @@ function loadCategoryPage() {
     document.title = `${category.name} в Гусеве — Флаер Гусев`;
     
     const filteredShops = shopsData.filter(shop => 
-        shop.category === cat.toLowerCase()
+        shopInCategory(shop, cat.toLowerCase())
     );
     
     const crumb = document.getElementById('categoryCrumb');
