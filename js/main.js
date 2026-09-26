@@ -217,6 +217,18 @@ function isShopOpenNow(shop) {
     return cur >= o && cur < c;
 }
 
+// Превращает телефон в href для tel:. 8-800 → 8800..., +7/8 → 7..., иначе null.
+function phoneToTel(phone) {
+    if (!phone) return null;
+    const raw = String(phone).replace(/\D/g, '');
+    if (raw.length < 10) return null; // "не указан", "нет", пусто
+    if (raw.length === 11 && raw.startsWith('8800')) return 'tel:' + raw; // федеральный 8-800
+    if (raw.length === 11 && raw[0] === '8') return 'tel:7' + raw.slice(1);
+    if (raw.length === 11 && raw[0] === '7') return 'tel:' + raw;
+    if (raw.length === 10) return 'tel:7' + raw;
+    return null;
+}
+
 // Форматирование текстовых часов из объекта в "пн–пт 08:30–19:00, сб 08:30–17:00"
 function formatHoursText(shop) {
     if (!shop.hours) return null;
@@ -314,7 +326,17 @@ function createShopCard(shop, index, clickable) {
     
     const phone = document.createElement('div');
     phone.className = 'shop-phone';
-    phone.textContent = `📱 ${shop.phone}`;
+    phone.appendChild(document.createTextNode('📱 '));
+    const telHref = phoneToTel(shop.phone);
+    if (telHref) {
+        const phoneLink = document.createElement('a');
+        phoneLink.setAttribute('itemprop', 'telephone');
+        phoneLink.href = telHref;
+        phoneLink.textContent = shop.phone;
+        phone.appendChild(phoneLink);
+    } else {
+        phone.appendChild(document.createTextNode(shop.phone));
+    }
     
     const products = document.createElement('div');
     products.className = 'shop-products';
