@@ -24,17 +24,99 @@
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="manifest" href="manifest.json">
     <link rel="preload" href="css/style.css" as="style">
     <link rel="stylesheet" href="css/style.css">
     
     <!-- Schema.org ItemList -->
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "ItemList",
-      "name": "Магазины по категориям",
-      "description": "Каталог магазинов города Гусев по категориям товаров"
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Магазины по категориям",
+  "description": "Каталог магазинов города Гусев по категориям товаров",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Мебель",
+      "url": "https://gusev-flyer.ru/mebel.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Продукты",
+      "url": "https://gusev-flyer.ru/produkty.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Стройматериалы",
+      "url": "https://gusev-flyer.ru/stroymaterialy.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Одежда",
+      "url": "https://gusev-flyer.ru/odezhda.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "name": "Техника",
+      "url": "https://gusev-flyer.ru/tehnika.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 6,
+      "name": "Товары для дома",
+      "url": "https://gusev-flyer.ru/byt.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 7,
+      "name": "Аптеки",
+      "url": "https://gusev-flyer.ru/apteka.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 8,
+      "name": "Авто",
+      "url": "https://gusev-flyer.ru/avto.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 9,
+      "name": "Канцтовары",
+      "url": "https://gusev-flyer.ru/kanctovary.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 10,
+      "name": "Кафе и рестораны",
+      "url": "https://gusev-flyer.ru/cafe.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 11,
+      "name": "Зоотовары",
+      "url": "https://gusev-flyer.ru/zootovary.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 12,
+      "name": "Детские товары",
+      "url": "https://gusev-flyer.ru/detskie-tovary.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 13,
+      "name": "Цветы",
+      "url": "https://gusev-flyer.ru/cvety.html"
     }
+  ],
+  "numberOfItems": 13
+}
     </script>
     
     <!-- Schema.org BreadcrumbList -->
@@ -50,6 +132,7 @@
     </script>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Перейти к содержанию</a>
     <header class="site-header">
         <div class="container">
             <a href="index.html" class="logo">
@@ -59,6 +142,7 @@
             <nav class="nav">
                 <a href="index.html" class="nav-link">Главная</a>
                 <a href="categories.html" class="nav-link">Категории</a>
+                    <a href="vse-magaziny.html" class="nav-link">Все магазины</a>
                 <a href="tariffs.html" class="nav-link">Тарифы</a>
                 <a href="for-business.html" class="nav-link">Для бизнеса</a>
                 <a href="blog.html" class="nav-link">Блог</a>
@@ -70,17 +154,18 @@
         </div>
     </header>
 
-<nav class="breadcrumbs"><div class="container"><a href="index.html">Главная</a> <span>→ </span> <a href="categories.html">Категории</a> <span>→ </span> <strong id="categoryCrumb">Загрузка...</strong></div></nav>
+<nav class="breadcrumbs"><div class="container"><a href="index.html">Главная</a> <span>→ </span> <a href="categories.html">Категории</a>
+                <a href="vse-magaziny.html">Все магазины</a> <span>→ </span> <strong id="categoryCrumb">Загрузка...</strong></div></nav>
 
     <section class="category-hero">
         <div class="container">
             <div class="category-head">
-                <h1 class="category-title" id="categoryTitle">Загрузка...</h1>
+                <h1 class="category-title" id="main-content" tabindex="-1">Загрузка...</h1>
                 <p class="category-sub" id="categoryDesc"></p>
             </div>
             <div class="category-meta">
                 <div class="category-meta-item"><span class="category-meta-ico">🛍️</span><span id="metaShops"><b>—</b> магазинов</span></div>
-                <div class="category-meta-item"><span class="category-meta-ico">📍</span><span>г. Гусев</span></div>
+                <div class="category-meta-item"><span class="category-meta-ico">📌</span><span>г. Гусев</span></div>
                 <div class="category-meta-item"><span class="category-meta-ico">✅</span><span>Данные проверены</span></div>
             </div>
             <p class="category-lead" id="categoryLead"></p>
@@ -120,6 +205,7 @@
                     <h4>Навигация</h4>
                     <a href="index.html">Главная</a>
                     <a href="categories.html">Категории</a>
+                <a href="vse-magaziny.html">Все магазины</a>
                     <a href="tariffs.html">Тарифы</a>
                     <a href="blog.html">Блог</a>
                     <a href="about.html">О проекте</a>
@@ -144,8 +230,8 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 ФлаерГусев. Все права защищены. | <a href="politika-pd.html">Политика обработки ПДн</a></p>
-                <p>📧 pryazhnikov24@yandex.ru | 📱 <a href="tel:79527965785">+7 (952) 796-57-85</a></p>
+                <p>&copy; <span class="year">2026</span> ФлаерГусев. Все права защищены. | <a href="politika-pd.html">Политика обработки ПДн</a></p>
+                <p>📧 pryazhnikov24@yandex.ru | <svg class="ico ico-phone" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:79527965785">+7 (952) 796-57-85</a></p>
                 <p>г. Гусев, Калининградская область</p>
             </div>
         </div>
@@ -153,7 +239,7 @@
 
 
 
-    <script src="js/main.js?v=5"></script>
+    <script src="js/main.js?v=6"></script>
 
 <!-- Yandex.Metrika counter (deferred) -->
 <script>
@@ -173,5 +259,6 @@
 <noscript><div><img src="https://mc.yandex.ru/watch/111176884" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
 <script src="js/metrika-goals.js?v=1"></script>
+    <script src="js/year.js?v=1"></script>
 </body>
 </html>

@@ -554,17 +554,17 @@ function loadCategoryPage() {
     const params = new URLSearchParams(window.location.search);
     const cat = params.get('cat');
     
-    if (!cat || !document.getElementById('categoryTitle')) return;
+    if (!cat || !document.getElementById('main-content')) return;
     
     const category = categories[cat.toLowerCase()];
     if (!category) {
-        document.getElementById('categoryTitle').textContent = 'Категория не найдена';
+        document.getElementById('main-content').textContent = 'Категория не найдена';
         return;
     }
     
     registerCategoryClick(cat.toLowerCase());
     
-    document.getElementById('categoryTitle').innerHTML = `<span class="gradient-text">${category.name}</span> в Гусеве`;
+    document.getElementById('main-content').innerHTML = `<span class="gradient-text">${category.name}</span> в Гусеве`;
     document.getElementById('categoryDesc').textContent = `${category.icon} Каталог с адресами, телефонами и режимом работы`;
     document.title = `${category.name} в Гусеве — Флаер Гусев`;
     

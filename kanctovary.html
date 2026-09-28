@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Где купить канцтовары и всё для школы в Гусеве? Каталог магазинов: Жёлтый Бегемотик и другие. Адреса, телефоны, режим работы. Подготовка к 1 сентября на gusev-flyer.ru.">
+    <meta name="description" content="Канцтовары и всё для школы в Гусеве: «Жёлтый Бегемотик» и другие магазины. Тетради, ручки, рюкзаки. Адреса, телефоны, режим работы.">
     <meta name="keywords" content="канцтовары Гусев, всё для школы Гусев, купить тетради Гусев, ранцы Гусев, Жёлтый Бегемотик Гусев">
     <meta name="robots" content="index, follow">
     
@@ -27,6 +27,7 @@
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="manifest" href="manifest.json">
     <link rel="preload" href="css/style.css" as="style">
     <link rel="stylesheet" href="css/style.css">
     
@@ -62,13 +63,35 @@
     <!-- Schema.org ItemList -->
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "ItemList",
-      "name": "Канцтовары в Гусеве",
-      "description": "Магазины Канцтовары в городе Гусев, Калининградская область",
-      "url": "https://gusev-flyer.ru/kanctovary.html",
-      "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Канцлир", "url": "https://gusev-flyer.ru/kanctovary.html", "description": "Тетради, ручки, бумага, портфели"}, {"@type": "ListItem", "position": 2, "name": "Холст с маслом", "url": "https://gusev-flyer.ru/kanctovary.html", "description": "Канцтовары, художественные принадлежности"}, {"@type": "ListItem", "position": 3, "name": "ЖЁЛТЫЙ БЕГЕМОТИК", "url": "https://gusev-flyer.ru/kanctovary.html", "description": "Детские товары, игрушки, товары для дома"}]
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Канцтовары в Гусеве",
+  "description": "Магазины Канцтовары в городе Гусев, Калининградская область",
+  "url": "https://gusev-flyer.ru/kanctovary.html",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Канцлир",
+      "url": "https://gusev-flyer.ru/kanctovary.html#kanclir",
+      "description": "Тетради, ручки, бумага, портфели"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Холст с маслом",
+      "url": "https://gusev-flyer.ru/kanctovary.html#holst-s-maslom",
+      "description": "Канцтовары, художественные принадлежности"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "ЖЁЛТЫЙ БЕГЕМОТИК",
+      "url": "https://gusev-flyer.ru/kanctovary.html#zheltyy-begemotik",
+      "description": "Детские товары, игрушки, товары для дома"
     }
+  ]
+}
     </script>
     
     <!-- Schema.org BreadcrumbList -->
@@ -94,6 +117,7 @@
     </script>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Перейти к содержанию</a>
         <header class="site-header">
         <div class="container">
             <a href="index.html" class="logo">
@@ -103,6 +127,7 @@
             <nav class="nav">
                 <a href="index.html" class="nav-link">Главная</a>
                 <a href="categories.html" class="nav-link active">Категории</a>
+                    <a href="vse-magaziny.html" class="nav-link">Все магазины</a>
                 <a href="tariffs.html" class="nav-link">Тарифы</a>
                 <a href="for-business.html" class="nav-link">Для бизнеса</a>
                 <a href="blog.html" class="nav-link">Блог</a>
@@ -114,17 +139,18 @@
         </div>
     </header>
 
-    <nav class="breadcrumbs"><div class="container"><a href="index.html">Главная</a> <span>→</span> <a href="categories.html">Категории</a> <span>→</span> <strong>Канцтовары</strong></div></nav>
+    <nav class="breadcrumbs"><div class="container"><a href="index.html">Главная</a> <span>→</span> <a href="categories.html">Категории</a>
+                <a href="vse-magaziny.html">Все магазины</a> <span>→</span> <strong>Канцтовары</strong></div></nav>
 
         <section class="category-hero">
         <div class="container">
             <div class="category-head">
-                <h1 class="category-title">Магазины <span class="gradient-text">канцтоваров</span> в Гусеве</h1>
+                <h1 id="main-content" tabindex="-1" class="category-title">Магазины <span class="gradient-text">канцтоваров</span> в Гусеве</h1>
                 <p class="category-sub">📎 Каталог с адресами, телефонами и режимом работы</p>
             </div>
             <div class="category-meta">
                 <div class="category-meta-item"><span class="category-meta-ico">🛍️</span><span><b>3</b> магазина</span></div>
-                <div class="category-meta-item"><span class="category-meta-ico">📍</span><span>г. Гусев</span></div>
+                <div class="category-meta-item"><span class="category-meta-ico"></span><span>г. Гусев</span></div>
                 <div class="category-meta-item"><span class="category-meta-ico">✅</span><span>Данные проверены</span></div>
             </div>
             <p class="category-lead">Канцтовары в Гусеве (Калининградская область). Тетради, ручки, бумага, портфели, офисные принадлежности. Актуальные адреса и телефоны.</p>
@@ -137,38 +163,38 @@
             <div class="shops-note">Рейтинги магазинов — средняя оценка по данным Яндекс, Google и 2ГИС</div>
             <div class="shops-grid">
                 
-        <div class="shop-card" itemscope itemtype="https://schema.org/LocalBusiness">
+        <div class="shop-card" id="kanclir" itemscope itemtype="https://schema.org/LocalBusiness">
             <div class="shop-header">
                 <span class="shop-name" itemprop="name">Канцлир</span>
                 <span class="shop-badge">Канцтовары</span>
             </div>
                 <div class="shop-meta-row"><span class="shop-top-badge">🔥 ТОП</span><span class="shop-rating" title="Рейтинг 4.5 из 5">★★★★✯ <b>4.5</b></span></div>
-            <div class="shop-address" itemscope itemtype="https://schema.org/PostalAddress"><span itemprop="streetAddress">Московская ул., 28</span><meta itemprop="addressLocality" content="Гусев"><meta itemprop="addressRegion" content="Калининградская область"></div>
-            <div class="shop-phone">📱 <a itemprop="telephone" href="tel:79114858330">+7 (911) 485-83-30</a></div>
+            <div class="shop-address" itemscope itemtype="https://schema.org/PostalAddress"><svg class="ico ico-pin" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span itemprop="streetAddress">Московская ул., 28</span><meta itemprop="addressLocality" content="Гусев"><meta itemprop="addressRegion" content="Калининградская область"></div>
+            <div class="shop-phone"><svg class="ico ico-phone" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a itemprop="telephone" href="tel:79114858330">+7 (911) 485-83-30</a></div>
             <div class="shop-products">
                 <span class="product-tag">Тетради</span><span class="product-tag">Ручки</span><span class="product-tag">Бумага</span><span class="product-tag">Портфели</span>
             </div>
         </div>
-        <div class="shop-card" itemscope itemtype="https://schema.org/LocalBusiness">
+        <div class="shop-card" id="holst-s-maslom" itemscope itemtype="https://schema.org/LocalBusiness">
             <div class="shop-header">
                 <span class="shop-name" itemprop="name">Холст с маслом</span>
                 <span class="shop-badge">Канцтовары</span>
             </div>
                 <div class="shop-meta-row"><span class="shop-top-badge">🔥 ТОП</span><span class="shop-rating" title="Рейтинг 4.4 из 5">★★★★✯ <b>4.4</b></span></div>
-            <div class="shop-address" itemscope itemtype="https://schema.org/PostalAddress"><span itemprop="streetAddress">ул. Менделеева, 8А (этаж 1)</span><meta itemprop="addressLocality" content="Гусев"><meta itemprop="addressRegion" content="Калининградская область"></div>
-            <div class="shop-phone">📱 <a itemprop="telephone" href="tel:79062377013">+7 (906) 237-70-13</a></div>
+            <div class="shop-address" itemscope itemtype="https://schema.org/PostalAddress"><svg class="ico ico-pin" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span itemprop="streetAddress">ул. Менделеева, 8А (этаж 1)</span><meta itemprop="addressLocality" content="Гусев"><meta itemprop="addressRegion" content="Калининградская область"></div>
+            <div class="shop-phone"><svg class="ico ico-phone" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a itemprop="telephone" href="tel:79062377013">+7 (906) 237-70-13</a></div>
             <div class="shop-products">
                 <span class="product-tag">Канцтовары</span><span class="product-tag">Художественные принадлежности</span><span class="product-tag">Холсты</span>
             </div>
         </div>
-        <div class="shop-card" itemscope itemtype="https://schema.org/LocalBusiness">
+        <div class="shop-card" id="zheltyy-begemotik" itemscope itemtype="https://schema.org/LocalBusiness">
             <div class="shop-header">
                 <span class="shop-name" itemprop="name">Жёлтый Бегемотик</span>
                 <span class="shop-badge">Канцтовары</span>
             </div>
                 <div class="shop-meta-row"><span class="shop-top-badge">🔥 ТОП</span><span class="shop-rating" title="Рейтинг 4.5 из 5">★★★★✯ <b>4.5</b></span></div>
-            <div class="shop-address" itemscope itemtype="https://schema.org/PostalAddress"><span itemprop="streetAddress">просп. Ленина, 42а</span><meta itemprop="addressLocality" content="Гусев"><meta itemprop="addressRegion" content="Калининградская область"></div>
-            <div class="shop-phone">📱 <a itemprop="telephone" href="tel:79622525475">+7 (962) 252-54-75</a></div>
+            <div class="shop-address" itemscope itemtype="https://schema.org/PostalAddress"><svg class="ico ico-pin" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span itemprop="streetAddress">просп. Ленина, 42а</span><meta itemprop="addressLocality" content="Гусев"><meta itemprop="addressRegion" content="Калининградская область"></div>
+            <div class="shop-phone"><svg class="ico ico-phone" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a itemprop="telephone" href="tel:79622525475">+7 (962) 252-54-75</a></div>
             <div class="shop-products">
                 <span class="product-tag">Канцтовары</span><span class="product-tag">Игрушки</span><span class="product-tag">Самокаты</span><span class="product-tag">Велосипеды</span>
             </div>
@@ -184,7 +210,7 @@
                 <p><strong>Канцтовары в Гусеве</strong> — в нашем каталоге собраны лучшие магазины канцелярии города Гусев, Калининградская область. Тетради, ручки, карандаши, портфели школьные, альбомы, краски, бумага — всё для школы и офиса в одном месте.</p>
                 <p>Готовитесь к 1 сентября? В каталоге «ФлаерГусев» найдёте магазины с тетрадями, школьными рюкзаками, пеналами и всем необходимым для учеников. Для офиса — бумага, картриджи, папки, степлеры и канцелярские принадлежности.</p>
                 <p>Мы постоянно обновляем информацию о магазинах и товарах, чтобы вы могли найти самые актуальные предложения. Все магазины проходят проверку — мы гарантируем качество данных.</p>
-                <p>Готовитесь к 1 сентября и ищете, что взять ребёнку в школу? Читайте подробный обзор в нашей статье <a href="article-kanctovary.html">«Канцтовары в Гусеве: где купить всё для школы и офиса в 2026»</a> — там собран список покупок и советы по выбору рюкзака.</p>
+                <p>Готовитесь к 1 сентября и ищете, что взять ребёнку в школу? Читайте подробный обзор в нашей статье <a href="article-kanctovary.html">«Канцтовары в Гусеве: где купить всё для школы и офиса»</a> — там собран список покупок и советы по выбору рюкзака.</p>
                 <p>Вы владелец магазина канцтоваров в Гусеве? Вы можете добавить свою организацию в каталог — подробности на странице <a href="tariffs.html">Тарифы</a>.</p>
             </div>
         </div>
@@ -205,6 +231,7 @@
                     <h4>Навигация</h4>
                     <a href="index.html">Главная</a>
                     <a href="categories.html">Категории</a>
+                <a href="vse-magaziny.html">Все магазины</a>
                     <a href="tariffs.html">Тарифы</a>
                     <a href="blog.html">Блог</a>
                     <a href="about.html">О проекте</a>
@@ -229,14 +256,14 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 ФлаерГусев. Все права защищены. | <a href="politika-pd.html">Политика обработки ПДн</a></p>
-                <p>📧 pryazhnikov24@yandex.ru | 📱 <a href="tel:79527965785">+7 (952) 796-57-85</a></p>
+                <p>&copy; <span class="year">2026</span> ФлаерГусев. Все права защищены. | <a href="politika-pd.html">Политика обработки ПДн</a></p>
+                <p>📧 pryazhnikov24@yandex.ru | <svg class="ico ico-phone" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:79527965785">+7 (952) 796-57-85</a></p>
                 <p>г. Гусев, Калининградская область</p>
             </div>
         </div>
     </footer>
 
-    <script src="js/main.js?v=5"></script>
+    <script src="js/main.js?v=6"></script>
 
 <!-- Yandex.Metrika counter (deferred) -->
 <script>
@@ -256,5 +283,6 @@
 <noscript><div><img src="https://mc.yandex.ru/watch/111176884" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
 <script src="js/metrika-goals.js?v=1"></script>
+    <script src="js/year.js?v=1"></script>
 </body>
 </html>

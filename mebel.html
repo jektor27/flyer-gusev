@@ -27,6 +27,7 @@
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="manifest" href="manifest.json">
     <link rel="preload" href="css/style.css" as="style">
     <link rel="stylesheet" href="css/style.css">
     
@@ -36,13 +37,49 @@
     <!-- Schema.org ItemList -->
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "ItemList",
-      "name": "Мебель в Гусеве",
-      "description": "Магазины Мебель в городе Гусев, Калининградская область",
-      "url": "https://gusev-flyer.ru/mebel.html",
-      "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Софа", "url": "https://gusev-flyer.ru/mebel.html", "description": "Кровати, шкафы, столы, стулья, диваны"}, {"@type": "ListItem", "position": 2, "name": "BOXXSale", "url": "https://gusev-flyer.ru/mebel.html", "description": "Мебель для дома и офиса"}, {"@type": "ListItem", "position": 3, "name": "Недорогая мебель", "url": "https://gusev-flyer.ru/mebel.html", "description": "Кровати, шкафы, комоды, столы"}, {"@type": "ListItem", "position": 4, "name": "Первый мебельный", "url": "https://gusev-flyer.ru/mebel.html", "description": "Мебель для дома"}, {"@type": "ListItem", "position": 5, "name": "Boxx", "url": "https://gusev-flyer.ru/mebel.html", "description": "Мебель для дома и офиса"}]
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Мебель в Гусеве",
+  "description": "Магазины Мебель в городе Гусев, Калининградская область",
+  "url": "https://gusev-flyer.ru/mebel.html",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Софа",
+      "url": "https://gusev-flyer.ru/mebel.html#sofa",
+      "description": "Кровати, шкафы, столы, стулья, диваны"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "BOXXSale",
+      "url": "https://gusev-flyer.ru/mebel.html#boxxsale",
+      "description": "Мебель для дома и офиса"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Недорогая мебель",
+      "url": "https://gusev-flyer.ru/mebel.html#nedorogaya-mebel",
+      "description": "Кровати, шкафы, комоды, столы"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Первый мебельный",
+      "url": "https://gusev-flyer.ru/mebel.html#pervyy-mebelnyy",
+      "description": "Мебель для дома"
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "name": "Boxx",
+      "url": "https://gusev-flyer.ru/mebel.html#boxx",
+      "description": "Мебель для дома и офиса"
     }
+  ]
+}
     </script>
     
     <!-- Schema.org BreadcrumbList -->
@@ -68,6 +105,7 @@
     </script>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Перейти к содержанию</a>
     <header class="site-header">
         <div class="container">
             <a href="index.html" class="logo">
@@ -77,6 +115,7 @@
             <nav class="nav">
                 <a href="index.html" class="nav-link">Главная</a>
                 <a href="categories.html" class="nav-link">Категории</a>
+                    <a href="vse-magaziny.html" class="nav-link">Все магазины</a>
                 <a href="tariffs.html" class="nav-link">Тарифы</a>
                 <a href="for-business.html" class="nav-link">Для бизнеса</a>
                 <a href="blog.html" class="nav-link">Блог</a>
@@ -88,17 +127,18 @@
         </div>
     </header>
 
-    <nav class="breadcrumbs"><div class="container"><a href="index.html">Главная</a> <span>→</span> <a href="categories.html">Категории</a> <span>→</span> <strong>Мебель</strong></div></nav>
+    <nav class="breadcrumbs"><div class="container"><a href="index.html">Главная</a> <span>→</span> <a href="categories.html">Категории</a>
+                <a href="vse-magaziny.html">Все магазины</a> <span>→</span> <strong>Мебель</strong></div></nav>
 
         <section class="category-hero">
         <div class="container">
             <div class="category-head">
-                <h1 class="category-title">Магазины <span class="gradient-text">мебели</span> в Гусеве</h1>
+                <h1 id="main-content" tabindex="-1" class="category-title">Магазины <span class="gradient-text">мебели</span> в Гусеве</h1>
                 <p class="category-sub">🪑 Каталог с адресами, телефонами и режимом работы</p>
             </div>
             <div class="category-meta">
                 <div class="category-meta-item"><span class="category-meta-ico">🛍️</span><span><b>5</b> магазинов</span></div>
-                <div class="category-meta-item"><span class="category-meta-ico">📍</span><span>г. Гусев</span></div>
+                <div class="category-meta-item"><span class="category-meta-ico"></span><span>г. Гусев</span></div>
                 <div class="category-meta-item"><span class="category-meta-ico">✅</span><span>Данные проверены</span></div>
             </div>
             <p class="category-lead">Каталог магазинов мебели в Гусеве (Калининградская область). Кровати, шкафы, столы, стулья, диваны. Актуальные адреса, телефоны и ассортимент.</p>
@@ -111,62 +151,62 @@
             <div class="shops-note">Рейтинги магазинов — средняя оценка по данным Яндекс, Google и 2ГИС</div>
             <div class="shops-grid">
                 
-        <div class="shop-card" itemscope itemtype="https://schema.org/LocalBusiness">
+        <div class="shop-card" id="sofa" itemscope itemtype="https://schema.org/LocalBusiness">
             <div class="shop-header">
                 <span class="shop-name" itemprop="name">Софа</span>
                 <span class="shop-badge">Мебель</span>
             </div>
                 <div class="shop-meta-row"><span class="shop-top-badge">🔥 ТОП</span><span class="shop-rating" title="Рейтинг 4.6 из 5">★★★★✯ <b>4.6</b></span></div>
-            <div class="shop-address" itemscope itemtype="https://schema.org/PostalAddress"><span itemprop="streetAddress">ул. Менделеева, 4</span><meta itemprop="addressLocality" content="Гусев"><meta itemprop="addressRegion" content="Калининградская область"></div>
-            <div class="shop-phone">📱 <a itemprop="telephone" href="tel:79062192244">+7 (906) 219-22-44</a></div>
+            <div class="shop-address" itemscope itemtype="https://schema.org/PostalAddress"><svg class="ico ico-pin" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span itemprop="streetAddress">ул. Менделеева, 4</span><meta itemprop="addressLocality" content="Гусев"><meta itemprop="addressRegion" content="Калининградская область"></div>
+            <div class="shop-phone"><svg class="ico ico-phone" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a itemprop="telephone" href="tel:79062192244">+7 (906) 219-22-44</a></div>
             <div class="shop-products">
                 <span class="product-tag">Кровати</span><span class="product-tag">шкафы</span><span class="product-tag">столы</span><span class="product-tag">стулья</span><span class="product-tag">диваны</span>
             </div>
         </div>
-        <div class="shop-card" itemscope itemtype="https://schema.org/LocalBusiness">
+        <div class="shop-card" id="boxxsale" itemscope itemtype="https://schema.org/LocalBusiness">
             <div class="shop-header">
                 <span class="shop-name" itemprop="name">BOXXSale</span>
                 <span class="shop-badge">Мебель</span>
             </div>
                 <div class="shop-meta-row"><span class="shop-top-badge">🔥 ТОП</span><span class="shop-rating" title="Рейтинг 4.5 из 5">★★★★✯ <b>4.5</b></span></div>
-            <div class="shop-address" itemscope itemtype="https://schema.org/PostalAddress"><span itemprop="streetAddress">Московская ул., 14</span><meta itemprop="addressLocality" content="Гусев"><meta itemprop="addressRegion" content="Калининградская область"></div>
-            <div class="shop-phone">📱 <a itemprop="telephone" href="tel:79052454062">+7 (905) 245-40-62</a></div>
+            <div class="shop-address" itemscope itemtype="https://schema.org/PostalAddress"><svg class="ico ico-pin" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span itemprop="streetAddress">Московская ул., 14</span><meta itemprop="addressLocality" content="Гусев"><meta itemprop="addressRegion" content="Калининградская область"></div>
+            <div class="shop-phone"><svg class="ico ico-phone" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a itemprop="telephone" href="tel:79052454062">+7 (905) 245-40-62</a></div>
             <div class="shop-products">
                 <span class="product-tag">Мебель для дома и офиса</span>
             </div>
         </div>
-        <div class="shop-card" itemscope itemtype="https://schema.org/LocalBusiness">
+        <div class="shop-card" id="nedorogaya-mebel" itemscope itemtype="https://schema.org/LocalBusiness">
             <div class="shop-header">
                 <span class="shop-name" itemprop="name">Недорогая мебель</span>
                 <span class="shop-badge">Мебель</span>
             </div>
                 <div class="shop-meta-row"><span class="shop-top-badge">🔥 ТОП</span><span class="shop-rating" title="Рейтинг 4.4 из 5">★★★★✯ <b>4.4</b></span></div>
-            <div class="shop-address" itemscope itemtype="https://schema.org/PostalAddress"><span itemprop="streetAddress">ул. Ломоносова, 10</span><meta itemprop="addressLocality" content="Гусев"><meta itemprop="addressRegion" content="Калининградская область"></div>
-            <div class="shop-phone">📱 <a itemprop="telephone" href="tel:79218530273">+7 (921) 853-02-73</a></div>
+            <div class="shop-address" itemscope itemtype="https://schema.org/PostalAddress"><svg class="ico ico-pin" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span itemprop="streetAddress">ул. Ломоносова, 10</span><meta itemprop="addressLocality" content="Гусев"><meta itemprop="addressRegion" content="Калининградская область"></div>
+            <div class="shop-phone"><svg class="ico ico-phone" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a itemprop="telephone" href="tel:79218530273">+7 (921) 853-02-73</a></div>
             <div class="shop-products">
                 <span class="product-tag">Кровати</span><span class="product-tag">шкафы</span><span class="product-tag">комоды</span><span class="product-tag">столы</span>
             </div>
         </div>
-        <div class="shop-card" itemscope itemtype="https://schema.org/LocalBusiness">
+        <div class="shop-card" id="pervyy-mebelnyy" itemscope itemtype="https://schema.org/LocalBusiness">
             <div class="shop-header">
                 <span class="shop-name" itemprop="name">Первый мебельный</span>
                 <span class="shop-badge">Мебель</span>
             </div>
                 <div class="shop-meta-row"><span class="shop-rating" title="Рейтинг 4.3 из 5">★★★★☆ <b>4.3</b></span></div>
-            <div class="shop-address" itemscope itemtype="https://schema.org/PostalAddress"><span itemprop="streetAddress">Московская ул.</span><meta itemprop="addressLocality" content="Гусев"><meta itemprop="addressRegion" content="Калининградская область"></div>
-            <div class="shop-phone">📱 <a itemprop="telephone" href="tel:79062101927">+7 (906) 210-19-27</a></div>
+            <div class="shop-address" itemscope itemtype="https://schema.org/PostalAddress"><svg class="ico ico-pin" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span itemprop="streetAddress">Московская ул.</span><meta itemprop="addressLocality" content="Гусев"><meta itemprop="addressRegion" content="Калининградская область"></div>
+            <div class="shop-phone"><svg class="ico ico-phone" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a itemprop="telephone" href="tel:79062101927">+7 (906) 210-19-27</a></div>
             <div class="shop-products">
                 <span class="product-tag">Мебель</span><span class="product-tag">шкафы</span><span class="product-tag">столы</span><span class="product-tag">диваны</span>
             </div>
         </div>
-        <div class="shop-card" itemscope itemtype="https://schema.org/LocalBusiness">
+        <div class="shop-card" id="boxx" itemscope itemtype="https://schema.org/LocalBusiness">
             <div class="shop-header">
                 <span class="shop-name" itemprop="name">Boxx</span>
                 <span class="shop-badge">Мебель</span>
             </div>
                 <div class="shop-meta-row"><span class="shop-rating" title="Рейтинг 4.4 из 5">★★★★✯ <b>4.4</b></span></div>
-            <div class="shop-address" itemscope itemtype="https://schema.org/PostalAddress"><span itemprop="streetAddress">ул. Победы, 29</span><meta itemprop="addressLocality" content="Гусев"><meta itemprop="addressRegion" content="Калининградская область"></div>
-            <div class="shop-phone">📱 <a itemprop="telephone" href="tel:79632943636">+7 (963) 294-36-36</a></div>
+            <div class="shop-address" itemscope itemtype="https://schema.org/PostalAddress"><svg class="ico ico-pin" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span itemprop="streetAddress">ул. Победы, 29</span><meta itemprop="addressLocality" content="Гусев"><meta itemprop="addressRegion" content="Калининградская область"></div>
+            <div class="shop-phone"><svg class="ico ico-phone" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a itemprop="telephone" href="tel:79632943636">+7 (963) 294-36-36</a></div>
             <div class="shop-products">
                 <span class="product-tag">Мебель</span><span class="product-tag">шкафы</span><span class="product-tag">столы</span><span class="product-tag">комоды</span>
             </div>
@@ -181,7 +221,7 @@
             <div class="article-content">
                 <p>Гусев — город с богатой инфраструктурой и развитой торговлей. В нашем каталоге собраны лучшие магазины категории "Мебель" в Гусеве.</p>
                 <p>Мы постоянно обновляем информацию о магазинах и товарах, чтобы вы могли найти самые актуальные предложения. Все магазины проходят проверку — мы гарантируем качество данных.</p>
-                <p>Планируете обновить обстановку дома? Читайте подробный обзор в нашей статье <a href="article-mebel.html">«Мебель в Гусеве: где купить кровать, шкаф и диван в 2026»</a> — там собраны советы по выбору мебели для спальни и гостиной и как не переплатить.</p>
+                <p>Планируете обновить обстановку дома? Читайте подробный обзор в нашей статье <a href="article-mebel.html">«Мебель в Гусеве: где купить кровать, шкаф и диван»</a> — там собраны советы по выбору мебели для спальни и гостиной и как не переплатить.</p>
                 <p>Вы владелец магазина мебели в Гусеве? Вы можете добавить свою организацию в каталог — подробности на странице <a href="tariffs.html">Тарифы</a>.</p>
             </div>
         </div>
@@ -202,6 +242,7 @@
                     <h4>Навигация</h4>
                     <a href="index.html">Главная</a>
                     <a href="categories.html">Категории</a>
+                <a href="vse-magaziny.html">Все магазины</a>
                     <a href="tariffs.html">Тарифы</a>
                     <a href="blog.html">Блог</a>
                     <a href="about.html">О проекте</a>
@@ -226,14 +267,14 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 ФлаерГусев. Все права защищены. | <a href="politika-pd.html">Политика обработки ПДн</a></p>
-                <p>📧 pryazhnikov24@yandex.ru | 📱 <a href="tel:79527965785">+7 (952) 796-57-85</a></p>
+                <p>&copy; <span class="year">2026</span> ФлаерГусев. Все права защищены. | <a href="politika-pd.html">Политика обработки ПДн</a></p>
+                <p>📧 pryazhnikov24@yandex.ru | <svg class="ico ico-phone" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:79527965785">+7 (952) 796-57-85</a></p>
                 <p>г. Гусев, Калининградская область</p>
             </div>
         </div>
     </footer>
 
-    <script src="js/main.js?v=5"></script>
+    <script src="js/main.js?v=6"></script>
 
 <!-- Yandex.Metrika counter (deferred) -->
 <script>
@@ -253,5 +294,6 @@
 <noscript><div><img src="https://mc.yandex.ru/watch/111176884" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
 <script src="js/metrika-goals.js?v=1"></script>
+    <script src="js/year.js?v=1"></script>
 </body>
 </html>

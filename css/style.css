@@ -201,7 +201,18 @@ body {
     border: none;
     color: var(--light);
     font-size: 28px;
+    line-height: 1;
     cursor: pointer;
+    min-width: 44px;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    transition: background 0.2s ease;
+}
+.menu-btn:hover, .menu-btn:focus-visible {
+    background: rgba(255, 255, 255, 0.12);
+    outline: none;
 }
 
 /* Hero */
@@ -913,9 +924,23 @@ body {
 
 .demo-verify-meta { font-size: 9px; color: var(--gray); margin-top: 2px; }
 
-.demo-more { margin-top: auto; align-self: flex-end; font-size: 10px; color: var(--accent); text-decoration: none; }
+.demo-more {
+    margin-top: auto;
+    align-self: flex-end;
+    font-size: 13px;
+    line-height: 1.35;
+    color: var(--accent);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    min-height: 32px;
+    padding: 4px 0;
+}
 
-.demo-more:hover { text-decoration: underline; }
+.demo-more:hover {
+    text-decoration: underline;
+    color: #ff6b81;
+}
 
 /* Categories */
 .categories {
@@ -1771,16 +1796,21 @@ body {
 }
 
 .home-contact-value {
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 600;
     color: #ffffff;
     text-decoration: none;
-    transition: color .2s ease;
+    transition: color .2s ease, background .2s ease;
     overflow-wrap: anywhere;
+    display: inline-flex;
+    align-items: center;
+    min-height: 34px;
+    padding: 4px 0;
 }
 
-a.home-contact-value:hover {
+a.home-contact-value:hover, a.home-contact-value:focus-visible {
     color: #e94560;
+    text-decoration: underline;
 }
 
 @media (max-width:1140px){
@@ -1793,8 +1823,17 @@ a.home-contact-value:hover {
         gap: 12px;
     }
     .home-contact-value {
-        font-size: 13px;
-    }
+    font-size: 15px;
+    font-weight: 600;
+    color: #ffffff;
+    text-decoration: none;
+    transition: color .2s ease, background .2s ease;
+    overflow-wrap: anywhere;
+    display: inline-flex;
+    align-items: center;
+    min-height: 34px;
+    padding: 4px 0;
+}
 }
 
 @media (max-width:800px){
@@ -1887,8 +1926,17 @@ a.home-contact-value:hover {
         font-size: 10px;
     }
     .home-contact-value {
-        font-size: 13px;
-    }
+    font-size: 15px;
+    font-weight: 600;
+    color: #ffffff;
+    text-decoration: none;
+    transition: color .2s ease, background .2s ease;
+    overflow-wrap: anywhere;
+    display: inline-flex;
+    align-items: center;
+    min-height: 34px;
+    padding: 4px 0;
+}
 }
 
 /* ===== Блок «Частые вопросы» (главная) ===== */
@@ -2937,8 +2985,20 @@ a.home-contact-value:hover {
     }
     
     .menu-btn {
-        display: block;
-    }
+    display: none;
+    background: none;
+    border: none;
+    color: var(--light);
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+    min-width: 44px;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    transition: background 0.2s ease;
+}
 }
 
 @media (max-width: 992px) {
@@ -3001,7 +3061,6 @@ a.home-contact-value:hover {
         text-align: center;
     }
 }
-
 
 /* ========================================
    Internal Links (��������)
@@ -5047,3 +5106,163 @@ html {
 .seo-text a { color: #ff6b6b; }
 .seo-text a:hover { text-decoration: underline; }
 .jastas-pronounce{position:absolute;width:1px;height:1px;margin:-1px;padding:0;border:0;clip:rect(0 0 0 0);overflow:hidden;white-space:nowrap;}
+
+/* ===== Страница «Все магазины» ===== */
+.allshops-nav {
+    background: rgba(255, 255, 255, 0.04);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 20px 0;
+}
+.allshops-nav-block {
+    margin-bottom: 12px;
+}
+.allshops-nav-block:last-child {
+    margin-bottom: 0;
+}
+.allshops-nav-block b {
+    display: block;
+    color: var(--light);
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+.allshops-alpha-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.allshops-alpha {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 36px;
+    min-height: 36px;
+    padding: 6px 10px;
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 10px;
+    color: var(--light);
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+.allshops-alpha:hover,
+.allshops-alpha:focus-visible {
+    background: rgba(233, 69, 96, 0.22);
+    border-color: var(--accent);
+    transform: translateY(-1px);
+}
+.allshops-letter {
+    font-size: 26px;
+    font-weight: 800;
+    color: var(--light);
+    margin: 32px 0 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid rgba(233, 69, 96, 0.35);
+    scroll-margin-top: 90px;
+}
+.allshops-letter:first-child {
+    margin-top: 0;
+}
+.shop-products a.product-tag {
+    text-decoration: none;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+.shop-products a.product-tag:hover,
+.shop-products a.product-tag:focus-visible {
+    background: rgba(233, 69, 96, 0.22);
+    border-color: var(--accent);
+}
+@media (max-width: 768px) {
+    .allshops-alpha {
+        min-width: 44px;
+        min-height: 44px;
+    }
+    .allshops-letter {
+        font-size: 22px;
+    }
+}
+
+/* ===== Иконки в карточках магазинов (вместо эмодзи) ===== */
+/* Правил для .shop-info здесь нет намеренно: он не должен становиться
+   flex-контейнером, иначе блоки сжимаются и вёрстка карточки едет.
+   .shop-address и .shop-hours уже flex-строки в исходном CSS. */
+
+/* телефон: строка с иконкой (в т.ч. <a class="shop-phone"> на главной) */
+.shop-phone,
+.home-shops .shop-info > a.shop-phone {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+/* адрес на главной — это <span itemprop="address">, а не .shop-address */
+.home-shops .shop-info > span[itemprop="address"] {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* сами иконки */
+.shop-address > .ico,
+.shop-hours > .ico,
+.shop-phone > .ico,
+.shop-phone > span > .ico,
+.home-shops .shop-info > span[itemprop="address"] > .ico,
+.home-shops .shop-info > a.shop-phone > .ico {
+    width: 16px;
+    height: 16px;
+    flex: 0 0 16px;
+    color: var(--accent);
+    stroke: currentColor;
+}
+/* у часов текст многострочный — иконка по первой строке, а не по центру */
+.shop-hours {
+    align-items: flex-start;
+}
+.shop-hours > .ico {
+    margin-top: 2px;
+}
+/* текст не должен выпирать */
+.shop-address > span,
+.shop-hours > span,
+.shop-phone > span,
+.shop-phone > a {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+@media (max-width: 768px) {
+    .shop-address > .ico,
+    .shop-hours > .ico,
+    .shop-phone > .ico,
+    .shop-phone > span > .ico,
+    .home-shops .shop-info > span[itemprop="address"] > .ico,
+    .home-shops .shop-info > a.shop-phone > .ico {
+        width: 15px;
+        height: 15px;
+        flex-basis: 15px;
+    }
+}
+/* Skip-link: доступность — пропустить навигацию */
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    z-index: 2000;
+    background: #e94560;
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 0 0 8px 0;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: none;
+}
+.skip-link:focus,
+.skip-link:focus-visible {
+    left: 0;
+    outline: 3px solid #9b2c47;
+    outline-offset: -3px;
+}
+#main-content:focus {
+    outline: none;
+}

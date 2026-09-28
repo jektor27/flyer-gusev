@@ -7,16 +7,16 @@
     <meta name="author" content="Флаер Гусев">
     <meta name="robots" content="index, follow">
     
-    <meta property="og:title" content="Флаер Гусев — живой каталог магазинов и товаров города Гусев | 78 организаций">
-    <meta property="og:description" content="Где купить в Гусеве? Автоматизированный каталог 78 проверенных магазинов: мебель, продукты, стройматериалы, одежда, техника, аптеки. Данные обновляются ежедневно, актуальные адреса и телефоны — ФлаерГусев.">
+    <meta property="og:title" content="Флаер Гусев — каталог магазинов Гусева: 78 организаций">
+    <meta property="og:description" content="Где купить в Гусеве? Каталог 78 проверенных магазинов: мебель, продукты, стройматериалы, одежда, техника, аптеки. Актуальные адреса и телефоны — ФлаерГусев.">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="ru_RU">
     <meta property="og:image" content="https://gusev-flyer.ru/og-image.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="669">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Флаер Гусев — живой каталог магазинов и товаров города Гусев | 78 организаций">
-    <meta name="twitter:description" content="Где купить в Гусеве? Автоматизированный каталог 78 проверенных магазинов: мебель, продукты, стройматериалы, одежда, техника, аптеки. Данные обновляются ежедневно, актуальные адреса и телефоны — ФлаерГусев.">
+    <meta name="twitter:title" content="Флаер Гусев — каталог магазинов Гусева: 78 организаций">
+    <meta name="twitter:description" content="Где купить в Гусеве? Каталог 78 проверенных магазинов: мебель, продукты, стройматериалы, одежда, техника, аптеки. Актуальные адреса и телефоны — ФлаерГусев.">
     <meta name="twitter:image" content="https://gusev-flyer.ru/og-image.jpg">
     
     <title>Магазины Гусева: 78 организаций — адреса | ФлаерГусев</title>
@@ -28,6 +28,7 @@
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="manifest" href="manifest.json">
     <link rel="preload" href="css/style.css" as="style">
     <link rel="stylesheet" href="css/style.css">
     
@@ -89,19 +90,49 @@
      <!-- Schema.org ItemList: Popular Shops -->
      <script type="application/ld+json">
      {
-       "@context": "https://schema.org",
-       "@type": "ItemList",
-       "name": "Популярные магазины Гусева",
-       "description": "Популярные магазины и организации города Гусев",
-       "url": "https://gusev-flyer.ru/",
-       "itemListElement": [
-          {"@type": "ListItem", "position": 1, "name": "ПрофСтайл", "url": "https://gusev-flyer.ru/stroymaterialy.html", "description": "Строительные материалы и инструменты — ул. Достоевского, 3"},
-          {"@type": "ListItem", "position": 2, "name": "Тёплый дом", "url": "https://gusev-flyer.ru/stroymaterialy.html", "description": "Строительный магазин — кирпич, цемент, доски, краска, инструменты"},
-          {"@type": "ListItem", "position": 3, "name": "Планета здоровья", "url": "https://gusev-flyer.ru/apteka.html", "description": "Аптека — лекарства, витамины, БАДы"},
-          {"@type": "ListItem", "position": 4, "name": "Щи Борщи", "url": "https://gusev-flyer.ru/cafe.html", "description": "Столовая — домашняя кухня, борщ, щи, комплексные обеды"},
-          {"@type": "ListItem", "position": 5, "name": "Техник", "url": "https://gusev-flyer.ru/avto.html", "description": "Автозапчасти — масла, фильтры, аксессуары"}
-       ]
-     }
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Популярные магазины Гусева",
+  "description": "Популярные магазины и организации города Гусев",
+  "url": "https://gusev-flyer.ru/",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "ПрофСтайл",
+      "url": "https://gusev-flyer.ru/stroymaterialy.html#profstail",
+      "description": "Строительные материалы и инструменты — ул. Достоевского, 3"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Тёплый дом",
+      "url": "https://gusev-flyer.ru/stroymaterialy.html#teplyj-dom",
+      "description": "Строительный магазин — кирпич, цемент, доски, краска, инструменты"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Планета здоровья",
+      "url": "https://gusev-flyer.ru/apteka.html#planeta-zdorovya",
+      "description": "Аптека — лекарства, витамины, БАДы"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Щи Борщи",
+      "url": "https://gusev-flyer.ru/cafe.html#schi-borschi",
+      "description": "Столовая — домашняя кухня, борщ, щи, комплексные обеды"
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "name": "Техник",
+      "url": "https://gusev-flyer.ru/avto.html#tehnik",
+      "description": "Автозапчасти — масла, фильтры, аксессуары"
+    }
+  ]
+}
      </script>
      <!-- Schema.org FAQPage -->
      <script type="application/ld+json">
@@ -173,6 +204,7 @@
     </script>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Перейти к содержанию</a>
     <header class="site-header">
         <div class="container">
             <a href="index.html" class="logo">
@@ -182,6 +214,7 @@
             <nav class="nav">
                 <a href="index.html" class="nav-link active">Главная</a>
                 <a href="categories.html" class="nav-link">Категории</a>
+                    <a href="vse-magaziny.html" class="nav-link">Все магазины</a>
                 <a href="tariffs.html" class="nav-link">Тарифы</a>
                 <a href="for-business.html" class="nav-link">Для бизнеса</a>
                 <a href="blog.html" class="nav-link">Блог</a>
@@ -200,7 +233,7 @@
                     <span class="hero-badge-ico">🫎</span>
                     <span class="hero-badge-text">Город Гусев — Гордость лосей!</span>
                 </div>
-                <h1>Каталог <span class="gradient-text">магазинов Гусева</span> — 78 проверенных организаций</h1>
+                <h1 id="main-content" tabindex="-1">Каталог <span class="gradient-text">магазинов Гусева</span> — 78 проверенных организаций</h1>
                 <p class="hero-subtitle">Более 78 магазинов и товаров в одном месте. Удобный поиск, актуальные цены, проверенные продавцы.</p>
 
                 <div class="search-box">
@@ -356,14 +389,14 @@
                             </div>
                         </div>
                     </div>
-                    <h3 class="feature-title">📱 Мобильный дизайн</h3>
+                    <h3 class="feature-title"><svg class="ico ico-phone" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Мобильный дизайн</h3>
                     <p class="feature-desc">Удобно с любого устройства — телефона, планшета или компьютера.</p>
                 </div>
                 <div class="feature-card">
                     <div class="demo demo-verified">
                         <div class="demo-verify-head">
                             <span class="demo-verify-badge">🫎 Проверено ФлаерГусев</span>
-                            <span class="demo-verify-date">проверено 15.08.2026</span>
+                            <span class="demo-verify-date">проверено ФлаерГусев</span>
                         </div>
                         <div class="demo-verify-row">
                             <span class="demo-check">✓</span>
@@ -501,59 +534,61 @@
                 <p class="home-shops-sub">Магазины с высоким рейтингом, которые выбирают жители города</p>
             </div>
             <div class="shops-grid">
-                <article class="shop-card">
+                <article class="shop-card" itemscope itemtype="https://schema.org/LocalBusiness">
                     <div class="shop-card-head">
                         <span class="shop-badge">Стройматериалы</span>
                         <span class="shop-rating">★ 4.9</span>
                     </div>
                     <span class="shop-icon">🧱</span>
-                    <h3 class="shop-name">ПрофСтайл</h3>
+                    <h3 class="shop-name" itemprop="name">ПрофСтайл</h3>
                     <div class="shop-info">
-                        <span>📍 ул. Достоевского, 3</span>
-                        <a class="shop-phone" href="tel:+74014338080">📱 +7 (40143) 3-80-80</a>
-                        <span>🕑 пн–пт 08:30–19:00, сб 08:30–17:00, вс 09:00–15:00</span>
-                    </div>
+                        <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress"><svg class="ico ico-pin" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span itemprop="streetAddress"> ул. Достоевского, 3</span><meta itemprop="addressLocality" content="Гусев"><meta itemprop="addressRegion" content="Калининградская область"></span>
+                        <a class="shop-phone" href="tel:+74014338080" itemprop="telephone"><svg class="ico ico-phone" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>+7 (40143) 3-80-80</a>
+                    
+                        <div class="shop-hours" itemprop="openingHours" content="Mo-Fr 08:30-19:00, Sa 08:30-17:00, Su 09:00-15:00"><svg class="ico ico-clock" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span>пн–пт 08:30–19:00, сб 08:30–17:00, вс 09:00–15:00</span></div></div>
                     <a class="shop-more" href="stroymaterialy.html#profstail">Подробнее →</a>
                 </article>
-                <article class="shop-card">
+                <article class="shop-card" itemscope itemtype="https://schema.org/LocalBusiness">
                     <div class="shop-card-head">
                         <span class="shop-badge">Стройматериалы</span>
                         <span class="shop-rating">★ 4.9</span>
                     </div>
                     <span class="shop-icon">🧱</span>
-                    <h3 class="shop-name">Тёплый дом</h3>
+                    <h3 class="shop-name" itemprop="name">Тёплый дом</h3>
                     <div class="shop-info">
-                        <span>📍 Школьная ул., 11</span>
-                        <a class="shop-phone" href="tel:+74014335011">📱 +7 (40143) 3-50-11</a>
-                    </div>
+                        <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress"><svg class="ico ico-pin" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span itemprop="streetAddress"> Школьная ул., 11</span><meta itemprop="addressLocality" content="Гусев"><meta itemprop="addressRegion" content="Калининградская область"></span>
+                        <a class="shop-phone" href="tel:+74014335011" itemprop="telephone"><svg class="ico ico-phone" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>+7 (40143) 3-50-11</a>
+                    
+                        <div class="shop-hours" itemprop="openingHours" content="Mo-Fr 08:30-19:00, Sa 08:30-17:00, Su 09:00-15:00"><svg class="ico ico-clock" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span>пн–пт 08:30–19:00, сб 08:30–17:00, вс 09:00–15:00</span></div></div>
                     <a class="shop-more" href="stroymaterialy.html#teplyj-dom">Подробнее →</a>
                 </article>
-                <article class="shop-card">
+                <article class="shop-card" itemscope itemtype="https://schema.org/LocalBusiness">
                     <div class="shop-card-head">
                         <span class="shop-badge">Аптека</span>
                         <span class="shop-rating">★ 4.8</span>
                     </div>
                     <span class="shop-icon">💊</span>
-                    <h3 class="shop-name">Планета здоровья</h3>
+                    <h3 class="shop-name" itemprop="name">Планета здоровья</h3>
                     <div class="shop-info">
-                        <span>📍 Московская ул., 9</span>
-                        <a class="shop-phone" href="tel:+78007550500">📱 8 (800) 755-05-00</a>
-                    </div>
-                    <a class="shop-more" href="apteka.html">Подробнее →</a>
+                        <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress"><svg class="ico ico-pin" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span itemprop="streetAddress"> Московская ул., 9</span><meta itemprop="addressLocality" content="Гусев"><meta itemprop="addressRegion" content="Калининградская область"></span>
+                        <a class="shop-phone" href="tel:+78007550500" itemprop="telephone"><svg class="ico ico-phone" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>8 (800) 755-05-00</a>
+                    
+                        <div class="shop-hours" itemprop="openingHours" content="Mo-Su 00:00-23:59"><svg class="ico ico-clock" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span>круглосуточно</span></div></div>
+                    <a class="shop-more" href="apteka.html#planeta-zdorovya">Подробнее →</a>
                 </article>
-                <article class="shop-card">
+                <article itemscope itemtype="https://schema.org/LocalBusiness" class="shop-card">
                     <div class="shop-card-head">
                         <span class="shop-badge">Кафе и рестораны</span>
                         <span class="shop-rating">★ 4.8</span>
                     </div>
                     <span class="shop-icon">☕</span>
-                    <h3 class="shop-name">Щи Борщи</h3>
+                    <h3 class="shop-name" itemprop="name">Щи Борщи</h3>
                     <div class="shop-info">
-                        <span>📍 просп. Ленина, 21</span>
-                        <a class="shop-phone" href="tel:+79062388938">📱 +7 (906) 238-89-38</a>
-                        <span>🕑 ежедневно 09:00–20:00</span>
-                    </div>
-                    <a class="shop-more" href="cafe.html">Подробнее →</a>
+                        <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress"><svg class="ico ico-pin" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span itemprop="streetAddress"> просп. Ленина, 21</span><meta itemprop="addressLocality" content="Гусев"><meta itemprop="addressRegion" content="Калининградская область"></span>
+                        <a class="shop-phone" href="tel:+79062388938"><svg class="ico ico-phone" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>+7 (906) 238-89-38</a>
+                    
+                        <div class="shop-hours" itemprop="openingHours" content="Mo-Su 09:00-20:00"><svg class="ico ico-clock" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span>ежедневно 09:00–20:00</span></div></div>
+                    <a class="shop-more" href="cafe.html#schi-borschi">Подробнее →</a>
                 </article>
             </div>
             <div class="home-shops-cta">
@@ -608,14 +643,14 @@
                         </div>
                     </div>
                     <div class="home-contact-card">
-                        <span class="home-contact-icon">📱</span>
+                        <span class="home-contact-icon"><svg class="ico ico-phone" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
                         <div class="home-contact-info">
                             <span class="home-contact-label">Телефон</span>
                             <a class="home-contact-value" href="tel:+79527965785">+7 (952) 796-57-85</a>
                         </div>
                     </div>
                     <div class="home-contact-card">
-                        <span class="home-contact-icon">📍</span>
+                        <span class="home-contact-icon"></span>
                         <div class="home-contact-info">
                             <span class="home-contact-label">Город</span>
                             <span class="home-contact-value">г. Гусев, Калининградская обл.</span>
@@ -741,7 +776,7 @@
                     <h3 class="home-questions-title">Есть вопросы?</h3>
                     <p class="home-questions-text">Позвоните или напишите — обсудим размещение, тарифы и продвижение вашего магазина</p>
                     <div class="home-questions-buttons">
-                        <a class="home-questions-btn home-questions-btn-primary" href="tel:+79527965785">📱 Позвонить</a>
+                        <a class="home-questions-btn home-questions-btn-primary" href="tel:+79527965785"><svg class="ico ico-phone" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Позвонить</a>
                         <a class="home-questions-btn home-questions-btn-ghost" href="mailto:pryazhnikov24@yandex.ru">📧 Написать</a>
                     </div>
                 </div>
@@ -834,6 +869,7 @@
                     <ul class="footer-links">
                         <li><a href="index.html">Главная</a></li>
                         <li><a href="index.html#categories">Категории</a></li>
+                        <li><a href="vse-magaziny.html">Все магазины</a></li>
                         <li><a href="blog.html">Блог</a></li>
                         <li><a href="tariffs.html">Тарифы</a></li>
                         <li><a href="for-business.html">Для бизнеса</a></li>
@@ -870,7 +906,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p class="footer-copyright">© 2026 ФлаерГусев · Каталог магазинов Гусева</p>
+                <p class="footer-copyright">© <span class="year">2026</span> ФлаерГусев · Каталог магазинов Гусева</p>
                 <div class="footer-bottom-links">
                     <a href="politika-pd.html">Политика обработки ПДн</a>
                     <span class="footer-bottom-sep">·</span>
@@ -882,7 +918,7 @@
         </div>
     </footer>
 
-    <script src="js/main.js?v=5"></script>
+    <script src="js/main.js?v=6"></script>
 
 <!-- Yandex.Metrika counter (deferred) -->
 <script>
@@ -902,6 +938,7 @@
 <noscript><div><img src="https://mc.yandex.ru/watch/111176884" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
 <script src="js/metrika-goals.js?v=1"></script>
+    <script src="js/year.js?v=1"></script>
 </body>
 </html>
 

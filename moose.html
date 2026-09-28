@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="ru">
 <head>
 <meta charset="utf-8">
@@ -26,6 +26,7 @@
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="manifest" href="manifest.json">
 <meta name="yandex-verification" content="f76b111d88cf6ce9">
 
 <script type="application/ld+json">
@@ -120,12 +121,14 @@
 </style>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Перейти к содержанию</a>
 
 <header class="site-header">
   <a class="logo" href="index.html">🫎 Флаер<span>Гусев</span></a>
   <nav>
     <a href="index.html">Главная</a>
     <a href="index.html#categories">Категории</a>
+        <a href="vse-magaziny.html">Все магазины</a>
     <a href="tariffs.html">Тарифы</a>
     <a href="moose.html" class="active">О лосе</a>
   </nav>
@@ -134,7 +137,7 @@
 <main class="article-section">
   <div class="article-wrap">
 
-    <h1 class="article-title">О <span class="gradient-text">лосе</span></h1>
+    <h1 id="main-content" tabindex="-1" class="article-title">О <span class="gradient-text">лосе</span></h1>
     <p class="article-lead">Лось для Гусева — не просто животное. Это символ города, изображённый на его гербе, и живой памятник в самом центре. Рассказываем, как сохатый стал главным гусевцем.</p>
 
     <!-- Положи фото панно в img/gusev-coat.jpg (или поменяй путь ниже) -->
@@ -196,7 +199,7 @@
 
 <footer class="site-footer">
   <div class="footer-bottom">
-    <p>© 2026 ФлаерГусев · Каталог магазинов Гусева</p>
+    <p>© <span class="year">2026</span> ФлаерГусев · Каталог магазинов Гусева</p>
     <a class="ja-badge" href="https://pryazhnikov-ai.ru" target="_blank" rel="noopener" title="Разработано тандемом Jasta и Александра">
       <span class="ja-mark">J&amp;A</span>
       <span class="ja-label">продукт Jasta &amp; Александра</span>
@@ -223,5 +226,6 @@
 <noscript><div><img src="https://mc.yandex.ru/watch/111176884" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
 <script src="js/metrika-goals.js?v=1"></script>
+    <script src="js/year.js?v=1"></script>
 </body>
 </html>
