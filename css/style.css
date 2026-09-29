@@ -2984,8 +2984,8 @@ a.home-contact-value:hover, a.home-contact-value:focus-visible {
         display: flex;
     }
     
-    .menu-btn {
-    display: none;
+.menu-btn {
+    display: block;
     background: none;
     border: none;
     color: var(--light);
