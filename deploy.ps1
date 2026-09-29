@@ -17,7 +17,12 @@ $repo = "D:\Jastas\projects\flyer-gusev"
 $py = "D:\Jastas\server\.venv\Scripts\python.exe"
 $recrawl = "D:\Jastas\tools\recrawl_yandex.py"
 $seoNotify = "D:\Jastas\projects\flyer-gusev-work\scripts\seo_notify.py"
+$deepAudit = "D:\Jastas\projects\flyer-gusev-work\scripts\deep_audit.py"
 Set-Location $repo
+
+Write-Host "Глубокий аудит перед публикацией:"
+& $py $deepAudit
+if ($LASTEXITCODE -ne 0) { throw "Аудит нашёл проблемы — публикация остановлена. Сначала почини." }
 
 if ($Message) {
     git add -A
