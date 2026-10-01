@@ -1,4 +1,4 @@
-* {
+﻿* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -1121,6 +1121,7 @@ body {
     transition: all 0.4s ease;
     position: relative;
     overflow: hidden;
+    scroll-margin-top: 110px;
 }
 
 .shop-card::before {
@@ -5265,4 +5266,592 @@ html {
 }
 #main-content:focus {
     outline: none;
+}
+
+/* ============ СТРАНИЦА-МАГАЗИН "ФЛАЕР" ============ */
+/* Стиль бумажного флаера: плотные панели, крупный телефон, отрывной купон тарифов. */
+/* Платные слоты: is-empty = заглушка (магазин не оплатил), без = реклама магазина. */
+
+.flyer-sheet {
+    background: var(--light);
+    color: var(--primary);
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 30px 60px -20px rgba(0,0,0,0.55);
+    margin: 30px 0 60px;
+    border: 1px solid rgba(0,0,0,0.08);
+}
+
+/* --- Шапка флаера: то, что человек видит за секунду --- */
+.flyer-top {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 26px;
+    padding: 30px 34px;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+    color: var(--light);
+    border-bottom: 5px solid var(--accent);
+}
+.flyer-badges {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+.flyer-cat {
+    background: var(--accent);
+    color: #fff;
+    font-weight: 800;
+    font-size: 12px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    padding: 6px 12px;
+    border-radius: 999px;
+}
+.flyer-rating {
+    color: var(--gold-light);
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+.flyer-title {
+    font-size: clamp(30px, 6vw, 48px);
+    line-height: 1.05;
+    font-weight: 900;
+    margin: 0 0 10px;
+    letter-spacing: -1px;
+}
+.flyer-title:focus {
+    outline: none;
+}
+.flyer-lead {
+    font-size: 17px;
+    line-height: 1.5;
+    color: var(--gray-light);
+    margin: 0;
+    max-width: 60ch;
+}
+.flyer-contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    text-align: right;
+    min-width: 250px;
+}
+
+/* Телефон: главный элемент страницы, как на настоящем флаере */
+.flyer-phone {
+    display: block;
+    font-size: clamp(26px, 4.4vw, 36px);
+    font-weight: 900;
+    color: #fff;
+    text-decoration: none;
+    background: var(--accent);
+    padding: 14px 24px;
+    border-radius: 12px;
+    white-space: nowrap;
+    box-shadow: 0 10px 26px -8px rgba(233,69,96,0.7);
+    transition: transform 0.15s ease, background 0.15s ease;
+}
+.flyer-phone:hover {
+    background: var(--accent-light);
+    transform: translateY(-2px);
+}
+.flyer-route {
+    color: var(--gold-light);
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px dashed rgba(244,208,63,0.55);
+    padding-bottom: 2px;
+}
+.flyer-route:hover {
+    color: #fff;
+}
+.flyer-hours-brief {
+    color: var(--gray-light);
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* --- Блоки --- */
+.flyer-block {
+    padding: 26px 34px;
+    border-bottom: 1px solid rgba(0,0,0,0.09);
+}
+.flyer-h2 {
+    font-size: 21px;
+    font-weight: 800;
+    margin: 0 0 14px;
+    color: var(--primary);
+}
+.flyer-text {
+    font-size: 17px;
+    line-height: 1.6;
+    margin: 0;
+    color: #2a2a45;
+}
+.flyer-tags {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin: 0;
+    padding: 0;
+}
+.flyer-tag {
+    background: #f2f4fb;
+    border: 1px solid rgba(26,26,46,0.12);
+    border-radius: 8px;
+    padding: 8px 13px;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+/* --- Расписание --- */
+.flyer-hours {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+}
+.flyer-hours th,
+.flyer-hours td {
+    padding: 11px 12px;
+    text-align: left;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+.flyer-hours th {
+    color: var(--gray);
+    font-weight: 600;
+    width: 45%;
+}
+.flyer-hours td {
+    font-weight: 700;
+}
+.flyer-hours tr:last-child th,
+.flyer-hours tr:last-child td {
+    border-bottom: none;
+}
+.flyer-hours tr.is-today th,
+.flyer-hours tr.is-today td {
+    color: var(--accent);
+}
+
+/* --- Акции --- */
+.flyer-actions {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 12px;
+}
+.flyer-action {
+    border-left: 5px solid var(--accent);
+    background: #fff5f7;
+    padding: 14px 16px;
+    border-radius: 0 10px 10px 0;
+    font-size: 16px;
+    line-height: 1.5;
+}
+.flyer-action b {
+    display: block;
+    font-size: 17px;
+    color: var(--primary);
+}
+.flyer-action-date {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--accent);
+    margin-bottom: 4px;
+}
+
+/* --- Фотографии (платный слот) --- */
+.flyer-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 12px;
+}
+.flyer-gallery img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+}
+.flyer-vk {
+    display: inline-block;
+    background: #0077ff;
+    color: #fff;
+    font-weight: 700;
+    padding: 12px 22px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+/* --- Заглушки: выглядят как приглашение, а не как "нет данных" --- */
+.flyer-slot.is-empty {
+    background: repeating-linear-gradient(45deg, #fafbfe, #fafbfe 12px, #f4f6fc 12px, #f4f6fc 24px);
+}
+.slot-empty {
+    text-align: center;
+    padding: 8px 0 4px;
+}
+.slot-ico {
+    color: #b9c2dc;
+    margin-bottom: 8px;
+}
+.slot-empty p {
+    margin: 0 0 6px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #6b7490;
+}
+.slot-why {
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    max-width: 52ch;
+    margin: 0 auto 12px !important;
+    color: #8892b0 !important;
+}
+.slot-link {
+    display: inline-block;
+    border: 2px solid var(--accent);
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 15px;
+    padding: 9px 20px;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: background 0.15s ease, color 0.15s ease;
+}
+.slot-link:hover {
+    background: var(--accent);
+    color: #fff;
+}
+
+/* --- Отрывной купон с тарифами --- */
+.flyer-owner {
+    padding: 30px 34px 34px;
+    background: linear-gradient(135deg, #14142b 0%, #0a0a1a 100%);
+    color: var(--gray-light);
+    position: relative;
+}
+.flyer-owner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: repeating-linear-gradient(90deg, var(--gold) 0 12px, transparent 12px 24px);
+}
+.flyer-owner-title {
+    font-size: 24px;
+    font-weight: 900;
+    color: #fff;
+    margin: 0 0 8px;
+    text-align: center;
+}
+.flyer-owner-sub {
+    text-align: center;
+    font-size: 15px;
+    margin: 0 0 22px;
+    color: #9aa4c4;
+}
+.flyer-tariffs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    max-width: 760px;
+    margin: 0 auto;
+}
+.flyer-tariff {
+    background: #fff;
+    color: var(--primary);
+    border-radius: 14px;
+    padding: 22px;
+    border-top: 5px solid var(--accent);
+}
+.flyer-tariff.is-premium {
+    border-top-color: var(--gold);
+}
+.flyer-tariff h3 {
+    margin: 0 0 8px;
+    font-size: 21px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.flyer-price {
+    font-size: 16px;
+    color: #5a6180;
+    margin-bottom: 14px;
+}
+.flyer-price b {
+    font-size: 34px;
+    color: var(--primary);
+    font-weight: 900;
+}
+.flyer-tariff ul {
+    list-style: none;
+    margin: 0 0 18px;
+    padding: 0;
+    font-size: 15px;
+}
+.flyer-tariff li {
+    padding: 6px 0 6px 22px;
+    position: relative;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+.flyer-tariff li::before {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 14px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+}
+.flyer-tariff.is-premium li::before {
+    background: var(--gold);
+}
+.flyer-tariff-btn {
+    display: block;
+    text-align: center;
+    background: var(--accent);
+    color: #fff;
+    font-weight: 800;
+    padding: 12px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+.flyer-tariff.is-premium .flyer-tariff-btn {
+    background: var(--gold);
+    color: #2a2000;
+}
+.flyer-owner-alt {
+    text-align: center;
+    font-size: 14px;
+    margin: 20px 0 0;
+    color: #8892b0;
+}
+.flyer-owner-alt a {
+    color: var(--gold-light);
+}
+
+/* --- Телефон --- */
+@media (max-width: 860px) {
+    .flyer-top {
+        grid-template-columns: 1fr;
+        padding: 24px 20px;
+    }
+    .flyer-contact {
+        text-align: left;
+        min-width: 0;
+    }
+    .flyer-phone {
+        text-align: center;
+    }
+    .flyer-block,
+    .flyer-owner {
+        padding: 22px 20px;
+    }
+    .flyer-tariffs {
+        grid-template-columns: 1fr;
+    }
+}
+/* ==========================================================================
+   ВИТРИНА-ЗАГЛУШКА: слот фотографий на странице магазина.
+
+   Задача одна: владелец магазина открывает страницу и должен узнать себя.
+   Поэтому в рамке - его название, его адрес и его телефон. Не «пришлите
+   фотографии», а «смотрите, это уже ваша витрина, осталось добавить фото».
+   ========================================================================== */
+
+/* ==========================================================================
+   ВИТРИНА-ЗАГЛУШКА: слот фотографий на странице магазина.
+
+   Задача одна: владелец магазина открывает страницу и должен узнать себя.
+   Поэтому в рамке - его название, его адрес и его телефон. Не «пришлите
+   фотографии», а «смотрите, это уже ваша витрина, осталось добавить фото».
+   ========================================================================== */
+
+.flyer-promo {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+    gap: 26px;
+    align-items: center;
+    padding: 22px;
+    border: 1px dashed #c9ccd6;
+    border-radius: 16px;
+    background:
+        linear-gradient(180deg, #fbfbfd 0%, #f3f4f8 100%);
+}
+
+/* --- Рамка под фото: сюда встанет настоящее фото магазина --- */
+
+.flyer-promo-frame {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 232px;
+    padding: 24px 20px;
+    text-align: center;
+    border: 2px dashed #a8adbe;
+    border-radius: 13px;
+    background: #fff;
+}
+
+.flyer-promo-ico {
+    color: #9aa0b4;
+}
+
+.flyer-promo-title {
+    margin: 0;
+    font-size: 1.28rem;
+    font-weight: 800;
+    color: #1c1e26;
+    letter-spacing: -0.01em;
+}
+
+.flyer-promo-sub {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #6b7080;
+    max-width: 30ch;
+}
+
+/* Карточка-превью: как магазин выглядит в каталоге.
+   Фон затемнён намеренно: белый текст на светло-красном не проходил бы
+   по контрасту (4.5:1) для мелкого текста - адреса и телефона. */
+.flyer-promo-card {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-top: 6px;
+    padding: 11px 15px;
+    border-radius: 10px;
+    background: #b32c44;
+    color: #fff;
+    box-shadow: 0 4px 14px rgba(179, 44, 68, 0.26);
+}
+
+.flyer-promo-card b {
+    font-size: 1.02rem;
+    font-weight: 800;
+}
+
+.flyer-promo-card span {
+    font-size: 0.83rem;
+    opacity: 0.94;
+}
+
+/* --- Правая часть: зачем это и сколько стоит --- */
+
+.flyer-promo-cta {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.flyer-promo-lead {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #2a2d38;
+}
+
+.flyer-promo-price {
+    margin: 0;
+    font-size: 0.97rem;
+    color: #2a2d38;
+}
+
+.flyer-promo-price b {
+    font-size: 1.16rem;
+    font-weight: 900;
+    color: #e94560;
+}
+
+.flyer-promo-price span {
+    display: block;
+    margin-top: 3px;
+    font-size: 0.88rem;
+    color: #6b7080;
+}
+
+.flyer-promo-btn {
+    display: inline-block;
+    align-self: flex-start;
+    padding: 13px 24px;
+    border-radius: 10px;
+    background: #b32c44;
+    color: #fff !important;
+    font-weight: 800;
+    text-decoration: none;
+    transition: background 0.18s ease, transform 0.18s ease;
+}
+
+.flyer-promo-btn:hover {
+    background: #99223a;
+    transform: translateY(-1px);
+}
+
+@media (max-width: 720px) {
+    .flyer-promo {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        padding: 16px;
+    }
+    .flyer-promo-frame {
+        min-height: 190px;
+    }
+    .flyer-promo-btn {
+        align-self: stretch;
+        text-align: center;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   РАЗОВАЯ ОПЛАТА. Подписки нет: страница покупается один раз.
+   «один раз» стоит рядом с числом, а не в мелком тексте - это снимает
+   главный вопрос покупателя «а сколько платить дальше».
+   -------------------------------------------------------------------------- */
+
+.flyer-price em {
+    font-style: normal;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #6b7080;
+}
+
+.flyer-owner-more {
+    margin: 16px 0 0;
+    padding: 13px 15px;
+    border-radius: 10px;
+    background: #f3f4f8;
+    font-size: 0.93rem;
+    line-height: 1.5;
+    color: #2a2d38;
+}
+
+.flyer-owner-more b {
+    font-weight: 800;
+    color: #b32c44;
+}
+
+.flyer-owner.is-paid {
+    border-color: #cfe7d3;
+    background: #f2faf3;
 }

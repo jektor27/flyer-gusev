@@ -1,4 +1,4 @@
-// Данные магазинов (реальные данные по CSV)
+﻿// Данные магазинов (реальные данные по CSV)
 const shopsData = [
     {id:1,name:"Софа",category:"mebel",address:"ул. Менделеева, 4",phone:"+7 (906) 219-22-44",description:"Салон мебели — кровати, шкафы, столы, стулья, диваны",products:["Кровати","Шкафы","Столы","Стулья","Диваны"],badge:"Мебель",rating:4.6},
     {id:2,name:"BOXXSale",category:"mebel",address:"Московская ул., 14",phone:"+7 (905) 245-40-62",description:"Мебельный магазин — мебель для дома и офиса",products:["Мебель","Шкафы","Столы","Комоды"],badge:"Мебель",rating:4.5},
@@ -77,7 +77,12 @@ const shopsData = [
     {id:82,name:"Цветы",category:"cvety",address:"просп. Ленина, 24",phone:"+7 (909) 777-47-72",description:"Магазин цветов в Гусеве — букеты, срезанные цветы, небольшие композиции",products:["Букеты","Цветы"],badge:"Цветы",rating:4.3},
     {id:83,name:"Флора",category:"cvety",address:"Правобережная ул., 4",phone:"+7 (991) 169-93-08",description:"Магазин цветов, искусственные растения и товары для садоводов. Ежедневно с 08:00 до 20:00",products:["Цветы","Букеты","Искусственные растения","Для садоводов"],badge:"Цветы",hours:{"пн":["08:00","20:00"],"вт":["08:00","20:00"],"ср":["08:00","20:00"],"чт":["08:00","20:00"],"пт":["08:00","20:00"],"сб":["08:00","20:00"],"вс":["08:00","20:00"]}},
     {id:84,name:"Цветы, букеты, подарки",category:"cvety",address:"Московская ул., 19",description:"Магазин цветов, букетов и подарков в Гусеве",products:["Букеты","Цветы","Подарки"],badge:"Цветы",rating:3.8},
-    {id:85,name:"Эдельвейс",category:"cvety",address:"Вокзальная ул., 6",description:"Магазин цветов у вокзала в Гусеве",products:["Цветы","Букеты"],badge:"Цветы",rating:4.0}
+    {id:85,name:"Эдельвейс",category:"cvety",address:"Вокзальная ул., 6",description:"Магазин цветов у вокзала в Гусеве",products:["Цветы","Букеты"],badge:"Цветы",rating:4.0},
+    {id:86,name:"Аистёнок",category:"detskie-tovary",address:"Школьная ул., 19",phone:"+7 (921) 263-19-17",description:"Детский магазин — детские товары, одежда и игрушки",products:["Детские товары","Одежда","Игрушки"],badge:"Детский магазин"},
+    {id:87,name:"Меркурий",category:"produkty",address:"Красноармейская ул., 3",phone:"+7 (40143) 3-38-10",description:"Продуктовый магазин в Гусеве",products:["Продукты","Пищевые товары"],badge:"Продукты",hoursNote:"09:00–19:00"},
+    {id:88,name:"Мираж",category:"odezhda",address:"Железнодорожная ул., 11",description:"Магазин обуви в Гусеве",products:["Обувь","Одежда"],badge:"Одежда"},
+    {id:89,name:"Ветеринарная аптека",category:"zootovary",address:"Железнодорожная ул., 11",phone:"+7 (921) 006-78-22",description:"Ветеринарная аптека — корма и лекарства для животных",products:["Ветаптека","Корма для животных","Лекарства для животных"],badge:"Зоотовары",hours:{"пн":["10:00","18:00"],"вт":["10:00","18:00"],"ср":["10:00","18:00"],"чт":["10:00","18:00"],"пт":["10:00","18:00"],"сб":["10:00","15:00"]}},
+    {id:90,name:"Шторные Сезоны",category:"byt",address:"Московская ул., 7",phone:"+7 (921) 261-39-10",description:"Шторы и текстиль для дома",products:["Шторы","Текстиль","Товары для дома"],badge:"Быт",hours:{"пн":["10:00","18:00"],"вт":["10:00","18:00"],"ср":["10:00","18:00"],"чт":["10:00","18:00"],"пт":["10:00","18:00"],"сб":["10:00","15:00"]}}
 ]
 
 // Категории (ключ = slug из URL ?cat=mebel)
@@ -103,6 +108,7 @@ document.addEventListener('DOMContentLoaded', function() {
     loadPopularQueries();
     initSearch();
     loadCategoryPage();
+    bindStaticShopCards();
     if (window.location.pathname.indexOf('cafe.html') !== -1) {
         registerCategoryClick('cafe');
     }
@@ -249,6 +255,59 @@ function formatHoursText(shop) {
     return matches.join(', ');
 }
 
+// Адрес флаера магазина: shop-<id>-<латиница-транслит>. Должен совпадать со slugify в create_shop_pages.py
+const SHOP_SLUG_TABLE = {
+    'а':'a','б':'b','в':'v','г':'g','д':'d','е':'e','ё':'e','ж':'zh','з':'z','и':'i','й':'y',
+    'к':'k','л':'l','м':'m','н':'n','о':'o','п':'p','р':'r','с':'s','т':'t','у':'u','ф':'f',
+    'х':'h','ц':'c','ч':'ch','ш':'sh','щ':'sch','ъ':'','ы':'y','ь':'','э':'e','ю':'yu','я':'ya'
+};
+function shopSlug(name, id) {
+    let out = '';
+    for (const ch of String(name || '').toLowerCase()) {
+        if (/[a-z0-9]/.test(ch)) out += ch;
+        else if (SHOP_SLUG_TABLE[ch] !== undefined) out += SHOP_SLUG_TABLE[ch];
+    }
+    return 'shop-' + id + '-' + out.slice(0, 40);
+}
+function shopUrl(shop) {
+    return shopSlug(shop.name, shop.id) + '.html';
+}
+
+// Страницы категорий — статичный HTML с вписанными карточками. Навешиваем переход на флаер
+// по имени магазина из shopsData. Карточки без совпадения остаются некликабельными.
+function bindStaticShopCards() {
+    const norm = s => String(s || '').toLowerCase().replace(/ё/g, 'е').replace(/\s+/g, ' ').trim();
+    const byName = new Map();
+    for (const shop of shopsData) {
+        if (!byName.has(norm(shop.name))) byName.set(norm(shop.name), shop);
+    }
+    let bound = 0, skipped = 0;
+    for (const card of document.querySelectorAll('.shop-card')) {
+        if (card.classList.contains('shop-card-clickable')) continue;
+        if (card.matches('a[href]')) { skipped++; continue; }
+        const nameEl = card.querySelector('.shop-name');
+        if (!nameEl) { skipped++; continue; }
+        const shop = byName.get(norm(nameEl.textContent));
+        if (!shop) { skipped++; continue; }
+        card.classList.add('shop-card-clickable');
+        card.setAttribute('role', 'link');
+        card.tabIndex = 0;
+        card.setAttribute('aria-label', 'Открыть карточку магазина ' + shop.name);
+        const go = function(e) {
+            // Клик по телефону или другой ссылке внутри карточки не должен открывать флаер
+            if (e && e.target && e.target.closest('a, button, input, select, textarea')) return;
+            registerShopClick(shop.id);
+            window.location.href = shopUrl(shop);
+        };
+        card.addEventListener('click', go);
+        card.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(null); }
+        });
+        bound++;
+    }
+    return { bound: bound, skipped: skipped };
+}
+
 // Создание карточки магазина (безопасное создание DOM-элементов)
 function createShopCard(shop, index, clickable) {
     const card = document.createElement('div');
@@ -260,7 +319,7 @@ function createShopCard(shop, index, clickable) {
         card.tabIndex = 0;
         const go = function() {
             registerShopClick(shop.id);
-            window.location.href = shop.category + '.html';
+            window.location.href = shopUrl(shop);
         };
         card.addEventListener('click', go);
         card.addEventListener('keydown', function(e) {
@@ -466,6 +525,16 @@ function search() {
         "хоббит": "detskie-tovary"
     };
     
+    const norm = s => String(s || '').toLowerCase().replace(/ё/g, 'е').trim();
+    const q = norm(query);
+    
+    // 1. Точное совпадение по имени магазина — сразу открываем флаер.
+    const exact = shopsData.find(shop => norm(shop.name) === q);
+    if (exact) {
+        window.location.href = shopUrl(exact);
+        return;
+    }
+    
     let category = null;
     for (const [key, value] of Object.entries(categoryMap)) {
         if (query.includes(key)) {
@@ -485,6 +554,13 @@ function search() {
         shop.products.some(p => p.toLowerCase().includes(query))
     );
     
+    // 2. В запросе есть имя магазина — открываем его флаер, даже если слово совпало с категорией.
+    const byName = results.find(shop => norm(shop.name).includes(q));
+    if (byName && q.length >= 3) {
+        window.location.href = shopUrl(byName);
+        return;
+    }
+    
     if (!resultsBox) return;
     
     if (results.length > 0) {
@@ -495,7 +571,7 @@ function search() {
             </div>
             <div class="search-results-list">
                 ${results.map(shop => `
-                    <a href="${shop.category}.html" class="search-result-card">
+                    <a href="${shopUrl(shop)}" class="search-result-card">
                         <div class="search-result-name">${shop.name}</div>
                         <div class="search-result-addr">${shop.address}</div>
                         <div class="search-result-desc">${shop.description}</div>
@@ -536,7 +612,7 @@ function searchInCategory() {
     if (results.length > 0) {
         grid.innerHTML = '';
         results.forEach((shop, index) => {
-            grid.appendChild(createShopCard(shop, index));
+            grid.appendChild(createShopCard(shop, index, true));
         });
     } else {
         grid.innerHTML = '<p style="text-align:center; color:#8892b0; grid-column:1/-1; padding:60px;">Магазины по запросу «' + query + '» не найдены в этой категории</p>';
@@ -586,7 +662,7 @@ function loadCategoryPage() {
         grid.innerHTML = '';
         if (filteredShops.length > 0) {
             filteredShops.forEach((shop, index) => {
-                grid.appendChild(createShopCard(shop, index));
+                grid.appendChild(createShopCard(shop, index, true));
             });
         } else {
             grid.innerHTML = '<p style="text-align:center; color:#8892b0; grid-column:1/-1; padding:60px;">Магазины в этой категории пока не добавлены</p>';

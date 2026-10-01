@@ -16,6 +16,10 @@ Disallow: /test_vk_token.py
 Disallow: /audit_site.py
 Disallow: /create_landing_pages.py
 Disallow: /scripts/
+Disallow: /README.md
+Disallow: /INSTRUCTIONS-FOR-AI-MODELS.md
+Disallow: /deploy.ps1
+Disallow: /CNAME
 
 Sitemap: https://gusev-flyer.ru/sitemap.xml
 Host: gusev-flyer.ru
