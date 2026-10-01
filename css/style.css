@@ -5422,6 +5422,38 @@ html {
     font-weight: 600;
     cursor: default;
 }
+/* Частые вопросы: Алиса и Яндекс любят вопрос-ответ как готовый ответ. */
+.flyer-faq {
+    margin: 26px 0 0;
+    padding: 22px 24px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(244,208,63,0.18);
+    border-radius: 14px;
+}
+.flyer-faq h2 {
+    color: var(--gold-light);
+    font-size: 21px;
+    font-weight: 800;
+    margin: 0 0 14px;
+}
+.flyer-faq-item + .flyer-faq-item {
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+}
+.flyer-faq-item h3 {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 0 6px;
+    line-height: 1.35;
+}
+.flyer-faq-item p {
+    color: var(--gray-light);
+    font-size: 15px;
+    line-height: 1.55;
+    margin: 0;
+}
 .flyer-hours-brief {
     color: var(--gray-light);
     font-size: 15px;
