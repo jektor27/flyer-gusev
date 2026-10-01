@@ -5370,6 +5370,58 @@ html {
 .flyer-route:hover {
     color: #fff;
 }
+/* Адрес — обычный текст, без ссылки на карту. Решение от 01.10.2026:
+   руками проверены только 2 ссылки из 83, угадывать остальные нельзя. */
+.flyer-route {
+    color: var(--gray-light);
+    font-size: 15px;
+    font-weight: 600;
+}
+/* Телефон — главное действие страницы. Крупная кнопка, а не просто цифры. */
+.flyer-phone-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px 12px;
+    flex-wrap: wrap;
+    text-align: center;
+    text-decoration: none;
+    background: var(--accent);
+    padding: 12px 18px;
+    border-radius: 12px;
+    box-shadow: 0 10px 26px -8px rgba(233,69,96,0.7);
+    transition: transform 0.15s ease, background 0.15s ease;
+}
+.flyer-phone-btn:hover {
+    background: var(--accent-light);
+    transform: translateY(-2px);
+}
+.flyer-phone-btn__num {
+    color: #fff;
+    font-size: clamp(19px, 5.4vw, 26px);
+    font-weight: 900;
+    white-space: nowrap;
+}
+.flyer-phone-btn__act {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    background: rgba(255,255,255,0.22);
+    padding: 6px 13px;
+    border-radius: 999px;
+    white-space: nowrap;
+}
+.flyer-phone-btn--none {
+    background: rgba(255,255,255,0.08);
+    box-shadow: none;
+    justify-content: center;
+    color: var(--gray-light);
+    font-size: 16px;
+    font-weight: 600;
+    cursor: default;
+}
 .flyer-hours-brief {
     color: var(--gray-light);
     font-size: 15px;
