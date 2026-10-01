@@ -5422,6 +5422,18 @@ html {
     font-weight: 600;
     cursor: default;
 }
+/* Сноска под тарифом: бейдж «ТОП» не продаётся, за 1990 ₽ покупается позиция. */
+.fg-tariff-note {
+    color: var(--gray-light);
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 12px 0 0;
+    padding: 10px 12px;
+    background: rgba(255,255,255,0.05);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 8px 8px 0;
+}
+
 /* Частые вопросы: Алиса и Яндекс любят вопрос-ответ как готовый ответ. */
 .flyer-faq {
     margin: 26px 0 0;
