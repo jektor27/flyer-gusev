@@ -588,7 +588,43 @@
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
+    <url>
+    <loc>https://gusev-flyer.ru/shop-58-rigla.html</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
   <url>
+    <loc>https://gusev-flyer.ru/shop-59-megastroy.html</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://gusev-flyer.ru/shop-60-stroycentr.html</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://gusev-flyer.ru/shop-61-soho.html</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://gusev-flyer.ru/shop-63-zoomir.html</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://gusev-flyer.ru/shop-64-dobryykofe.html</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+<url>
     <loc>https://gusev-flyer.ru/shop-65-burgomistr.html</loc>
     <lastmod>2026-10-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -741,6 +777,24 @@
   <url>
     <loc>https://gusev-flyer.ru/shop-90-shtornyesezony.html</loc>
     <lastmod>2026-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://gusev-flyer.ru/shop-91-kooperator.html</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://gusev-flyer.ru/shop-92-interdizayn.html</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://gusev-flyer.ru/shop-93-nuzhnyemelochi.html</loc>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
