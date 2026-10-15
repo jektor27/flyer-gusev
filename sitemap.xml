@@ -247,6 +247,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://gusev-flyer.ru/article-zootovary.html</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://gusev-flyer.ru/shop-1-sofa.html</loc>
     <lastmod>2026-10-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -793,8 +799,26 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://gusev-flyer.ru/shop-93-nuzhnyemelochi.html</loc>
+<loc>https://gusev-flyer.ru/shop-93-nuzhnyemelochi.html</loc>
     <lastmod>2026-10-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://gusev-flyer.ru/shop-94-zolotayarybka.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://gusev-flyer.ru/shop-95-novayazhizn.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://gusev-flyer.ru/shop-96-matilda.html</loc>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
