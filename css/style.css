@@ -3116,7 +3116,7 @@ a.home-contact-value:hover, a.home-contact-value:focus-visible {
 }
 
 /* ========================================
-   Internal Links (��������)
+   Internal Links (перелинковка)
    ======================================== */
 
 .internal-links {
@@ -6027,4 +6027,61 @@ html {
 .flyer-owner.is-paid {
     border-color: #cfe7d3;
     background: #f2faf3;
+}
+
+.open-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    line-height: 1;
+    padding: 4px 10px;
+    border-radius: var(--r-pill);
+    border: 1px solid var(--border);
+    background: var(--bg-3);
+    color: var(--text-2);
+}
+
+.open-badge::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    flex: 0 0 7px;
+    border-radius: 50%;
+    background: currentColor;
+}
+
+.open-badge.is-open {
+    color: var(--green);
+    border-color: rgba(46,213,115,0.4);
+    background: rgba(46,213,115,0.1);
+}
+
+.open-badge.is-closed {
+    color: var(--text-3);
+    border-color: var(--border);
+    background: var(--bg-3);
+}
+
+.guide-now {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 5px;
+    margin: 0 0 var(--sp-5);
+    padding: 10px 16px;
+    font-size: 13px;
+    line-height: 1.4;
+    color: var(--text-2);
+    background: var(--bg-2);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: var(--r-md);
+}
+
+.guide-now b {
+    color: var(--text-1);
+    font-weight: 700;
 }
