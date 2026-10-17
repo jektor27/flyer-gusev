@@ -198,14 +198,26 @@
             </a>
             <nav class="nav">
                 <a href="index.html" class="nav-link">Главная</a>
-                <a href="categories.html" class="nav-link">Категории</a>
-                    <a href="vse-magaziny.html" class="nav-link">Все магазины</a>
-                <a href="tariffs.html" class="nav-link">Тарифы</a>
-                <a href="for-business.html" class="nav-link">Для бизнеса</a>
-                <a href="blog.html" class="nav-link">Блог</a>
-                <a href="moose.html" class="nav-link">О лосе</a>
-                <a href="about.html" class="nav-link">О проекте</a>
-                <a href="contacts.html" class="nav-link">Контакты</a>
+                <div class="nav-group">
+                    <button type="button" class="nav-link" aria-haspopup="true" aria-expanded="false">Пользователям <span class="nav-caret" aria-hidden="true"></span></button>
+                    <div class="nav-menu" role="menu">
+                        <a href="categories.html" role="menuitem">Категории</a>
+                        <a href="vse-magaziny.html" role="menuitem">Все магазины</a>
+                        <a href="vyhodnye-gusev.html" role="menuitem">Куда сходить в выходные</a>
+                        <a href="blog.html" role="menuitem">Блог</a>
+                        <a href="moose.html" role="menuitem">О лосе</a>
+                        <a href="about.html" role="menuitem">О проекте</a>
+                    </div>
+                </div>
+                <div class="nav-group">
+                    <button type="button" class="nav-link" aria-haspopup="true" aria-expanded="false">Бизнесу <span class="nav-caret" aria-hidden="true"></span></button>
+                    <div class="nav-menu" role="menu">
+                        <a href="tariffs.html" role="menuitem">Тарифы</a>
+                        <a href="for-business.html" role="menuitem">Для бизнеса</a>
+                        <a href="for-business.html" role="menuitem">Добавить магазин</a>
+                    </div>
+                </div>
+                <a href="for-business.html" class="nav-cta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>Разместить магазин</a>
             </nav>
             <button class="menu-btn" onclick="toggleMenu()">&#9776;</button>
         </div>

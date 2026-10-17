@@ -704,4 +704,44 @@ function toggleMenu() {
     }
 }
 
+// Главное меню v2: выпадающие группы (наведение на десктопе, аккордеон на мобильном)
+(function () {
+    function initNavGroups() {
+        const groups = document.querySelectorAll('.nav-group');
+        if (!groups.length) return;
+        function closeAll(except) {
+            groups.forEach(function (g) {
+                if (g !== except) {
+                    g.classList.remove('open');
+                    const b = g.querySelector('.nav-link');
+                    if (b) b.setAttribute('aria-expanded', 'false');
+                }
+            });
+        }
+        groups.forEach(function (g) {
+            const btn = g.querySelector('.nav-link');
+            if (!btn) return;
+            btn.addEventListener('click', function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                const willOpen = !g.classList.contains('open');
+                closeAll(g);
+                g.classList.toggle('open', willOpen);
+                btn.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+            });
+        });
+        document.addEventListener('click', function (e) {
+            if (!e.target.closest('.nav-group')) closeAll(null);
+        });
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') closeAll(null);
+        });
+    }
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initNavGroups);
+    } else {
+        initNavGroups();
+    }
+})();
+
 
