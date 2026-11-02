@@ -5019,6 +5019,30 @@ html {
     height:16px;
     stroke:currentColor;
 }
+/* --- единый линейный SVG-набор иконок интерфейса --- */
+.category-icon .ico,
+.shop-icon .ico,
+.home-contact-icon .ico,
+.article-meta-ico .ico{
+    width:1em;
+    height:1em;
+    flex:none;
+    stroke:currentColor;
+    color:var(--accent-text);
+}
+.search-ico .ico,
+.demo-search-ico .ico{
+    width:1em;
+    height:1em;
+    flex:none;
+    stroke:currentColor;
+    color:inherit;
+}
+.article-meta-ico .ico,
+.search-ico .ico,
+.demo-search-ico .ico{
+    vertical-align:-0.15em;
+}
 .category-meta-item b{
     color:var(--gold);
     font-weight:700;
@@ -6277,3 +6301,8 @@ html {
         margin: 10px 0 0;
     }
 }
+/* UI icon slots converted to inline SVG */
+.glass-emo .ico { width:18px; height:18px; flex:none; stroke:currentColor; color:var(--accent-text); }
+.menu-btn .ico { width:1.25em; height:1.25em; flex:none; stroke:currentColor; color:inherit; }
+.feature-title .ico { width:1em; height:1em; flex:none; stroke:currentColor; vertical-align:-0.15em; color:var(--accent-text); }
+.demo-phone-search .ico { width:1em; height:1em; flex:none; stroke:currentColor; color:inherit; }
