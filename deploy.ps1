@@ -24,6 +24,12 @@ Write-Host "Глубокий аудит перед публикацией:"
 & $py $deepAudit
 if ($LASTEXITCODE -ne 0) { throw "Аудит нашёл проблемы — публикация остановлена. Сначала почини." }
 
+$sitemapFix = "D:\Jastas\projects\flyer-gusev-work\scripts\update_sitemap_lastmod.py"
+if (Test-Path $sitemapFix) {
+    Write-Host "Обновляю lastmod в sitemap.xml по истории файлов:"
+    & $py $sitemapFix --apply
+}
+
 if ($Message) {
     git add -A
     if (git status --porcelain) {
