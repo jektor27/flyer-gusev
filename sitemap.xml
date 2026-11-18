@@ -133,6 +133,24 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://gusev-flyer.ru/article-odezhda-k-holodam.html</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://gusev-flyer.ru/article-dom-k-zime.html</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://gusev-flyer.ru/article-kak-ustroen-flyer.html</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://gusev-flyer.ru/about.html</loc>
     <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>
